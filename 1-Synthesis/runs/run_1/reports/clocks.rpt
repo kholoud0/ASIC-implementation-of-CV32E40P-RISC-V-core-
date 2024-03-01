@@ -1,0 +1,28 @@
+ 
+****************************************
+Report : clocks
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Fri Mar  1 01:24:58 2024
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+CLK_GATED        5.00   {0 2.5}             G d       {core_clock_gate_i/clk_o}
+CLK_I            5.00   {0 2.5}             d         {clk_i}
+--------------------------------------------------------------------------------
+
+Generated     Master         Generated      Master         Waveform
+Clock         Source         Source         Clock          Modification
+--------------------------------------------------------------------------------
+CLK_GATED     clk_i          {core_clock_gate_i/clk_o}
+                                            CLK_I          divide_by(1)
+--------------------------------------------------------------------------------
+1

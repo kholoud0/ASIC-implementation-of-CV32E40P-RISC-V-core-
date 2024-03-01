@@ -1,0 +1,19 @@
+****************************************
+Report : clock
+Design : riscv_core
+Mode   : func
+Version: O-2018.06-SP1
+Date   : Fri Mar  1 14:19:08 2024
+****************************************
+
+
+Attributes:
+    p - Propagated clock
+    G - Generated  clock
+    U - Unexpanded generated clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+CLK_I            5.00   {0 2.5}                       {clk_i}
+
+1

@@ -1,0 +1,56 @@
+****************************************
+Report : constraint
+        -all_violators
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Fri Mar  1 15:17:39 2024
+****************************************
+
+   late_timing
+   -----------
+
+Endpoint                         Path Delay     Path Required       CRP    Slack Group    Scenario
+----------------------------------------------------------------------------------------------------------
+No paths.
+
+   early_timing
+   -----------
+
+Endpoint                         Path Delay     Path Required       CRP    Slack Group    Scenario
+----------------------------------------------------------------------------------------------------------
+No paths.
+
+   Mode: func Corner: slow
+   Scenario: func_slow
+  ---------------------------------------------------------------------------
+   Number of max_transition violation(s): 0
+
+   Mode: func Corner: slow
+   Scenario: func_slow
+   max_capacitance                                                             
+                             Required        Actual                            
+   Net                      Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+   if_stage_i/n22               9.36           9.43          -0.07  (VIOLATED) 
+     PIN : if_stage_i/U91/X     9.36           9.43          -0.07  (VIOLATED) 
+
+   ex_stage_i/alu_i/shift_amt_int[2]     9.62     9.69       -0.07  (VIOLATED) 
+     PIN : ex_stage_i/alu_i/U69/X     9.62     9.69          -0.07  (VIOLATED) 
+
+   if_stage_i/prefetch_32_prefetch_buffer_i/n221     6.94     6.98    -0.04 (VIOLATED)
+     PIN : if_stage_i/prefetch_32_prefetch_buffer_i/U39/X     6.94     6.98    -0.04 (VIOLATED)
+
+   ex_stage_i/alu_i/n336        9.76           9.77          -0.01  (VIOLATED) 
+     PIN : ex_stage_i/alu_i/U1911/X     9.76     9.77        -0.01  (VIOLATED) 
+
+  ---------------------------------------------------------------------------
+   Number of max_capacitance violation(s): 4
+
+
+   Mode: func Corner: slow
+   Scenario: func_slow
+  ---------------------------------------------------------------------------
+   Number of min_capacitance violation(s): 0
+
+   Total number of violation(s): 4
+1

@@ -1,0 +1,170 @@
+Loading db file '/mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/db_nldm/saed14rvt_ss0p6vm40c.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Fri Mar  1 01:28:36 2024
+****************************************
+
+
+Library(s) Used:
+
+    saed14rvt_ss0p6vm40c (File: /mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/db_nldm/saed14rvt_ss0p6vm40c.db)
+
+
+Operating Conditions: ss0p6vm40c   Library: saed14rvt_ss0p6vm40c
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+riscv_core             16000             saed14rvt_ss0p6vm40c
+
+
+Global Operating Voltage = 0.6  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+riscv_core                               83.600  212.310 5.01e+04  295.960 100.0
+  debug_unit_i (riscv_debug_unit)         0.533    8.343  998.077    8.877   3.0
+  cs_registers_i (riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE0)
+                                          0.248    8.361 1.61e+03    8.611   2.9
+    add_775 (riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE0_DW01_inc_0)
+                                          0.000    0.000  110.260 1.10e-04   0.0
+  load_store_unit_i (riscv_load_store_unit)
+                                          0.794    4.327 1.05e+03    5.122   1.7
+    add_463_aco (riscv_load_store_unit_DW01_add_0)
+                                       8.53e-04 7.56e-03  225.254 8.64e-03   0.0
+    mult_add_463_aco (riscv_load_store_unit_DW02_mult_0)
+                                       3.89e-02 8.77e-03   68.458 4.77e-02   0.0
+  ex_stage_i (riscv_ex_stage_FPU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5)
+                                          0.460   11.212 1.97e+04   11.692   4.0
+    mult_i (riscv_mult_SHARED_DSP_MULT0)
+                                       4.75e-04    0.375 1.47e+04    0.390   0.1
+      add_0_root_add_0_root_add_283_2 (riscv_mult_SHARED_DSP_MULT0_DW01_add_0)
+                                          0.000    0.000  225.513 2.26e-04   0.0
+      add_1_root_add_0_root_add_283_2 (riscv_mult_SHARED_DSP_MULT0_DW01_add_1)
+                                          0.000    0.000  225.513 2.26e-04   0.0
+      mult_280 (riscv_mult_SHARED_DSP_MULT0_DW02_mult_0)
+                                          0.000    0.000 2.00e+03 2.00e-03   0.0
+      mult_281 (riscv_mult_SHARED_DSP_MULT0_DW02_mult_1)
+                                          0.000    0.000 2.00e+03 2.00e-03   0.0
+      add_0_root_add_0_root_add_269_4 (riscv_mult_SHARED_DSP_MULT0_DW01_add_4)
+                                          0.000    0.000  226.120 2.26e-04   0.0
+      add_1_root_add_0_root_add_269_4 (riscv_mult_SHARED_DSP_MULT0_DW01_add_5)
+                                          0.000    0.000  226.120 2.26e-04   0.0
+      add_3_root_add_269_4 (riscv_mult_SHARED_DSP_MULT0_DW01_add_6)
+                                          0.000    0.000  131.913 1.32e-04   0.0
+      add_2_root_add_269_4 (riscv_mult_SHARED_DSP_MULT0_DW01_add_7)
+                                          0.000    0.000  139.113 1.39e-04   0.0
+      mult_264 (riscv_mult_SHARED_DSP_MULT0_DW02_mult_2)
+                                          0.000    0.000  547.069 5.47e-04   0.0
+      mult_265 (riscv_mult_SHARED_DSP_MULT0_DW02_mult_3)
+                                          0.000    0.000  547.069 5.47e-04   0.0
+      mult_266 (riscv_mult_SHARED_DSP_MULT0_DW02_mult_4)
+                                          0.000    0.000  547.069 5.47e-04   0.0
+      mult_267 (riscv_mult_SHARED_DSP_MULT0_DW02_mult_5)
+                                          0.000    0.000  547.069 5.47e-04   0.0
+      add_0_root_add_0_root_add_230_2 (riscv_mult_SHARED_DSP_MULT0_DW01_add_12)
+                                          0.000    0.000  225.513 2.26e-04   0.0
+      mult_230 (riscv_mult_SHARED_DSP_MULT0_DW02_mult_6)
+                                          0.000    0.000 3.63e+03 3.63e-03   0.0
+      add_1_root_add_0_root_add_230_2 (riscv_mult_SHARED_DSP_MULT0_DW01_add_14)
+                                          0.000    0.000  225.513 2.26e-04   0.0
+      add_0_root_add_0_root_add_114_2 (riscv_mult_SHARED_DSP_MULT0_DW01_add_15)
+                                       6.42e-07 2.61e-06  239.913 2.43e-04   0.0
+      add_1_root_add_0_root_add_114_2 (riscv_mult_SHARED_DSP_MULT0_DW01_add_16)
+                                       2.14e-06 2.74e-06  228.084 2.33e-04   0.0
+      mult_113 (riscv_mult_SHARED_DSP_MULT0_DW02_mult_7)
+                                          0.000    0.000 2.02e+03 2.02e-03   0.0
+      sll_101 (riscv_mult_SHARED_DSP_MULT0_DW01_ash_0)
+                                       5.44e-05 1.46e-05   82.226 1.51e-04   0.0
+      sra_117 (riscv_mult_SHARED_DSP_MULT0_DW_rash_0)
+                                       1.23e-04 3.18e-05  230.286 3.85e-04   0.0
+    alu_i (riscv_alu_SHARED_INT_DIV0_FPU0)
+                                          0.427   10.161 4.87e+03   10.593   3.6
+      add_168 (riscv_alu_SHARED_INT_DIV0_FPU0_DW01_add_2)
+                                       8.67e-03 8.86e-03  241.162 1.78e-02   0.0
+      sll_881 (riscv_alu_SHARED_INT_DIV0_FPU0_DW01_ash_1)
+                                          0.000    0.000   48.836 4.88e-05   0.0
+      sll_882 (riscv_alu_SHARED_INT_DIV0_FPU0_DW01_ash_0)
+                                       2.80e-04 2.52e-04  232.644 7.65e-04   0.0
+      add_182 (riscv_alu_SHARED_INT_DIV0_FPU0_DW01_add_1)
+                                       1.45e-03 7.62e-03  220.462 9.30e-03   0.0
+      srl_283 (riscv_alu_SHARED_INT_DIV0_FPU0_DW_rash_0)
+                                       2.97e-02 1.97e-02  348.416 4.98e-02   0.0
+      int_div_div_i (riscv_alu_div)       0.225   10.035 1.68e+03   10.262   3.5
+        r76 (riscv_alu_div_DW01_cmp6_0)
+                                          0.000    0.000   86.975 8.70e-05   0.0
+        sub_100 (riscv_alu_div_DW01_sub_1)
+                                          0.000    0.000   85.552 8.56e-05   0.0
+        add_107 (riscv_alu_div_DW01_add_0)
+                                          0.000    0.000  226.120 2.26e-04   0.0
+        sub_107 (riscv_alu_div_DW01_sub_0)
+                                          0.000    0.000  152.468 1.52e-04   0.0
+      alu_ff_i (alu_ff)                   0.000    0.000   72.724 7.27e-05   0.0
+      alu_popcnt_i (alu_popcnt)        5.75e-03 5.86e-03  193.778 1.18e-02   0.0
+  id_stage_i (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5)
+                                          5.642  148.949 2.23e+04  154.613  52.2
+    r162 (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DW01_add_4)
+                                       5.78e-03 1.60e-02  225.560 2.20e-02   0.0
+    sll_468 (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DW01_ash_0)
+                                       1.40e-02 3.35e-03   92.477 1.74e-02   0.0
+    sub_468 (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DW01_dec_0)
+                                       1.42e-02 6.95e-03   69.140 2.13e-02   0.0
+    add_536 (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DW01_add_3)
+                                       9.33e-03 2.21e-02  148.433 3.16e-02   0.0
+    add_537 (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DW01_add_2)
+                                       6.99e-03 1.37e-02  124.054 2.08e-02   0.0
+    add_580 (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DW01_add_1)
+                                       1.36e-02 4.40e-02  216.509 5.79e-02   0.0
+    add_581 (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DW01_add_0)
+                                       1.30e-02 4.26e-02  216.575 5.59e-02   0.0
+    hwloop_regs_i (riscv_hwloop_regs_N_REGS2)
+                                          0.425   18.004 1.80e+03   18.431   6.2
+      sub_103 (riscv_hwloop_regs_N_REGS2_DW01_dec_1)
+                                       1.03e-04 5.00e-05   85.037 2.38e-04   0.0
+      sub_103_G2 (riscv_hwloop_regs_N_REGS2_DW01_dec_0)
+                                       5.86e-05 2.84e-05   85.042 1.72e-04   0.0
+    int_controller_i (riscv_int_controller_PULP_SECURE0)
+                                       1.58e-02    0.751   71.678    0.767   0.3
+    controller_i (riscv_controller_FPU0)
+                                          0.254    0.835  280.869    1.089   0.4
+    decoder_i (riscv_decoder_FPU0_PULP_SECURE0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_WOP_CPU6)
+                                          0.116 4.71e-02  584.054    0.164   0.1
+    registers_i (riscv_register_file_ADDR_WIDTH6_FPU0)
+                                          3.445   93.395 1.40e+04   96.854  32.7
+  if_stage_i (riscv_if_stage_N_HWLP2_RDATA_WIDTH32_FPU0)
+                                          3.133   30.667 4.34e+03   33.805  11.4
+    compressed_decoder_i (riscv_compressed_decoder_FPU0)
+                                          0.423    0.243  211.129    0.666   0.2
+    hwloop_controller_i (riscv_hwloop_controller_N_REGS2)
+                                       4.13e-02    0.107  268.343    0.149   0.1
+      eq_64 (riscv_hwloop_controller_N_REGS2_DW01_cmp6_1)
+                                       2.07e-02 5.33e-02   70.520 7.41e-02   0.0
+      eq_64_G2 (riscv_hwloop_controller_N_REGS2_DW01_cmp6_0)
+                                       2.07e-02 5.33e-02   70.523 7.40e-02   0.0
+    prefetch_32_prefetch_buffer_i (riscv_prefetch_buffer)
+                                          2.143   23.033 2.88e+03   25.180   8.5
+      add_115 (riscv_prefetch_buffer_DW01_add_0)
+                                       1.46e-02 2.79e-02  101.230 4.27e-02   0.0
+      fifo_i (riscv_fetch_fifo)           1.553   19.233 2.20e+03   20.788   7.0
+        add_182 (riscv_fetch_fifo_DW01_inc_0)
+                                       6.27e-03 1.66e-02  102.070 2.29e-02   0.0
+  core_clock_gate_i (cluster_clock_gating)
+                                         72.756    0.325   18.307   73.081  24.7
+1

@@ -1,0 +1,275 @@
+****************************************
+Report : hierarchy
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Fri Mar  1 15:17:41 2024
+****************************************
+
+riscv_core:riscv_core_3_after_pns.design (riscv_core)
+  SAEDRVT14_AN3_0P75                           saed14rvt_ss0p6vm40c
+  SAEDRVT14_CAPTTAPP6                          saed14rvt_ss0p6vm40c
+  SAEDRVT14_OA2BB2_V1_1                        saed14rvt_ss0p6vm40c
+  SAEDRVT14_OR2_MM_4                           saed14rvt_ss0p6vm40c
+  SAEDRVT14_TIE0_4                             saed14rvt_ss0p6vm40c
+  SAEDRVT14_TIE1_V1_2                          saed14rvt_ss0p6vm40c
+  cluster_clock_gating
+     SAEDRVT14_CKGTPLT_V5_4                    saed14rvt_ss0p6vm40c
+  riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE0
+     riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE0_DW01_inc_0
+  riscv_debug_unit
+     SAEDRVT14_FDPRBQ_V2_1                     saed14rvt_ss0p6vm40c
+  riscv_ex_stage_FPU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5
+     riscv_alu_SHARED_INT_DIV0_FPU0
+        SAEDRVT14_AO211_1                      saed14rvt_ss0p6vm40c
+        SAEDRVT14_AOI222_0P5                   saed14rvt_ss0p6vm40c
+        SAEDRVT14_AOI31_0P5                    saed14rvt_ss0p6vm40c
+        SAEDRVT14_AOINV_IW_0P5                 saed14rvt_ss0p6vm40c
+        SAEDRVT14_INV_0P5                      saed14rvt_ss0p6vm40c
+        SAEDRVT14_INV_0P75                     saed14rvt_ss0p6vm40c
+        SAEDRVT14_INV_2                        saed14rvt_ss0p6vm40c
+        SAEDRVT14_INV_PS_1                     saed14rvt_ss0p6vm40c
+        SAEDRVT14_MUX2_MM_0P5                  saed14rvt_ss0p6vm40c
+        SAEDRVT14_MUX3_V1M_0P5                 saed14rvt_ss0p6vm40c
+        SAEDRVT14_MUXI2_B_1                    saed14rvt_ss0p6vm40c
+        SAEDRVT14_MUXI4_U_0P5                  saed14rvt_ss0p6vm40c
+        SAEDRVT14_ND2_0P5                      saed14rvt_ss0p6vm40c
+        SAEDRVT14_ND2_MM_3                     saed14rvt_ss0p6vm40c
+        SAEDRVT14_ND3_1                        saed14rvt_ss0p6vm40c
+        SAEDRVT14_NR2_5                        saed14rvt_ss0p6vm40c
+        SAEDRVT14_OA211_1                      saed14rvt_ss0p6vm40c
+        SAEDRVT14_OA221_1                      saed14rvt_ss0p6vm40c
+        SAEDRVT14_OA222_1                      saed14rvt_ss0p6vm40c
+        SAEDRVT14_OA33_1                       saed14rvt_ss0p6vm40c
+        SAEDRVT14_OAI211_0P5                   saed14rvt_ss0p6vm40c
+        SAEDRVT14_OAI222_0P5                   saed14rvt_ss0p6vm40c
+        SAEDRVT14_OAI222_1                     saed14rvt_ss0p6vm40c
+        SAEDRVT14_OAI222_2                     saed14rvt_ss0p6vm40c
+        SAEDRVT14_OR3_0P5                      saed14rvt_ss0p6vm40c
+        SAEDRVT14_OR3_0P75                     saed14rvt_ss0p6vm40c
+        alu_ff
+        alu_popcnt
+        riscv_alu_SHARED_INT_DIV0_FPU0_DW01_add_1
+        riscv_alu_SHARED_INT_DIV0_FPU0_DW01_add_2
+        riscv_alu_SHARED_INT_DIV0_FPU0_DW01_ash_0
+           SAEDRVT14_MUX2_U_0P5                saed14rvt_ss0p6vm40c
+           SAEDRVT14_MUXI2_0P5                 saed14rvt_ss0p6vm40c
+           SAEDRVT14_MUXI2_U_0P5               saed14rvt_ss0p6vm40c
+        riscv_alu_SHARED_INT_DIV0_FPU0_DW01_ash_1
+        riscv_alu_SHARED_INT_DIV0_FPU0_DW_rash_0
+           SAEDRVT14_OR2_MM_1                  saed14rvt_ss0p6vm40c
+        riscv_alu_div
+           SAEDRVT14_AOI31_0P75                saed14rvt_ss0p6vm40c
+           SAEDRVT14_NR2_2                     saed14rvt_ss0p6vm40c
+           riscv_alu_div_DW01_add_0
+           riscv_alu_div_DW01_cmp6_0
+           riscv_alu_div_DW01_sub_0
+           riscv_alu_div_DW01_sub_1
+     riscv_mult_SHARED_DSP_MULT0
+        SAEDRVT14_AO21_2                       saed14rvt_ss0p6vm40c
+        SAEDRVT14_NR2_MM_0P5                   saed14rvt_ss0p6vm40c
+        SAEDRVT14_NR3_2                        saed14rvt_ss0p6vm40c
+        riscv_mult_SHARED_DSP_MULT0_DW01_add_0
+        riscv_mult_SHARED_DSP_MULT0_DW01_add_1
+        riscv_mult_SHARED_DSP_MULT0_DW01_add_12
+        riscv_mult_SHARED_DSP_MULT0_DW01_add_14
+        riscv_mult_SHARED_DSP_MULT0_DW01_add_15
+        riscv_mult_SHARED_DSP_MULT0_DW01_add_16
+        riscv_mult_SHARED_DSP_MULT0_DW01_add_4
+        riscv_mult_SHARED_DSP_MULT0_DW01_add_5
+        riscv_mult_SHARED_DSP_MULT0_DW01_add_6
+           SAEDRVT14_EO3_2                     saed14rvt_ss0p6vm40c
+        riscv_mult_SHARED_DSP_MULT0_DW01_add_7
+        riscv_mult_SHARED_DSP_MULT0_DW01_ash_0
+        riscv_mult_SHARED_DSP_MULT0_DW02_mult_0
+           riscv_mult_SHARED_DSP_MULT0_DW01_add_2
+        riscv_mult_SHARED_DSP_MULT0_DW02_mult_1
+           riscv_mult_SHARED_DSP_MULT0_DW01_add_3
+        riscv_mult_SHARED_DSP_MULT0_DW02_mult_2
+           riscv_mult_SHARED_DSP_MULT0_DW01_add_8
+        riscv_mult_SHARED_DSP_MULT0_DW02_mult_3
+           riscv_mult_SHARED_DSP_MULT0_DW01_add_9
+        riscv_mult_SHARED_DSP_MULT0_DW02_mult_4
+           riscv_mult_SHARED_DSP_MULT0_DW01_add_10
+        riscv_mult_SHARED_DSP_MULT0_DW02_mult_5
+           riscv_mult_SHARED_DSP_MULT0_DW01_add_11
+        riscv_mult_SHARED_DSP_MULT0_DW02_mult_6
+        riscv_mult_SHARED_DSP_MULT0_DW02_mult_7
+           riscv_mult_SHARED_DSP_MULT0_DW01_add_17
+              SAEDRVT14_EN3_1                  saed14rvt_ss0p6vm40c
+              SAEDRVT14_EO3_0P5                saed14rvt_ss0p6vm40c
+        riscv_mult_SHARED_DSP_MULT0_DW_rash_0
+           SAEDRVT14_NR2_MM_2                  saed14rvt_ss0p6vm40c
+  riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5
+     SAEDRVT14_AN2_MM_2                        saed14rvt_ss0p6vm40c
+     SAEDRVT14_AN3_0P5                         saed14rvt_ss0p6vm40c
+     SAEDRVT14_AO2BB2_0P5                      saed14rvt_ss0p6vm40c
+     SAEDRVT14_AOI21_V1_6                      saed14rvt_ss0p6vm40c
+     SAEDRVT14_AOI22_0P5                       saed14rvt_ss0p6vm40c
+     SAEDRVT14_BUF_10                          saed14rvt_ss0p6vm40c
+     SAEDRVT14_BUF_UCDC_1                      saed14rvt_ss0p6vm40c
+     SAEDRVT14_EN2_3                           saed14rvt_ss0p6vm40c
+     SAEDRVT14_FDPRBQ_V2_2                     saed14rvt_ss0p6vm40c
+     SAEDRVT14_FDPSBQ_2                        saed14rvt_ss0p6vm40c
+     SAEDRVT14_FDPSBQ_4                        saed14rvt_ss0p6vm40c
+     SAEDRVT14_INV_S_0P5                       saed14rvt_ss0p6vm40c
+     SAEDRVT14_ND2_5                           saed14rvt_ss0p6vm40c
+     SAEDRVT14_ND2_CDC_4                       saed14rvt_ss0p6vm40c
+     SAEDRVT14_ND2_MM_6                        saed14rvt_ss0p6vm40c
+     SAEDRVT14_NR2_MM_4                        saed14rvt_ss0p6vm40c
+     SAEDRVT14_NR3_3                           saed14rvt_ss0p6vm40c
+     SAEDRVT14_OA21B_4                         saed14rvt_ss0p6vm40c
+     SAEDRVT14_OA21_2                          saed14rvt_ss0p6vm40c
+     SAEDRVT14_OA21_MM_2                       saed14rvt_ss0p6vm40c
+     SAEDRVT14_OA221_2                         saed14rvt_ss0p6vm40c
+     SAEDRVT14_OA22_1                          saed14rvt_ss0p6vm40c
+     SAEDRVT14_OA22_2                          saed14rvt_ss0p6vm40c
+     SAEDRVT14_OA2BB2_V1_2                     saed14rvt_ss0p6vm40c
+     SAEDRVT14_OA2BB2_V1_4                     saed14rvt_ss0p6vm40c
+     SAEDRVT14_OA32_U_0P5                      saed14rvt_ss0p6vm40c
+     SAEDRVT14_OAI21_0P75                      saed14rvt_ss0p6vm40c
+     SAEDRVT14_OAI21_1P5                       saed14rvt_ss0p6vm40c
+     SAEDRVT14_OAI21_2                         saed14rvt_ss0p6vm40c
+     SAEDRVT14_OAI21_V1_6                      saed14rvt_ss0p6vm40c
+     SAEDRVT14_OAI31_0P5                       saed14rvt_ss0p6vm40c
+     riscv_controller_FPU0
+        SAEDRVT14_AN4_0P5                      saed14rvt_ss0p6vm40c
+        SAEDRVT14_EN2_1                        saed14rvt_ss0p6vm40c
+        SAEDRVT14_ND2B_2                       saed14rvt_ss0p6vm40c
+        SAEDRVT14_ND2_8                        saed14rvt_ss0p6vm40c
+        SAEDRVT14_NR3_0P5                      saed14rvt_ss0p6vm40c
+     riscv_decoder_FPU0_PULP_SECURE0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_WOP_CPU6
+        SAEDRVT14_AO33_1                       saed14rvt_ss0p6vm40c
+        SAEDRVT14_ND2B_4                       saed14rvt_ss0p6vm40c
+        SAEDRVT14_ND2_MM_4                     saed14rvt_ss0p6vm40c
+        SAEDRVT14_ND3B_0P75                    saed14rvt_ss0p6vm40c
+        SAEDRVT14_OAI21_1                      saed14rvt_ss0p6vm40c
+        SAEDRVT14_OAI21_3                      saed14rvt_ss0p6vm40c
+        SAEDRVT14_OAI21_V1_4                   saed14rvt_ss0p6vm40c
+        SAEDRVT14_OAI21_V1_8                   saed14rvt_ss0p6vm40c
+        SAEDRVT14_OAI311_1                     saed14rvt_ss0p6vm40c
+     riscv_hwloop_regs_N_REGS2
+        SAEDRVT14_ND2_4                        saed14rvt_ss0p6vm40c
+        SAEDRVT14_ND2_MM_1                     saed14rvt_ss0p6vm40c
+        riscv_hwloop_regs_N_REGS2_DW01_dec_0
+           SAEDRVT14_OR2_0P5                   saed14rvt_ss0p6vm40c
+        riscv_hwloop_regs_N_REGS2_DW01_dec_1
+     riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DW01_add_0
+        SAEDRVT14_ADDF_V1_1                    saed14rvt_ss0p6vm40c
+        SAEDRVT14_EO3_1                        saed14rvt_ss0p6vm40c
+     riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DW01_add_1
+     riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DW01_add_2
+     riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DW01_add_3
+     riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DW01_add_4
+     riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DW01_ash_0
+     riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DW01_dec_0
+     riscv_int_controller_PULP_SECURE0
+        SAEDRVT14_AO22_4                       saed14rvt_ss0p6vm40c
+        SAEDRVT14_NR2_MM_3                     saed14rvt_ss0p6vm40c
+        SAEDRVT14_OAI33_0P75                   saed14rvt_ss0p6vm40c
+        SAEDRVT14_OR3_2                        saed14rvt_ss0p6vm40c
+     riscv_register_file_ADDR_WIDTH6_FPU0
+        SAEDRVT14_AN2_MM_4                     saed14rvt_ss0p6vm40c
+        SAEDRVT14_AN2_MM_6                     saed14rvt_ss0p6vm40c
+        SAEDRVT14_AO22_0P5                     saed14rvt_ss0p6vm40c
+        SAEDRVT14_BUF_8                        saed14rvt_ss0p6vm40c
+        SAEDRVT14_BUF_S_2                      saed14rvt_ss0p6vm40c
+        SAEDRVT14_BUF_S_6                      saed14rvt_ss0p6vm40c
+        SAEDRVT14_INV_4                        saed14rvt_ss0p6vm40c
+        SAEDRVT14_INV_S_1P5                    saed14rvt_ss0p6vm40c
+        SAEDRVT14_INV_S_3                      saed14rvt_ss0p6vm40c
+        SAEDRVT14_INV_S_6                      saed14rvt_ss0p6vm40c
+        SAEDRVT14_INV_S_8                      saed14rvt_ss0p6vm40c
+        SAEDRVT14_OAI22_0P75                   saed14rvt_ss0p6vm40c
+        SAEDRVT14_OR3_4                        saed14rvt_ss0p6vm40c
+  riscv_if_stage_N_HWLP2_RDATA_WIDTH32_FPU0
+     SAEDRVT14_AN3_2                           saed14rvt_ss0p6vm40c
+     SAEDRVT14_AN3_4                           saed14rvt_ss0p6vm40c
+     SAEDRVT14_AO21B_0P5                       saed14rvt_ss0p6vm40c
+     SAEDRVT14_AO222_1                         saed14rvt_ss0p6vm40c
+     SAEDRVT14_AOI21_2                         saed14rvt_ss0p6vm40c
+     SAEDRVT14_AOI21_3                         saed14rvt_ss0p6vm40c
+     SAEDRVT14_AOI222_1                        saed14rvt_ss0p6vm40c
+     SAEDRVT14_FDPRBQ_V2_4                     saed14rvt_ss0p6vm40c
+     SAEDRVT14_FDPSBQ_1                        saed14rvt_ss0p6vm40c
+     SAEDRVT14_NR3B_U_0P5                      saed14rvt_ss0p6vm40c
+     SAEDRVT14_OR4_2                           saed14rvt_ss0p6vm40c
+     riscv_compressed_decoder_FPU0
+        SAEDRVT14_AOI311_1                     saed14rvt_ss0p6vm40c
+        SAEDRVT14_ND3_0P5                      saed14rvt_ss0p6vm40c
+        SAEDRVT14_NR3_1                        saed14rvt_ss0p6vm40c
+        SAEDRVT14_OA221_U_0P5                  saed14rvt_ss0p6vm40c
+        SAEDRVT14_OA31_1                       saed14rvt_ss0p6vm40c
+     riscv_hwloop_controller_N_REGS2
+        SAEDRVT14_AO22_1                       saed14rvt_ss0p6vm40c
+        riscv_hwloop_controller_N_REGS2_DW01_cmp6_0
+           SAEDRVT14_AN2_1                     saed14rvt_ss0p6vm40c
+           SAEDRVT14_ND2_CDC_0P5               saed14rvt_ss0p6vm40c
+           SAEDRVT14_NR2_1                     saed14rvt_ss0p6vm40c
+           SAEDRVT14_OAI22_0P5                 saed14rvt_ss0p6vm40c
+        riscv_hwloop_controller_N_REGS2_DW01_cmp6_1
+     riscv_prefetch_buffer
+        SAEDRVT14_AO21_1                       saed14rvt_ss0p6vm40c
+        SAEDRVT14_AO221_2                      saed14rvt_ss0p6vm40c
+        SAEDRVT14_AO221_4                      saed14rvt_ss0p6vm40c
+        SAEDRVT14_ND2B_U_0P5                   saed14rvt_ss0p6vm40c
+        SAEDRVT14_OA21_1                       saed14rvt_ss0p6vm40c
+        SAEDRVT14_OA22_0P75                    saed14rvt_ss0p6vm40c
+        SAEDRVT14_OA22_4                       saed14rvt_ss0p6vm40c
+        SAEDRVT14_OAI31_1                      saed14rvt_ss0p6vm40c
+        SAEDRVT14_OAI32_0P75                   saed14rvt_ss0p6vm40c
+        SAEDRVT14_OR2_1                        saed14rvt_ss0p6vm40c
+        SAEDRVT14_OR4_1                        saed14rvt_ss0p6vm40c
+        SAEDRVT14_TIE0_V1_2                    saed14rvt_ss0p6vm40c
+        SAEDRVT14_TIE1_4                       saed14rvt_ss0p6vm40c
+        riscv_fetch_fifo
+           SAEDRVT14_AN2B_MM_1                 saed14rvt_ss0p6vm40c
+           SAEDRVT14_AN2_MM_1                  saed14rvt_ss0p6vm40c
+           SAEDRVT14_AN2_MM_3                  saed14rvt_ss0p6vm40c
+           SAEDRVT14_AN4_1                     saed14rvt_ss0p6vm40c
+           SAEDRVT14_AO221_0P5                 saed14rvt_ss0p6vm40c
+           SAEDRVT14_AO32_1                    saed14rvt_ss0p6vm40c
+           SAEDRVT14_AOI21_0P5                 saed14rvt_ss0p6vm40c
+           SAEDRVT14_AOI21_0P75                saed14rvt_ss0p6vm40c
+           SAEDRVT14_AOI21_1P5                 saed14rvt_ss0p6vm40c
+           SAEDRVT14_AOI22_1                   saed14rvt_ss0p6vm40c
+           SAEDRVT14_AOINV_IW_1                saed14rvt_ss0p6vm40c
+           SAEDRVT14_BUF_3                     saed14rvt_ss0p6vm40c
+           SAEDRVT14_BUF_S_1                   saed14rvt_ss0p6vm40c
+           SAEDRVT14_BUF_S_4                   saed14rvt_ss0p6vm40c
+           SAEDRVT14_FDPRBQ_V2LP_0P5           saed14rvt_ss0p6vm40c
+           SAEDRVT14_FDPRBQ_V2LP_1             saed14rvt_ss0p6vm40c
+           SAEDRVT14_INV_3                     saed14rvt_ss0p6vm40c
+           SAEDRVT14_INV_S_2                   saed14rvt_ss0p6vm40c
+           SAEDRVT14_INV_S_4                   saed14rvt_ss0p6vm40c
+           SAEDRVT14_ND2_2                     saed14rvt_ss0p6vm40c
+           SAEDRVT14_ND2_6                     saed14rvt_ss0p6vm40c
+           SAEDRVT14_ND2_CDC_1                 saed14rvt_ss0p6vm40c
+           SAEDRVT14_ND2_MM_2                  saed14rvt_ss0p6vm40c
+           SAEDRVT14_NR2_MM_1                  saed14rvt_ss0p6vm40c
+           SAEDRVT14_NR2_MM_6                  saed14rvt_ss0p6vm40c
+           SAEDRVT14_NR4_0P75                  saed14rvt_ss0p6vm40c
+           SAEDRVT14_OA21B_1                   saed14rvt_ss0p6vm40c
+           SAEDRVT14_OAI21_0P5                 saed14rvt_ss0p6vm40c
+           SAEDRVT14_OAI22_1                   saed14rvt_ss0p6vm40c
+           SAEDRVT14_OAI22_1P5                 saed14rvt_ss0p6vm40c
+           SAEDRVT14_OAI22_3                   saed14rvt_ss0p6vm40c
+           SAEDRVT14_OAI22_4                   saed14rvt_ss0p6vm40c
+           SAEDRVT14_OAI31_4                   saed14rvt_ss0p6vm40c
+           SAEDRVT14_OR2_MM_3                  saed14rvt_ss0p6vm40c
+           SAEDRVT14_OR3_1                     saed14rvt_ss0p6vm40c
+           riscv_fetch_fifo_DW01_inc_0
+              SAEDRVT14_ADDH_0P5               saed14rvt_ss0p6vm40c
+              SAEDRVT14_EO2_V1_0P75            saed14rvt_ss0p6vm40c
+              SAEDRVT14_INV_S_1                saed14rvt_ss0p6vm40c
+        riscv_prefetch_buffer_DW01_add_0
+  riscv_load_store_unit
+     SAEDRVT14_BUF_U_0P75                      saed14rvt_ss0p6vm40c
+     SAEDRVT14_ND2_3                           saed14rvt_ss0p6vm40c
+     SAEDRVT14_ND2_CDC_2                       saed14rvt_ss0p6vm40c
+     SAEDRVT14_NR2_4                           saed14rvt_ss0p6vm40c
+     SAEDRVT14_OR2B_PMM_2                      saed14rvt_ss0p6vm40c
+     riscv_load_store_unit_DW01_add_0
+        SAEDRVT14_EO2_3                        saed14rvt_ss0p6vm40c
+     riscv_load_store_unit_DW02_mult_0
+
+1

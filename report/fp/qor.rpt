@@ -1,0 +1,89 @@
+****************************************
+Report : qor
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Fri Mar  1 13:10:45 2024
+****************************************
+
+
+Scenario           'func::estimated_corner'
+Timing Path Group  'CLK_I'
+----------------------------------------
+Levels of Logic:                     82
+Critical Path Length:              6.60
+Critical Path Slack:              -1.63
+Critical Path Clk Period:          5.00
+Total Negative Slack:          -1823.50
+No. of Violating Paths:            1360
+----------------------------------------
+
+Scenario           'func_fast'
+Timing Path Group  'CLK_I'
+----------------------------------------
+Levels of Logic:                     82
+Critical Path Length:              1.84
+Critical Path Slack:               3.15
+Critical Path Clk Period:          5.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func_slow'
+Timing Path Group  'CLK_I'
+----------------------------------------
+Levels of Logic:                     82
+Critical Path Length:              6.60
+Critical Path Slack:              -1.63
+Critical Path Clk Period:          5.00
+Total Negative Slack:          -1823.45
+No. of Violating Paths:            1360
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:             73
+Hierarchical Port Count:          10122
+Leaf Cell Count:                  24391
+Buf/Inv Cell Count:                4987
+Buf Cell Count:                    1304
+Inv Cell Count:                    3683
+CT Buf/Inv Cell Count:                0
+Combinational Cell Count:         22188
+Sequential Cell Count:             2203
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:             8429.47
+Noncombinational Area:          2347.92
+Buf/Inv Area:                   1002.02
+Total Buffer Area:               347.87
+Total Inverter Area:             654.15
+Macro/Black Box Area:              0.00
+Net Area:                             0
+Net XLength:                       0.00
+Net YLength:                       0.00
+----------------------------------------
+Cell Area (netlist):                          10777.39
+Cell Area (netlist and physical only):        11604.56
+Net Length:                        0.00
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:             26736
+Nets with Violations:                 0
+Max Trans Violations:                 0
+Max Cap Violations:                   0
+----------------------------------------
+
+1

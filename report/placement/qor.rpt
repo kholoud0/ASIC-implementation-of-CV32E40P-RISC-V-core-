@@ -1,0 +1,78 @@
+****************************************
+Report : qor
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Fri Mar  1 15:17:56 2024
+****************************************
+
+
+Scenario           'func_fast'
+Timing Path Group  'CLK_I'
+----------------------------------------
+Levels of Logic:                     65
+Critical Path Length:              1.32
+Critical Path Slack:               3.68
+Critical Path Clk Period:          5.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func_slow'
+Timing Path Group  'CLK_I'
+----------------------------------------
+Levels of Logic:                     64
+Critical Path Length:              4.44
+Critical Path Slack:               0.53
+Critical Path Clk Period:          5.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:             73
+Hierarchical Port Count:          10366
+Leaf Cell Count:                  23532
+Buf/Inv Cell Count:                4008
+Buf Cell Count:                     402
+Inv Cell Count:                    3606
+CT Buf/Inv Cell Count:                0
+Combinational Cell Count:         21329
+Sequential Cell Count:             2203
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:             8500.38
+Noncombinational Area:          2351.56
+Buf/Inv Area:                    849.68
+Total Buffer Area:               137.73
+Total Inverter Area:             711.95
+Macro/Black Box Area:              0.00
+Net Area:                             0
+Net XLength:                       0.00
+Net YLength:                       0.00
+----------------------------------------
+Cell Area (netlist):                          10851.94
+Cell Area (netlist and physical only):        11679.11
+Net Length:                        0.00
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:             25720
+Nets with Violations:                 0
+Max Trans Violations:                 0
+Max Cap Violations:                   0
+----------------------------------------
+
+1
