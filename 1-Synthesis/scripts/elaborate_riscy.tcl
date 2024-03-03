@@ -2,15 +2,15 @@
 #----------------------
 #------------------------
 #---------------------------
-set RTL_PATH            "/mnt/hgfs/Gp_CV32e40p/rtl"
-set DEFINES_PATH 	"/mnt/hgfs/Gp_CV32e40p/defines"
+set RTL_PATH            "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/rtl"
+set DEFINES_PATH 	"/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/defines"
 set top		riscv_core
 #Add the path of the libraries and RTL files to the search_path variable
 lappend search_path $DB_PATH $RTL_PATH
 
 ### listing includes & packages
 set include_files [glob -directory $DEFINES_PATH *.*]
-
+source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/cons/dont_use_generic.tcl
 ## analyzing listing includes & packages
 analyze -autoread $include_files			
 

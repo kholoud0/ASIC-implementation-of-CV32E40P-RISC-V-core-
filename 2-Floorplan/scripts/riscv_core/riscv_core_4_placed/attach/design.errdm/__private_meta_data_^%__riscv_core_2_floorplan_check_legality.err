@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<errorData typeCount="0" majorVersion="1" minorVersion="8" name="__private_meta_data_:__riscv_core_2_floorplan_check_legality.err" designName="riscv_core_4_placed" info="" checker="Check Legality" checkerVersion="" created="1709437077" createdDate="03:03:2024:05:37:57:EET" modified="1709438850" modifiedDate="03:03:2024:06:07:30:EET" interactive="false" internal="false" metaData="true" numTypes="0" numInsts="0"/>

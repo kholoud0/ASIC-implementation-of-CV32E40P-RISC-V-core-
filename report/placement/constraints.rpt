@@ -3,7 +3,7 @@ Report : constraint
         -all_violators
 Design : riscv_core
 Version: O-2018.06-SP1
-Date   : Fri Mar  1 15:17:39 2024
+Date   : Sun Mar  3 06:07:48 2024
 ****************************************
 
    late_timing
@@ -31,20 +31,11 @@ No paths.
                              Required        Actual                            
    Net                      Capacitance    Capacitance       Slack  Violation  
   ---------------------------------------------------------------------------
-   if_stage_i/n22               9.36           9.43          -0.07  (VIOLATED) 
-     PIN : if_stage_i/U91/X     9.36           9.43          -0.07  (VIOLATED) 
-
-   ex_stage_i/alu_i/shift_amt_int[2]     9.62     9.69       -0.07  (VIOLATED) 
-     PIN : ex_stage_i/alu_i/U69/X     9.62     9.69          -0.07  (VIOLATED) 
-
-   if_stage_i/prefetch_32_prefetch_buffer_i/n221     6.94     6.98    -0.04 (VIOLATED)
-     PIN : if_stage_i/prefetch_32_prefetch_buffer_i/U39/X     6.94     6.98    -0.04 (VIOLATED)
-
-   ex_stage_i/alu_i/n336        9.76           9.77          -0.01  (VIOLATED) 
-     PIN : ex_stage_i/alu_i/U1911/X     9.76     9.77        -0.01  (VIOLATED) 
+   ex_stage_i/mult_i/sra_117/n105    30.53    30.79          -0.26  (VIOLATED) 
+     PIN : ex_stage_i/mult_i/sra_117/U234/X    30.53    30.79    -0.26 (VIOLATED)
 
   ---------------------------------------------------------------------------
-   Number of max_capacitance violation(s): 4
+   Number of max_capacitance violation(s): 1
 
 
    Mode: func Corner: slow
@@ -52,5 +43,5 @@ No paths.
   ---------------------------------------------------------------------------
    Number of min_capacitance violation(s): 0
 
-   Total number of violation(s): 4
+   Total number of violation(s): 1
 1

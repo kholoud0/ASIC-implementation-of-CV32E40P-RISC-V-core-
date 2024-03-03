@@ -5,12 +5,13 @@ source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floo
 set dir "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/report"
 
 
-open_block /mnt/hgfs/Gp_CV32e40p/2-Floorplan/scripts/riscv_core:riscv_core_4_placed.design
+open_block /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/riscv_core:riscv_core_4_placed.design
 link_block
 ####################################################################################
 ###################################  CTS  ###################################
 ####################################################################################
-
+set_lib_cell_purpose -include cts \
+{HVT_lib/buf1 HVT_lib/buf2 LVT_lib/buf1 LVT_lib/buf2}
 
 ############################################################
 #source /home/islam/ICpedia_Tasks/GPCore-aes_ip/core_updated/syn/cons/dont_use_generic.tcl

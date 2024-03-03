@@ -2,11 +2,11 @@
 Report : design
 Design : riscv_core
 Version: O-2018.06-SP1
-Date   : Fri Mar  1 15:17:45 2024
+Date   : Sun Mar  3 06:08:05 2024
 ****************************************
 
 Total number of std cells in library : 881
-Total number of dont_use lib cells   : 18
+Total number of dont_use lib cells   : 580
 Total number of dont_touch lib cells : 18
 Total number of buffers              : 59
 Total number of inverters            : 51
@@ -16,22 +16,22 @@ Total number of ICGs                 : 30
 
 Cell Instance Type  Count         Area
 --------------------------------------
-TOTAL LEAF CELLS    26637    11679.109
-Standard cells      23532    10851.937
+TOTAL LEAF CELLS    30480    18966.614
+Standard cells      27773    18245.470
 Hard macro cells        0        0.000
 Soft macro cells        0        0.000
 Always on cells         0        0.000
-Physical only        3105      827.172
-Fixed cells          3105      827.172
-Moveable cells      23532    10851.937
-Sequential           2203     2351.557
-Buffer/inverter      4008      849.683
+Physical only        2707      721.145
+Fixed cells          2707      721.145
+Moveable cells      27773    18245.470
+Sequential           2203     3127.847
+Buffer/inverter      5489     1498.456
 ICG cells               1        1.021
 
 Logic Hierarchies                    : 73
-Design Masters count                 : 192
-Total Flat nets count                : 25720
-Total FloatingNets count             : 55
+Design Masters count                 : 67
+Total Flat nets count                : 28034
+Total FloatingNets count             : 53
 Total no of Ports                    : 484
 Number of Master Clocks in design    : 1
 Number of Generated Clocks in design : 0
@@ -41,9 +41,9 @@ List of Modes                        : func
 List of Corners                      : slow, fast
 List of Scenarios                    : func_fast, func_slow
 
-Core Area                            : 53746.022
-Chip Area                            : 64684.712
-Total Site Row Area                  : 53746.022
+Core Area                            : 46479.874
+Chip Area                            : 56687.764
+Total Site Row Area                  : 46479.874
 Number of Blockages                  : 0
 Total area of Blockages              : 0.000
 Number of Power Domains              : 1
@@ -58,5 +58,5 @@ Number of Tech Layers                : 63 (53 of them have unknown routing dir.)
 
 Total wire length                    : 0.00 micron
 Total number of wires                : 0
-Total number of contacts             : 863
+Total number of contacts             : 2328
 1

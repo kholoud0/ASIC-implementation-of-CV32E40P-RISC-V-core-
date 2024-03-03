@@ -35,11 +35,11 @@ set DESIGN_REF_TECH_PATH          "/mnt/hgfs/SAED14nm_PDK_06052019/SAED14nm_PDK_
 # Example: set TARGET_LIBRARY_FILES "lib1.db lib2.db lib3.db"
 
 set ADDITIONAL_SEARCH_PATH     "/mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/db_nldm \
-				/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_2/netlists/riscv_core.v "
+				/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs "
 
 
 
-set GATE_NET_PATH       "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_2/netlists/riscv_core.v"
+set GATE_NET_PATH       "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs"
 
 set DB_PATH 	"/mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/db_nldm"
 set FFLIB 		"$DB_PATH/saed14rvt_ff0p88v125c.db"
@@ -119,6 +119,11 @@ puts "RM-Info: Completed script [info script]\n"
 set_host_options -max_cores 8
 set DESIGN riscv_core
 set_app_var search_path "$DESIGN_REF_TECH_PATH $DESIGN_REF_PATH $DB_PATH $GATE_NET_PATH"
+
+
+#close_lib
+
+#file delete -force ${DESIGN}
 
 create_lib -technology  $TECH_FILE -ref_libs " /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/CLIB_created/CLIBs/saed14rvt_c.ndm \
                                               /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/CLIB_created/CLIBs/saed14rvt_c_physical_only.ndm" ${DESIGN}

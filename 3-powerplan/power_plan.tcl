@@ -5,7 +5,7 @@ source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floo
 set dir "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/report"
 
 
-pen_block /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/riscv_core:riscv_core_2_floorplan.design
+open_block /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/riscv_core:riscv_core_2_floorplan.design
 
 link_block
 
@@ -55,10 +55,22 @@ set_pg_strategy m8_mesh -core -extension {{direction: T B L R} {stop: outermost_
 compile_pg -strategies m8_mesh
 
 
+create_pg_mesh_pattern m7_mesh -layers {{{vertical_layer: M7} {width: 2.5} {spacing: 4} {pitch: 13} {offset: 8}}}
+set_pg_strategy m7_s -core -extension {{direction: T B L R} {stop: outermost_ring}} -pattern {{name: m7_mesh} {nets: VDD VSS}} 
+compile_pg -strategies m7_s
+
+create_pg_mesh_pattern m6_mesh -layers {{{horizontal_layer: M6} {width: 2.5} {spacing: 4} {pitch: 13} {offset: 8}}}
+set_pg_strategy m6_s -core -extension {{direction: T B L R} {stop: outermost_ring}} -pattern {{name: m6_mesh} {nets: VDD VSS}} 
+compile_pg -strategies m6_s
+
+create_pg_mesh_pattern m5_mesh -layers {{{vertical_layer: M5} {width: 2.5} {spacing: 4} {pitch: 13} {offset: 8}}}
+set_pg_strategy m5_s -core -extension {{direction: T B L R} {stop: core_boundary}} -pattern {{name: m5_mesh} {nets: VDD VSS}} 
+compile_pg -strategies m5_s
 
 
 
-create_pg_std_cell_conn_pattern rail_pattern -rail_width 0.0945 -layers {M1}
+
+create_pg_std_cell_conn_pattern rail_pattern  -rail_width 0.094 -layers {M1}
 ######### Create rail strategy #########################
 set_pg_strategy rail_strat -pattern {{pattern: rail_pattern} {nets: VDD VSS}} -core
 ######### compile rail #################################
@@ -75,6 +87,8 @@ save_block -as ${DESIGN}_3_after_pns
 
 print_res {pns}
 report_qor > $dir/pns/qor.rpt
+create_utilization_configuration config_sr \
+            -capacity site_row -exclude {hard_macros macro_keepouts}
 report_utilization -config config_sr -verbose > $dir/pns/utilization_sire_row.rpt
 
 

@@ -20,7 +20,7 @@ set link_library 	 [list * $SSLIB $FFLIB]
 set target_library 	 [list $SSLIB $FFLIB]
 
 ######################## Elaboration #################################
-
+source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/cons/dont_use_generic.tcl
 
 
 source $ELABORATION

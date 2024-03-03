@@ -2,11 +2,11 @@
 Report : design
 Design : riscv_core
 Version: O-2018.06-SP1
-Date   : Fri Mar  1 13:10:44 2024
+Date   : Sun Mar  3 05:32:24 2024
 ****************************************
 
 Total number of std cells in library : 881
-Total number of dont_use lib cells   : 18
+Total number of dont_use lib cells   : 580
 Total number of dont_touch lib cells : 18
 Total number of buffers              : 59
 Total number of inverters            : 51
@@ -16,34 +16,34 @@ Total number of ICGs                 : 30
 
 Cell Instance Type  Count         Area
 --------------------------------------
-TOTAL LEAF CELLS    27496    11604.562
-Standard cells      24391    10777.390
+TOTAL LEAF CELLS    31822    19355.558
+Standard cells      29115    18634.414
 Hard macro cells        0        0.000
 Soft macro cells        0        0.000
 Always on cells         0        0.000
-Physical only        3105      827.172
-Fixed cells          3105      827.172
-Moveable cells      24391    10777.390
-Sequential           2203     2347.916
-Buffer/inverter      4987     1002.019
+Physical only        2707      721.145
+Fixed cells          2707      721.145
+Moveable cells      29115    18634.414
+Sequential           2203     3127.847
+Buffer/inverter      7119     2041.867
 ICG cells               1        1.021
 
 Logic Hierarchies                    : 73
-Design Masters count                 : 92
-Total Flat nets count                : 26736
-Total FloatingNets count             : 222
+Design Masters count                 : 55
+Total Flat nets count                : 29522
+Total FloatingNets count             : 208
 Total no of Ports                    : 482
 Number of Master Clocks in design    : 1
 Number of Generated Clocks in design : 0
 Number of Path Groups in design      : 7 (1 of them Non Default)
 Number of Scan Chains in design      : 0
 List of Modes                        : func
-List of Corners                      : slow, fast, estimated_corner
-List of Scenarios                    : func::estimated_corner, func_fast, func_slow
+List of Corners                      : slow, fast
+List of Scenarios                    : func_fast, func_slow
 
-Core Area                            : 53746.022
-Chip Area                            : 64684.712
-Total Site Row Area                  : 53746.022
+Core Area                            : 46479.874
+Chip Area                            : 56687.764
+Total Site Row Area                  : 46479.874
 Number of Blockages                  : 0
 Total area of Blockages              : 0.000
 Number of Power Domains              : 1

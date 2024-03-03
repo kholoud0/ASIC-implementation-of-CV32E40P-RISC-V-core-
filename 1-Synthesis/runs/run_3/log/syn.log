@@ -1,0 +1,213 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+#### Variables
+set CONSTRAINTS   	"/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/cons/explor_cons.tcl"
+/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/cons/explor_cons.tcl
+set DB_PATH 		"/mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/db_nldm"
+/mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/db_nldm
+set ELABORATION 	"/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/scripts/elaborate_riscy.tcl"
+/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/scripts/elaborate_riscy.tcl
+#set TTLIB 	"$DB_PATH/saed14rvt_tt0p8v125c.db"
+set FFLIB 	"$DB_PATH/saed14rvt_ff0p88v25c.db"
+/mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/db_nldm/saed14rvt_ff0p88v25c.db
+set SSLIB 	"$DB_PATH/saed14rvt_ss0p6vm40c.db"                                        
+/mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/db_nldm/saed14rvt_ss0p6vm40c.db
+################## Design Compiler Library Files #setup ######################
+puts "###########################################"
+###########################################
+puts "#      #setting Design Libraries          #"
+#      #setting Design Libraries          #
+puts "###########################################"
+###########################################
+## Standard Cell libraries 
+set link_library 	 [list * $SSLIB $FFLIB]
+* /mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/db_nldm/saed14rvt_ss0p6vm40c.db /mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/db_nldm/saed14rvt_ff0p88v25c.db
+set target_library 	 [list $SSLIB $FFLIB]
+/mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/db_nldm/saed14rvt_ss0p6vm40c.db /mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/db_nldm/saed14rvt_ff0p88v25c.db
+######################## Elaboration #################################
+source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/cons/dont_use_generic.tcl
+Loading db file '/mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/db_nldm/saed14rvt_ss0p6vm40c.db'
+Loading db file '/mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/db_nldm/saed14rvt_ff0p88v25c.db'
+Information: Attribute 'dont_use' is set on 240 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 78 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+source $ELABORATION
+Error: no files matched glob pattern "*.*"
+	Use error_info for more info. (CMD-013)
+Information: Attribute 'dont_use' is set on 240 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 78 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+Information: Attribute 'dont_use' is set on 2 objects. (UID-186)
+Error: can't read "include_files": no such variable
+	Use error_info for more info. (CMD-013)
+Error: can't read "RTL_files": no such variable
+	Use error_info for more info. (CMD-013)
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'gtech'
+Error: Cannot find the design 'riscv_core' in the library 'WORK'. (LBR-0)
+Error: Current design is not defined. (UID-4)
+0
+#################### Liniking All The Design Parts #########################
+puts "###############################################"
+###############################################
+puts "######## checking design consistency ##########"
+######## checking design consistency ##########
+puts "###############################################"
+###############################################
+check_design > design_checks.log
+#################### Define Design Constraints #########################
+puts "###############################################"
+###############################################
+puts "############ Design Constraints #### ##########"
+############ Design Constraints #### ##########
+puts "###############################################"
+###############################################
+source -verbose $CONSTRAINTS
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'clk_i'. (UID-109)
+Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
+0
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'CLK_I'. (UID-109)
+Error: Value for list '<object_list>' must have 1 elements. (CMD-036)
+0
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'CLK_I'. (UID-109)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
+0
+				 ###################reporting clocks#####################
+Error: Current design is not defined. (UID-4)
+0
+Error: Current design is not defined. (UID-4)
+0
+check_timing
+Error: Current design is not defined. (UID-4)
+0
+###################### Mapping and optimization ########################
+puts "###############################################"
+###############################################
+puts "########## Mapping & Optimization #############"
+########## Mapping & Optimization #############
+puts "###############################################"
+###############################################
+compile
+Error: Current design is not defined. (UID-4)
+0
+############################# Formality Setup File ##########################
+set_svf $top.svf 
+1
+#############################################################################
+# Write out files
+#############################################################################
+group_path -name input -from [all_inputs]
+Error: Current design is not defined. (UID-4)
+Error: Value for list '-from' must have 1 elements. (CMD-036)
+0
+group_path -name outputs -to [all_outputs]
+Error: Current design is not defined. (UID-4)
+Error: Value for list '-to' must have 1 elements. (CMD-036)
+0
+group_path -name comb -from [all_inputs] -to [all_outputs]
+Error: Current design is not defined. (UID-4)
+Error: Current design is not defined. (UID-4)
+Error: Value for list '-from' must have 1 elements. (CMD-036)
+Error: Value for list '-to' must have 1 elements. (CMD-036)
+0
+report_timing
+Error: Current design is not defined. (UID-4)
+0
+define_name_rules  no_case -case_insensitive
+1
+change_names -rule no_case -hierarchy
+Error: Current design is not defined. (UID-4)
+0
+change_names -rule sverilog -hierarchy
+Error: Current design is not defined. (UID-4)
+0
+set verilogout_no_tri	 true
+true
+set verilogout_equation  false
+false
+write_file -format verilog -hierarchy -output ../netlists/$top.ddc
+Error: No files or designs were specified. (UID-22)
+0
+write_file -format verilog -hierarchy -output ../netlists/$top.v
+Error: No files or designs were specified. (UID-22)
+0
+write_sdf  ../sdf/$top.sdf
+Error: Current design is not defined. (UID-4)
+0
+write_sdc  -nosplit ../sdc/$top.sdc
+Error: Current design is not defined. (UID-4)
+0
+####################### reporting ##########################################
+report_area -hierarchy > ../reports/area.rpt
+report_power -hierarchy > ../reports/power.rpt
+report_timing -delay_type max -max_paths 20 > ../reports/setup.rpt
+report_clock -attributes > ../reports/clocks.rpt
+report_constraint -all_violators -nosplit > ../reports/constraints.rpt
+############################################################################
+# DFT Preparation Section
+############################################################################
+#set flops_per_chain 100
+#set num_flops [sizeof_collection [all_registers -edge_triggered]]
+#set num_chains [expr $num_flops / $flops_per_chain + 1 ]
+################# starting graphical user interface #######################
+#gui_start
+#exit
+sh cp $top.svf ../svf/ 
+Error: cp: cannot stat 'riscv_core.svf': No such file or directory
+	Use error_info for more info. (CMD-013)
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> exit
+
+Memory usage for main task 438 Mbytes.
+Memory usage for this session 438 Mbytes.
+CPU usage for this session 5 seconds ( 0.00 hours ).
+
+Thank you...

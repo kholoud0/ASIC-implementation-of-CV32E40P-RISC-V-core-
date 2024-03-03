@@ -8,7 +8,7 @@ set dir "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/repo
 ###################################   FLOORPLAN   ##################################
 ####################################################################################
 
-set gate_verilog "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_2/netlists/riscv_core.v" 
+set gate_verilog "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_11/netlists/riscv_core.v" 
 
 read_verilog -top $DESIGN $gate_verilog
 
@@ -22,7 +22,7 @@ current_design $DESIGN
 #source /home/ICer/cv32e40p_updated/scripts/Synthesis/cons/cons.tcl
 
 source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/mcmm.tcl
-#source /home/islam/ICpedia_Tasks/GPCore-aes_ip/core_updated/syn/cons/dont_use_generic.tcl
+source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/cons/dont_use_generic.tcl
 save_block -as ${DESIGN}_1_imported
 
 ############################################################
@@ -43,7 +43,7 @@ set_attribute [get_layers MRDL] routing_direction horizontal
 
 #./output/ChipTop_pads.v
 initialize_floorplan \
-  -core_utilization 0.2 \
+  -core_utilization 0.4 \
   -flip_first_row true \
   -core_offset {11.25 11.25 11.25 11.25}
    # -boundary {{0 0} {700 700}} \
@@ -69,7 +69,7 @@ create_tap_cells -lib_cell  [get_lib_cell saed14rvt_ss0p6vm40c/SAEDRVT14_CAPTTAP
 
 set_placement_spacing_label -name x  -side both -lib_cells [get_lib_cells -of [get_cells *]]
 
-set_placement_spacing_rule -labels {x x} {0 3}
+set_placement_spacing_rule -labels {x x} {0 }
 
 report_placement_spacing_rules
 

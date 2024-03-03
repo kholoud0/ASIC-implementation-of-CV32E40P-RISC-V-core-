@@ -13,10 +13,10 @@ PDC app_options settings =========
 	place.legalize.preroute_shape_merge_distance: 0.0
 	place.legalize.enable_non_preferred_direction_span_check: 0
 
-Layer M1: cached 0 shapes out of 387 total shapes.
+Layer M1: cached 0 shapes out of 360 total shapes.
 Layer M2: cached 0 shapes out of 0 total shapes.
 Layer M3: cached 0 shapes out of 0 total shapes.
-Cached 0 vias out of 863 total vias.
+Cached 0 vias out of 2328 total vias.
 
 check_legality for block design riscv_core ... 
 Warning: Library cell saed14rvt_ss0p6vm40c:SAEDRVT14_ISOFSDPQ_PECO_8.frame is missing supply pins. Its power structure cannot be determined. (LGL-050)
@@ -30,7 +30,7 @@ Sorting rows.
 Checking spacing rule legality.
 0%....10%....20%....30%....40%....50%....60%....70%....80%....90%....100%
 Checking packing rule legality.
-0%....10%....20%....30%....40%....50%....60%....70%....80%....90%....100%
+
 
 ****************************************
   Report : Legality
