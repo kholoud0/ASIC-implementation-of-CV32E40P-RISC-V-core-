@@ -22,6 +22,8 @@ set_lib_cell_purpose -include cts \
 
 #set_clock_routing_rules -rules ROUTE_RULES_1 -min_routing_layer M2 -max_routing_layer M4
 
+set_lib_cell_purpose -include cts */*AOBUF_IW*
+check_design -checks pre_clock_tree_stage
 
 create_routing_rule ROUTE_RULES_1 -multiplier_spacing 2 -multiplier_width 2
 set_clock_routing_rules -rules ROUTE_RULES_1 -min_routing_layer metal2  -max_routing_layer metal5

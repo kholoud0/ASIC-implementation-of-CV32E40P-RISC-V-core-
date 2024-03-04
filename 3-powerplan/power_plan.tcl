@@ -76,6 +76,10 @@ set_pg_strategy rail_strat -pattern {{pattern: rail_pattern} {nets: VDD VSS}} -c
 ######### compile rail #################################
 compile_pg -strategies rail_strat 
 
+#############  fixing floating vias ###################
+remove_via  [get_vias -of_objects [get_nets -all "VSS VDD"]]
+create_pg_vias 
+
 ################# design checks ######################
 check_pg_connectivity
  check_pg_drc 

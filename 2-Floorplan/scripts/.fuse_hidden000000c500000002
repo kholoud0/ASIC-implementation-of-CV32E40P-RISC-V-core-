@@ -1,0 +1,139 @@
+
+icc2_shell> open_block /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/riscv_core:riscv_core_3_after_pns.design
+Information: User units loaded from library 'saed14rvt_ss0p6vm40c' (LNK-040)
+Opening block 'riscv_core:riscv_core_3_after_pns.design' in edit mode
+Information: loading PG routing via master rules, patterns, strategies and strategy via rules.
+via_master is not specified in the rule, use default via_master.
+Please specify NIL for via_master if no via is needed in this scope.
+Begin building search trees for block riscv_core:riscv_core_3_after_pns.design
+Done building search trees for block riscv_core:riscv_core_3_after_pns.design (time 0s)
+icc2_shell> link_block
+Using libraries: riscv_core saed14rvt_ss0p6vm40c saed14rvt_c_physical_only
+Warning: In library riscv_core, no block views exist for block riscv_core. (LNK-064)
+Visiting block riscv_core:riscv_core_3_after_pns.design
+Design 'riscv_core' was successfully linked.
+1
+icc2_shell> check_pg_drc
+Command check_pg_drc started  at Mon Mar  4 07:25:40 2024
+Command check_pg_drc finished at Mon Mar  4 07:25:45 2024
+CPU usage for check_pg_drc: 5.15 seconds ( 0.00 hours)
+Elapsed time for check_pg_drc: 5.15 seconds ( 0.00 hours)
+No errors found.
+icc2_shell> check_pg_missing_vias
+Check net VDD vias...
+Number of missing vias: 0
+Checking net VDD vias took 0 seconds.
+Check net VSS vias...
+Number of missing vias: 0
+Checking net VSS vias took 0 seconds.
+Overall runtime: 0 seconds.
+icc2_shell> check_pg_connectivity
+Loading cell instances...
+Number of Standard Cells: 31822
+Number of Macro Cells: 0
+Number of IO Pad Cells: 0
+Number of Blocks: 0
+Loading P/G wires and vias...
+Number of VDD Wires: 216
+Number of VDD Vias: 324
+Number of VDD Terminals: 0
+Number of VSS Wires: 216
+Number of VSS Vias: 404
+Number of VSS Terminals: 0
+**************Verify net VDD connectivity*****************
+  Number of floating wires: 215
+  Number of floating vias: 324
+  Number of floating std cells: 31597
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+**************Verify net VSS connectivity*****************
+  Number of floating wires: 180
+  Number of floating vias: 0
+  Number of floating std cells: 31822
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Overall runtime: 0 seconds.
+{PATH_19_274 PATH_19_134 PATH_19_130 PATH_19_358 PATH_19_128 PATH_19_156 PATH_19_144 PATH_19_124 PATH_19_304 PATH_19_246 PATH_19_146 PATH_19_136 PATH_19_250 PATH_19_310 PATH_19_276 PATH_19_140 PATH_19_280 PATH_19_126 PATH_19_132 PATH_19_162 PATH_19_320 PATH_19_112 PATH_19_210 PATH_19_154 PATH_19_142 PATH_19_114 PATH_19_264 PATH_19_8 PATH_19_326 PATH_19_270 PATH_19_216 PATH_19_350 PATH_19_110 PATH_19_218 PATH_19_342 PATH_19_282 PATH_19_226 PATH_19_278 PATH_19_242 PATH_19_184 PATH_19_336 PATH_19_230 PATH_19_340 PATH_19_330 PATH_19_302 PATH_19_334 PATH_19_150 PATH_19_306 PATH_19_300 PATH_19_222 PATH_19_240 PATH_19_148 PATH_19_68 PATH_19_190 PATH_19_272 PATH_19_328 PATH_19_322 PATH_19_308 PATH_19_182 PATH_19_160 PATH_19_220 PATH_19_152 PATH_19_314 PATH_19_120 PATH_19_170 PATH_19_332 PATH_19_98 PATH_19_338 PATH_19_352 PATH_19_16 PATH_19_18 PATH_19_324 PATH_19_346 PATH_19_354 PATH_33_34 PATH_35_1 PATH_33_30 PATH_35_26 PATH_33_0 PATH_35_32 PATH_33_6 PATH_35_0 PATH_33_1 PATH_35_6 PATH_33_22 PATH_35_20 PATH_33_16 PATH_35_4 PATH_33_14 PATH_35_18 PATH_33_20 PATH_35_8 PATH_33_12 PATH_35_10 PATH_33_18 PATH_35_14 PATH_33_8 PATH_35_12 PATH_33_26 PATH_35_16 ...}
+icc2_shell> get_vias -of_objects [get_nets -all "VSS VDD"]
+{VIA_SA_727 VIA_SA_726 VIA_SA_725 VIA_SA_724 VIA_SA_723 VIA_SA_722 VIA_SA_721 VIA_SA_720 VIA_SA_719 VIA_SA_718 VIA_SA_717 VIA_SA_716 VIA_SA_715 VIA_SA_714 VIA_SA_713 VIA_SA_712 VIA_SA_711 VIA_SA_710 VIA_SA_709 VIA_SA_708 VIA_SA_707 VIA_SA_706 VIA_SA_705 VIA_SA_704 VIA_SA_703 VIA_SA_702 VIA_SA_701 VIA_SA_700 VIA_SA_699 VIA_SA_698 VIA_SA_697 VIA_SA_696 VIA_SA_695 VIA_SA_694 VIA_SA_693 VIA_SA_692 VIA_SA_691 VIA_SA_690 VIA_SA_689 VIA_SA_688 VIA_SA_687 VIA_SA_686 VIA_SA_685 VIA_SA_684 VIA_SA_683 VIA_SA_682 VIA_SA_681 VIA_SA_680 VIA_SA_679 VIA_SA_678 VIA_SA_677 VIA_SA_676 VIA_SA_675 VIA_SA_674 VIA_SA_673 VIA_SA_672 VIA_SA_671 VIA_SA_670 VIA_SA_669 VIA_SA_668 VIA_SA_667 VIA_SA_666 VIA_SA_665 VIA_SA_664 VIA_SA_663 VIA_SA_662 VIA_SA_661 VIA_SA_660 VIA_SA_659 VIA_SA_658 VIA_SA_657 VIA_SA_656 VIA_SA_655 VIA_SA_654 VIA_SA_653 VIA_SA_652 VIA_SA_651 VIA_SA_650 VIA_SA_649 VIA_SA_648 VIA_SA_647 VIA_SA_646 VIA_SA_645 VIA_SA_644 VIA_SA_643 VIA_SA_642 VIA_SA_641 VIA_SA_640 VIA_SA_639 VIA_SA_638 VIA_SA_637 VIA_SA_636 VIA_SA_635 VIA_SA_634 VIA_SA_633 VIA_SA_632 VIA_SA_631 VIA_SA_630 VIA_SA_611 VIA_SA_610 ...}
+icc2_shell> remove_via  [get_vias -of_objects [get_nets -all "VSS VDD"]]
+728
+icc2_shell> check_pg_missing_vias
+Check net VDD vias...
+Number of missing vias on VIA8 layer: 324
+Total number of missing vias: 324
+Checking net VDD vias took 0 seconds.
+Check net VSS vias...
+Number of missing vias on VIA8 layer: 324
+Total number of missing vias: 324
+Checking net VSS vias took 0 seconds.
+Overall runtime: 0 seconds.
+icc2_shell> create_pg_vias
+Error: Required argument '-nets' was not found (CMD-007)
+icc2_shell> create_pg_vias -net {VDD VSS}
+Query intersections and create vias.
+Object query runtime: 0 seconds.
+Determining intersections for 432 shapes starts
+Intersection detection runtime: 0 seconds.
+Instantiating vias for 6408 intersections starts
+Via instantiation runtime: 0 seconds.
+Starting via DRC checking ...
+Checking DRC for 6408 stacked vias:0% 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%
+Overall via DRC checking runtime: 5 seconds.
+Checking dangling/floating vias.
+Start iteration 1: Checking 6408 stacked vias:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Start iteration 2: Checking 5806 stacked vias:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Start iteration 3: Checking 2558 stacked vias:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Committed 2558 vias.
+Committing vias takes 0.00 seconds.
+Overall runtime: 5 seconds.
+Successfully created PG Vias.
+1
+icc2_shell> check_pg_missing_vias
+Check net VDD vias...
+Number of missing vias: 0
+Checking net VDD vias took 0 seconds.
+Check net VSS vias...
+Number of missing vias: 0
+Checking net VSS vias took 0 seconds.
+Overall runtime: 0 seconds.
+icc2_shell> check_pg_connectivity
+Loading cell instances...
+Number of Standard Cells: 31822
+Number of Macro Cells: 0
+Number of IO Pad Cells: 0
+Number of Blocks: 0
+Loading P/G wires and vias...
+Number of VDD Wires: 216
+Number of VDD Vias: 1284
+Number of VDD Terminals: 0
+Number of VSS Wires: 216
+Number of VSS Vias: 1274
+Number of VSS Terminals: 0
+**************Verify net VDD connectivity*****************
+  Number of floating wires: 180
+  Number of floating vias: 0
+  Number of floating std cells: 31822
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+**************Verify net VSS connectivity*****************
+  Number of floating wires: 180
+  Number of floating vias: 0
+  Number of floating std cells: 31822
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Overall runtime: 0 seconds.
+{PATH_19_138 PATH_19_134 PATH_19_274 PATH_19_130 PATH_19_358 PATH_19_128 PATH_19_156 PATH_19_144 PATH_19_124 PATH_19_304 PATH_19_246 PATH_19_146 PATH_19_136 PATH_19_250 PATH_19_276 PATH_19_310 PATH_19_140 PATH_19_280 PATH_19_126 PATH_19_132 PATH_19_320 PATH_19_112 PATH_19_162 PATH_19_142 PATH_19_210 PATH_19_154 PATH_19_114 PATH_19_264 PATH_19_8 PATH_19_326 PATH_19_270 PATH_19_216 PATH_19_218 PATH_19_342 PATH_19_110 PATH_19_350 PATH_19_226 PATH_19_242 PATH_19_282 PATH_19_184 PATH_19_278 PATH_19_336 PATH_19_230 PATH_19_340 PATH_19_334 PATH_19_150 PATH_19_300 PATH_19_302 PATH_19_330 PATH_19_306 PATH_19_322 PATH_19_308 PATH_19_222 PATH_19_68 PATH_19_148 PATH_19_240 PATH_19_272 PATH_19_328 PATH_19_190 PATH_19_182 PATH_19_152 PATH_19_160 PATH_19_220 PATH_19_314 PATH_19_170 PATH_19_332 PATH_19_120 PATH_19_98 PATH_19_338 PATH_19_352 PATH_19_16 PATH_19_18 PATH_19_346 PATH_19_324 PATH_19_354 PATH_19_212 PATH_19_298 PATH_19_116 PATH_19_172 PATH_19_312 PATH_19_74 PATH_19_286 PATH_19_14 PATH_19_158 PATH_19_118 PATH_19_236 PATH_19_234 PATH_19_292 PATH_19_296 PATH_19_288 PATH_19_260 PATH_19_316 PATH_19_28 PATH_19_344 PATH_19_214 PATH_19_168 PATH_19_256 PATH_19_72 PATH_19_164 PATH_19_252 ...}
+icc2_shell> 
