@@ -1,6 +1,0 @@
-****************************************
-Report : Violation analysis
-Design : riscv_core
-Version: O-2018.06-SP1
-Date   : Sun Mar  3 05:40:38 2024
-****************************************

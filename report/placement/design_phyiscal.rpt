@@ -2,7 +2,7 @@
 Report : design
 Design : riscv_core
 Version: O-2018.06-SP1
-Date   : Sun Mar  3 06:08:05 2024
+Date   : Mon Mar  4 08:04:49 2024
 ****************************************
 
 Total number of std cells in library : 881
@@ -16,22 +16,22 @@ Total number of ICGs                 : 30
 
 Cell Instance Type  Count         Area
 --------------------------------------
-TOTAL LEAF CELLS    30480    18966.614
-Standard cells      27773    18245.470
+TOTAL LEAF CELLS    31822    19355.558
+Standard cells      29115    18634.414
 Hard macro cells        0        0.000
 Soft macro cells        0        0.000
 Always on cells         0        0.000
 Physical only        2707      721.145
 Fixed cells          2707      721.145
-Moveable cells      27773    18245.470
+Moveable cells      29115    18634.414
 Sequential           2203     3127.847
-Buffer/inverter      5489     1498.456
+Buffer/inverter      7119     2041.867
 ICG cells               1        1.021
 
 Logic Hierarchies                    : 73
-Design Masters count                 : 67
-Total Flat nets count                : 28034
-Total FloatingNets count             : 53
+Design Masters count                 : 55
+Total Flat nets count                : 29522
+Total FloatingNets count             : 206
 Total no of Ports                    : 484
 Number of Master Clocks in design    : 1
 Number of Generated Clocks in design : 0
@@ -58,5 +58,5 @@ Number of Tech Layers                : 63 (53 of them have unknown routing dir.)
 
 Total wire length                    : 0.00 micron
 Total number of wires                : 0
-Total number of contacts             : 2328
+Total number of contacts             : 2558
 1

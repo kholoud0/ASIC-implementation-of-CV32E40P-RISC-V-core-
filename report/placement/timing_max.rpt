@@ -7,394 +7,74 @@ Report : timing
         -nosplit
 Design : riscv_core
 Version: O-2018.06-SP1
-Date   : Sun Mar  3 06:07:56 2024
+Date   : Mon Mar  4 08:04:46 2024
 ****************************************
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_29_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_31_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
   Scenario: func_slow
   Path Group: CLK_I
   Path Type: max
 
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
+  Point                                                               Incr      Path  
+  -------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                             0.00      0.00
+  clock network delay (ideal)                                         0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)         0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)          0.09      0.09 f
   ...
-  id_stage_i/mult_operand_b_ex_o_reg_29_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.47      4.56 f
-  data arrival time                                                              4.56
+  id_stage_i/alu_operand_b_ex_o_reg_31_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.26      4.35 f
+  data arrival time                                                             4.35
 
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_operand_b_ex_o_reg_29_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.56
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.41
+  clock CLK_I (rise edge)                                             5.00      5.00
+  clock network delay (ideal)                                         0.00      5.00
+  id_stage_i/alu_operand_b_ex_o_reg_31_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
+  library setup time                                                 -0.03      4.97
+  data required time                                                            4.97
+  -------------------------------------------------------------------------------------------
+  data required time                                                            4.97
+  data arrival time                                                            -4.35
+  -------------------------------------------------------------------------------------------
+  slack (MET)                                                                   0.62
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_29_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_31_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
   Scenario: func_slow
   Path Group: CLK_I
   Path Type: max
 
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
+  Point                                                               Incr      Path  
+  -------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                             0.00      0.00
+  clock network delay (ideal)                                         0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)         0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)          0.09      0.09 f
   ...
-  id_stage_i/alu_operand_b_ex_o_reg_29_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.47      4.56 f
-  data arrival time                                                              4.56
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/alu_operand_b_ex_o_reg_29_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.56
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.41
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_29_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/mult_dot_op_b_ex_o_reg_29_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.47      4.56 f
-  data arrival time                                                              4.56
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_dot_op_b_ex_o_reg_29_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.56
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.41
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_30_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/mult_operand_b_ex_o_reg_30_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.46      4.56 f
-  data arrival time                                                              4.56
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_operand_b_ex_o_reg_30_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.56
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.41
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_30_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/alu_operand_b_ex_o_reg_30_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.46      4.56 f
-  data arrival time                                                              4.56
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/alu_operand_b_ex_o_reg_30_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.56
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.41
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_26_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/mult_operand_b_ex_o_reg_26_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.46      4.56 f
-  data arrival time                                                              4.56
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_operand_b_ex_o_reg_26_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.56
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.41
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_30_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/mult_dot_op_b_ex_o_reg_30_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.46      4.56 f
-  data arrival time                                                              4.56
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_dot_op_b_ex_o_reg_30_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.56
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.41
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_26_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/alu_operand_b_ex_o_reg_26_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.46      4.56 f
-  data arrival time                                                              4.56
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/alu_operand_b_ex_o_reg_26_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.56
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.42
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_28_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/mult_operand_b_ex_o_reg_28_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.46      4.56 f
-  data arrival time                                                              4.56
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_operand_b_ex_o_reg_28_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.56
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.42
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_26_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/mult_dot_op_b_ex_o_reg_26_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.46      4.56 f
-  data arrival time                                                              4.56
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_dot_op_b_ex_o_reg_26_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.56
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.42
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_28_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/mult_dot_op_b_ex_o_reg_28_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.46      4.56 f
-  data arrival time                                                              4.56
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_dot_op_b_ex_o_reg_28_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.56
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.42
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_28_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/alu_operand_b_ex_o_reg_28_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.46      4.56 f
-  data arrival time                                                              4.56
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/alu_operand_b_ex_o_reg_28_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.56
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.42
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
+  id_stage_i/mult_dot_op_b_ex_o_reg_31_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.26      4.35 f
+  data arrival time                                                             4.35
+
+  clock CLK_I (rise edge)                                             5.00      5.00
+  clock network delay (ideal)                                         0.00      5.00
+  id_stage_i/mult_dot_op_b_ex_o_reg_31_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
+  library setup time                                                 -0.03      4.97
+  data required time                                                            4.97
+  -------------------------------------------------------------------------------------------
+  data required time                                                            4.97
+  data arrival time                                                            -4.35
+  -------------------------------------------------------------------------------------------
+  slack (MET)                                                                   0.63
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
   Endpoint: id_stage_i/mult_operand_b_ex_o_reg_31_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
@@ -407,11 +87,11 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/mult_operand_b_ex_o_reg_31_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.46      4.55 f
-  data arrival time                                                              4.55
+  id_stage_i/mult_operand_b_ex_o_reg_31_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.26      4.35 f
+  data arrival time                                                              4.35
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
@@ -420,14 +100,14 @@ Date   : Sun Mar  3 06:07:56 2024
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.55
+  data arrival time                                                             -4.35
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.42
+  slack (MET)                                                                    0.63
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_31_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_30_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
   Scenario: func_slow
@@ -439,27 +119,27 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/alu_operand_b_ex_o_reg_31_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.46      4.55 f
-  data arrival time                                                              4.55
+  id_stage_i/mult_operand_b_ex_o_reg_30_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.25      4.34 f
+  data arrival time                                                              4.34
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/alu_operand_b_ex_o_reg_31_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  id_stage_i/mult_operand_b_ex_o_reg_30_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
   library setup time                                                  -0.03      4.97
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.55
+  data arrival time                                                             -4.34
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.42
+  slack (MET)                                                                    0.63
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_31_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_30_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
   Scenario: func_slow
@@ -471,27 +151,27 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/mult_dot_op_b_ex_o_reg_31_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.46      4.55 f
-  data arrival time                                                              4.55
+  id_stage_i/mult_dot_op_b_ex_o_reg_30_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.25      4.34 f
+  data arrival time                                                              4.34
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_dot_op_b_ex_o_reg_31_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  id_stage_i/mult_dot_op_b_ex_o_reg_30_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
   library setup time                                                  -0.03      4.97
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.55
+  data arrival time                                                             -4.34
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.42
+  slack (MET)                                                                    0.63
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_27_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_29_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
   Scenario: func_slow
@@ -503,27 +183,27 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/mult_operand_b_ex_o_reg_27_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.46      4.55 f
-  data arrival time                                                              4.55
+  id_stage_i/mult_operand_b_ex_o_reg_29_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.25      4.34 f
+  data arrival time                                                              4.34
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_operand_b_ex_o_reg_27_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
+  id_stage_i/mult_operand_b_ex_o_reg_29_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
   library setup time                                                  -0.03      4.97
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.55
+  data arrival time                                                             -4.34
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.42
+  slack (MET)                                                                    0.63
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_27_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_29_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
   Scenario: func_slow
@@ -535,27 +215,27 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/mult_dot_op_b_ex_o_reg_27_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.45      4.55 f
-  data arrival time                                                              4.55
+  id_stage_i/mult_dot_op_b_ex_o_reg_29_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.25      4.34 f
+  data arrival time                                                              4.34
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_dot_op_b_ex_o_reg_27_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  id_stage_i/mult_dot_op_b_ex_o_reg_29_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
   library setup time                                                  -0.03      4.97
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.55
+  data arrival time                                                             -4.34
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.42
+  slack (MET)                                                                    0.63
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_27_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_30_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
   Scenario: func_slow
@@ -567,27 +247,27 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/alu_operand_b_ex_o_reg_27_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.45      4.55 f
-  data arrival time                                                              4.55
+  id_stage_i/alu_operand_b_ex_o_reg_30_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.25      4.34 f
+  data arrival time                                                              4.34
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/alu_operand_b_ex_o_reg_27_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  id_stage_i/alu_operand_b_ex_o_reg_30_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
   library setup time                                                  -0.03      4.97
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.55
+  data arrival time                                                             -4.34
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.42
+  slack (MET)                                                                    0.63
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_9_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_29_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
   Scenario: func_slow
@@ -599,27 +279,27 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/mult_operand_b_ex_o_reg_9_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.44      4.54 f
-  data arrival time                                                              4.54
+  id_stage_i/alu_operand_b_ex_o_reg_29_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.25      4.34 f
+  data arrival time                                                              4.34
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_operand_b_ex_o_reg_9_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  id_stage_i/alu_operand_b_ex_o_reg_29_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
   library setup time                                                  -0.03      4.97
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.54
+  data arrival time                                                             -4.34
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.43
+  slack (MET)                                                                    0.64
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_25_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_28_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
   Scenario: func_slow
@@ -631,410 +311,26 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/mult_operand_b_ex_o_reg_25_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.44      4.54 f
-  data arrival time                                                              4.54
+  id_stage_i/alu_operand_b_ex_o_reg_28_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.25      4.34 f
+  data arrival time                                                              4.34
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_operand_b_ex_o_reg_25_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
+  id_stage_i/alu_operand_b_ex_o_reg_28_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
   library setup time                                                  -0.03      4.97
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.54
+  data arrival time                                                             -4.34
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.43
+  slack (MET)                                                                    0.64
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_17_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/mult_operand_b_ex_o_reg_17_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.44      4.54 f
-  data arrival time                                                              4.54
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_operand_b_ex_o_reg_17_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.54
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.43
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_25_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/alu_operand_b_ex_o_reg_25_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.44      4.54 f
-  data arrival time                                                              4.54
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/alu_operand_b_ex_o_reg_25_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.54
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.43
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_25_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/mult_dot_op_b_ex_o_reg_25_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.44      4.54 f
-  data arrival time                                                              4.54
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_dot_op_b_ex_o_reg_25_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.54
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.43
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_9_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/alu_operand_b_ex_o_reg_9_/D (SAEDRVT14_FSDPRBQ_V2_4)      4.44      4.54 f
-  data arrival time                                                              4.54
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/alu_operand_b_ex_o_reg_9_/CK (SAEDRVT14_FSDPRBQ_V2_4)     0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.54
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.43
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_9_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/mult_dot_op_b_ex_o_reg_9_/D (SAEDRVT14_FSDPRBQ_V2_4)      4.44      4.54 f
-  data arrival time                                                              4.54
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_dot_op_b_ex_o_reg_9_/CK (SAEDRVT14_FSDPRBQ_V2_4)     0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.54
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.44
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_17_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/mult_dot_op_b_ex_o_reg_17_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.44      4.54 f
-  data arrival time                                                              4.54
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_dot_op_b_ex_o_reg_17_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.54
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.44
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_17_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/alu_operand_b_ex_o_reg_17_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.44      4.54 f
-  data arrival time                                                              4.54
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/alu_operand_b_ex_o_reg_17_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.54
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.44
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_8_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/mult_operand_b_ex_o_reg_8_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.44      4.53 f
-  data arrival time                                                              4.53
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_operand_b_ex_o_reg_8_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.53
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.44
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_8_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/mult_dot_op_b_ex_o_reg_8_/D (SAEDRVT14_FSDPRBQ_V2_4)      4.44      4.53 f
-  data arrival time                                                              4.53
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_dot_op_b_ex_o_reg_8_/CK (SAEDRVT14_FSDPRBQ_V2_4)     0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.53
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.44
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_8_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/alu_operand_b_ex_o_reg_8_/D (SAEDRVT14_FSDPRBQ_V2_4)      4.44      4.53 f
-  data arrival time                                                              4.53
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/alu_operand_b_ex_o_reg_8_/CK (SAEDRVT14_FSDPRBQ_V2_4)     0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.53
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.44
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_24_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/mult_dot_op_b_ex_o_reg_24_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.44      4.53 f
-  data arrival time                                                              4.53
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_dot_op_b_ex_o_reg_24_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.53
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.44
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_24_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/alu_operand_b_ex_o_reg_24_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.43      4.53 f
-  data arrival time                                                              4.53
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/alu_operand_b_ex_o_reg_24_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.53
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.44
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
   Endpoint: id_stage_i/mult_operand_b_ex_o_reg_24_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
@@ -1047,11 +343,11 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/mult_operand_b_ex_o_reg_24_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.43      4.53 f
-  data arrival time                                                              4.53
+  id_stage_i/mult_operand_b_ex_o_reg_24_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.24      4.33 f
+  data arrival time                                                              4.33
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
@@ -1060,14 +356,14 @@ Date   : Sun Mar  3 06:07:56 2024
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.53
+  data arrival time                                                             -4.33
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.44
+  slack (MET)                                                                    0.64
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_19_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_26_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
   Scenario: func_slow
@@ -1079,27 +375,27 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/mult_operand_b_ex_o_reg_19_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.43      4.53 f
-  data arrival time                                                              4.53
+  id_stage_i/mult_operand_b_ex_o_reg_26_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.24      4.33 f
+  data arrival time                                                              4.33
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_operand_b_ex_o_reg_19_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
+  id_stage_i/mult_operand_b_ex_o_reg_26_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
   library setup time                                                  -0.03      4.97
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.53
+  data arrival time                                                             -4.33
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.44
+  slack (MET)                                                                    0.64
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_11_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_28_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
   Scenario: func_slow
@@ -1111,27 +407,27 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/mult_dot_op_b_ex_o_reg_11_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.43      4.53 f
-  data arrival time                                                              4.53
+  id_stage_i/mult_dot_op_b_ex_o_reg_28_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.25      4.33 f
+  data arrival time                                                              4.33
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_dot_op_b_ex_o_reg_11_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  id_stage_i/mult_dot_op_b_ex_o_reg_28_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
   library setup time                                                  -0.03      4.97
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.53
+  data arrival time                                                             -4.33
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.45
+  slack (MET)                                                                    0.64
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_19_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_28_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
   Scenario: func_slow
@@ -1143,27 +439,27 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/alu_operand_b_ex_o_reg_19_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.43      4.53 f
-  data arrival time                                                              4.53
+  id_stage_i/mult_operand_b_ex_o_reg_28_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.25      4.33 f
+  data arrival time                                                              4.33
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/alu_operand_b_ex_o_reg_19_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  id_stage_i/mult_operand_b_ex_o_reg_28_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
   library setup time                                                  -0.03      4.97
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.53
+  data arrival time                                                             -4.33
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.45
+  slack (MET)                                                                    0.64
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_18_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_26_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
   Scenario: func_slow
@@ -1175,27 +471,27 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/mult_operand_b_ex_o_reg_18_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.43      4.53 f
-  data arrival time                                                              4.53
+  id_stage_i/mult_dot_op_b_ex_o_reg_26_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.24      4.33 f
+  data arrival time                                                              4.33
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_operand_b_ex_o_reg_18_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
+  id_stage_i/mult_dot_op_b_ex_o_reg_26_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
   library setup time                                                  -0.03      4.97
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.53
+  data arrival time                                                             -4.33
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.45
+  slack (MET)                                                                    0.64
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_11_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_27_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
   Scenario: func_slow
@@ -1207,27 +503,27 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/alu_operand_b_ex_o_reg_11_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.43      4.53 f
-  data arrival time                                                              4.53
+  id_stage_i/mult_dot_op_b_ex_o_reg_27_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.24      4.33 f
+  data arrival time                                                              4.33
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/alu_operand_b_ex_o_reg_11_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  id_stage_i/mult_dot_op_b_ex_o_reg_27_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
   library setup time                                                  -0.03      4.97
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.53
+  data arrival time                                                             -4.33
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.45
+  slack (MET)                                                                    0.64
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_11_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_27_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
   Scenario: func_slow
@@ -1239,27 +535,27 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/mult_operand_b_ex_o_reg_11_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.43      4.53 f
-  data arrival time                                                              4.53
+  id_stage_i/mult_operand_b_ex_o_reg_27_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.24      4.33 f
+  data arrival time                                                              4.33
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_operand_b_ex_o_reg_11_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
+  id_stage_i/mult_operand_b_ex_o_reg_27_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
   library setup time                                                  -0.03      4.97
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.53
+  data arrival time                                                             -4.33
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.45
+  slack (MET)                                                                    0.64
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_19_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_26_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
   Scenario: func_slow
@@ -1271,26 +567,410 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/mult_dot_op_b_ex_o_reg_19_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.43      4.53 f
-  data arrival time                                                              4.53
+  id_stage_i/alu_operand_b_ex_o_reg_26_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.24      4.33 f
+  data arrival time                                                              4.33
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_dot_op_b_ex_o_reg_19_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  id_stage_i/alu_operand_b_ex_o_reg_26_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
   library setup time                                                  -0.03      4.97
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.53
+  data arrival time                                                             -4.33
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.45
+  slack (MET)                                                                    0.64
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_27_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/alu_operand_b_ex_o_reg_27_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.24      4.33 f
+  data arrival time                                                              4.33
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/alu_operand_b_ex_o_reg_27_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.33
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.64
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_25_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/alu_operand_b_ex_o_reg_25_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.24      4.32 f
+  data arrival time                                                              4.32
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/alu_operand_b_ex_o_reg_25_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.32
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.65
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_24_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/mult_dot_op_b_ex_o_reg_24_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.24      4.33 f
+  data arrival time                                                              4.33
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/mult_dot_op_b_ex_o_reg_24_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.33
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.65
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_24_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/alu_operand_b_ex_o_reg_24_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.24      4.32 f
+  data arrival time                                                              4.32
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/alu_operand_b_ex_o_reg_24_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.32
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.65
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_25_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/mult_operand_b_ex_o_reg_25_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.24      4.32 f
+  data arrival time                                                              4.32
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/mult_operand_b_ex_o_reg_25_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.32
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.65
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_25_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/mult_dot_op_b_ex_o_reg_25_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.24      4.32 f
+  data arrival time                                                              4.32
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/mult_dot_op_b_ex_o_reg_25_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.32
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.65
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_15_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/mult_dot_op_b_ex_o_reg_15_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.23      4.32 f
+  data arrival time                                                              4.32
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/mult_dot_op_b_ex_o_reg_15_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.32
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.65
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_15_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/mult_operand_b_ex_o_reg_15_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.23      4.32 f
+  data arrival time                                                              4.32
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/mult_operand_b_ex_o_reg_15_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.32
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.65
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_15_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/alu_operand_b_ex_o_reg_15_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.23      4.32 f
+  data arrival time                                                              4.32
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/alu_operand_b_ex_o_reg_15_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.32
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.66
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_23_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/mult_dot_op_b_ex_o_reg_23_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.23      4.31 f
+  data arrival time                                                              4.31
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/mult_dot_op_b_ex_o_reg_23_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.31
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.66
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_22_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/mult_dot_op_b_ex_o_reg_22_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.22      4.31 f
+  data arrival time                                                              4.31
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/mult_dot_op_b_ex_o_reg_22_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.31
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.66
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_13_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/mult_operand_b_ex_o_reg_13_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.22      4.31 f
+  data arrival time                                                              4.31
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/mult_operand_b_ex_o_reg_13_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.31
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.66
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
   Endpoint: id_stage_i/mult_operand_b_ex_o_reg_14_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
@@ -1303,11 +983,11 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/mult_operand_b_ex_o_reg_14_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.43      4.53 f
-  data arrival time                                                              4.53
+  id_stage_i/mult_operand_b_ex_o_reg_14_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.22      4.31 f
+  data arrival time                                                              4.31
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
@@ -1316,45 +996,13 @@ Date   : Sun Mar  3 06:07:56 2024
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.53
+  data arrival time                                                             -4.31
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.45
+  slack (MET)                                                                    0.66
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_14_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: slow
-  Scenario: func_slow
-  Path Group: CLK_I
-  Path Type: max
-
-  Point                                                                Incr      Path  
-  --------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                              0.00      0.00
-  clock network delay (ideal)                                          0.00      0.00
-
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
-  ...
-  id_stage_i/alu_operand_b_ex_o_reg_14_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.43      4.53 f
-  data arrival time                                                              4.53
-
-  clock CLK_I (rise edge)                                              5.00      5.00
-  clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/alu_operand_b_ex_o_reg_14_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
-  library setup time                                                  -0.03      4.97
-  data required time                                                             4.97
-  --------------------------------------------------------------------------------------------
-  data required time                                                             4.97
-  data arrival time                                                             -4.53
-  --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.45
-
-
-
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
   Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_14_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
@@ -1367,11 +1015,11 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/mult_dot_op_b_ex_o_reg_14_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.43      4.53 f
-  data arrival time                                                              4.53
+  id_stage_i/mult_dot_op_b_ex_o_reg_14_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.22      4.31 f
+  data arrival time                                                              4.31
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
@@ -1380,13 +1028,205 @@ Date   : Sun Mar  3 06:07:56 2024
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.53
+  data arrival time                                                             -4.31
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.45
+  slack (MET)                                                                    0.66
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_23_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/alu_operand_b_ex_o_reg_23_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.22      4.31 f
+  data arrival time                                                              4.31
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/alu_operand_b_ex_o_reg_23_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.31
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.66
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_13_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/mult_dot_op_b_ex_o_reg_13_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.22      4.31 f
+  data arrival time                                                              4.31
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/mult_dot_op_b_ex_o_reg_13_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.31
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.66
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_23_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/mult_operand_b_ex_o_reg_23_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.22      4.31 f
+  data arrival time                                                              4.31
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/mult_operand_b_ex_o_reg_23_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.31
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.66
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_22_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/mult_operand_b_ex_o_reg_22_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.22      4.31 f
+  data arrival time                                                              4.31
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/mult_operand_b_ex_o_reg_22_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.31
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.66
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_22_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/alu_operand_b_ex_o_reg_22_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.22      4.31 f
+  data arrival time                                                              4.31
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/alu_operand_b_ex_o_reg_22_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.31
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.66
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_19_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/mult_operand_b_ex_o_reg_19_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.22      4.31 f
+  data arrival time                                                              4.31
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/mult_operand_b_ex_o_reg_19_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.31
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.66
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
   Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_18_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
@@ -1399,11 +1239,11 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/mult_dot_op_b_ex_o_reg_18_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.43      4.53 f
-  data arrival time                                                              4.53
+  id_stage_i/mult_dot_op_b_ex_o_reg_18_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.22      4.31 f
+  data arrival time                                                              4.31
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
@@ -1412,14 +1252,14 @@ Date   : Sun Mar  3 06:07:56 2024
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.53
+  data arrival time                                                             -4.31
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.45
+  slack (MET)                                                                    0.66
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_18_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_21_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
   Scenario: func_slow
@@ -1431,27 +1271,27 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/alu_operand_b_ex_o_reg_18_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.43      4.53 f
-  data arrival time                                                              4.53
+  id_stage_i/mult_dot_op_b_ex_o_reg_21_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.22      4.31 f
+  data arrival time                                                              4.31
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/alu_operand_b_ex_o_reg_18_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  id_stage_i/mult_dot_op_b_ex_o_reg_21_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
   library setup time                                                  -0.03      4.97
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.53
+  data arrival time                                                             -4.31
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.45
+  slack (MET)                                                                    0.66
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_16_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_19_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
   Scenario: func_slow
@@ -1463,26 +1303,58 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/mult_operand_b_ex_o_reg_16_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.43      4.52 f
-  data arrival time                                                              4.52
+  id_stage_i/mult_dot_op_b_ex_o_reg_19_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.22      4.31 f
+  data arrival time                                                              4.31
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/mult_operand_b_ex_o_reg_16_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
+  id_stage_i/mult_dot_op_b_ex_o_reg_19_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
   library setup time                                                  -0.03      4.97
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.52
+  data arrival time                                                             -4.31
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.45
+  slack (MET)                                                                    0.67
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_13_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/alu_operand_b_ex_o_reg_13_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.22      4.31 f
+  data arrival time                                                              4.31
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/alu_operand_b_ex_o_reg_13_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.31
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.67
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
   Endpoint: id_stage_i/mult_operand_b_ex_o_reg_20_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
@@ -1495,11 +1367,11 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/mult_operand_b_ex_o_reg_20_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.43      4.52 f
-  data arrival time                                                              4.52
+  id_stage_i/mult_operand_b_ex_o_reg_20_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.22      4.31 f
+  data arrival time                                                              4.31
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
@@ -1508,13 +1380,45 @@ Date   : Sun Mar  3 06:07:56 2024
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.52
+  data arrival time                                                             -4.31
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.45
+  slack (MET)                                                                    0.67
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_14_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/alu_operand_b_ex_o_reg_14_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.22      4.31 f
+  data arrival time                                                              4.31
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/alu_operand_b_ex_o_reg_14_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.31
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.67
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
   Endpoint: id_stage_i/alu_operand_b_ex_o_reg_20_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
@@ -1527,11 +1431,11 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/alu_operand_b_ex_o_reg_20_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.43      4.52 f
-  data arrival time                                                              4.52
+  id_stage_i/alu_operand_b_ex_o_reg_20_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.22      4.31 f
+  data arrival time                                                              4.31
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
@@ -1540,13 +1444,109 @@ Date   : Sun Mar  3 06:07:56 2024
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.52
+  data arrival time                                                             -4.31
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.45
+  slack (MET)                                                                    0.67
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_12_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/mult_dot_op_b_ex_o_reg_12_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.22      4.31 f
+  data arrival time                                                              4.31
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/mult_dot_op_b_ex_o_reg_12_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.31
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.67
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_18_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/mult_operand_b_ex_o_reg_18_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.22      4.31 f
+  data arrival time                                                              4.31
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/mult_operand_b_ex_o_reg_18_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.31
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.67
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_21_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                                                Incr      Path  
+  --------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                              0.00      0.00
+  clock network delay (ideal)                                          0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
+  ...
+  id_stage_i/mult_operand_b_ex_o_reg_21_/D (SAEDRVT14_FSDPRBQ_V2_4)    4.22      4.31 f
+  data arrival time                                                              4.31
+
+  clock CLK_I (rise edge)                                              5.00      5.00
+  clock network delay (ideal)                                          0.00      5.00
+  id_stage_i/mult_operand_b_ex_o_reg_21_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00      5.00 r
+  library setup time                                                  -0.03      4.97
+  data required time                                                             4.97
+  --------------------------------------------------------------------------------------------
+  data required time                                                             4.97
+  data arrival time                                                             -4.31
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                    0.67
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
   Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_20_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
@@ -1559,11 +1559,11 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/mult_dot_op_b_ex_o_reg_20_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.43      4.52 f
-  data arrival time                                                              4.52
+  id_stage_i/mult_dot_op_b_ex_o_reg_20_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.22      4.31 f
+  data arrival time                                                              4.31
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
@@ -1572,14 +1572,14 @@ Date   : Sun Mar  3 06:07:56 2024
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.52
+  data arrival time                                                             -4.31
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.45
+  slack (MET)                                                                    0.67
 
 
 
-  Startpoint: id_stage_i/alu_operator_ex_o_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_16_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_18_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: slow
   Scenario: func_slow
@@ -1591,22 +1591,22 @@ Date   : Sun Mar  3 06:07:56 2024
   clock CLK_I (rise edge)                                              0.00      0.00
   clock network delay (ideal)                                          0.00      0.00
 
-  id_stage_i/alu_operator_ex_o_reg_0_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
-  id_stage_i/alu_operator_ex_o_reg_0_/Q (SAEDRVT14_FDPSBQ_4)           0.10      0.10 f
+  id_stage_i/alu_operator_ex_o_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_1_/Q (SAEDRVT14_FDPSBQ_4)           0.09      0.09 f
   ...
-  id_stage_i/alu_operand_b_ex_o_reg_16_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.43      4.52 f
-  data arrival time                                                              4.52
+  id_stage_i/alu_operand_b_ex_o_reg_18_/D (SAEDRVT14_FSDPRBQ_V2_4)     4.22      4.31 f
+  data arrival time                                                              4.31
 
   clock CLK_I (rise edge)                                              5.00      5.00
   clock network delay (ideal)                                          0.00      5.00
-  id_stage_i/alu_operand_b_ex_o_reg_16_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
+  id_stage_i/alu_operand_b_ex_o_reg_18_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      5.00 r
   library setup time                                                  -0.03      4.97
   data required time                                                             4.97
   --------------------------------------------------------------------------------------------
   data required time                                                             4.97
-  data arrival time                                                             -4.52
+  data arrival time                                                             -4.31
   --------------------------------------------------------------------------------------------
-  slack (MET)                                                                    0.45
+  slack (MET)                                                                    0.67
 
 
 1

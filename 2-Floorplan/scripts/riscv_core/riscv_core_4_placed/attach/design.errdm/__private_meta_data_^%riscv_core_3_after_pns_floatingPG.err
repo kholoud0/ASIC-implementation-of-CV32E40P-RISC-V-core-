@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<errorData typeCount="7" majorVersion="1" minorVersion="8" name="__private_meta_data_:riscv_core_3_after_pns_floatingPG.err" designName="riscv_core_4_placed" info="" checker="check_pg_connectivity" checkerVersion="" created="1709529960" createdDate="03:04:2024:07:26:00:EET" modified="1709532276" modifiedDate="03:04:2024:08:04:36:EET" interactive="false" internal="false" metaData="true" numTypes="7" numInsts="155281"/>

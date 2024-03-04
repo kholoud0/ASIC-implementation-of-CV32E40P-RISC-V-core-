@@ -7,7 +7,7 @@ Report : timing
         -nosplit
 Design : riscv_core
 Version: O-2018.06-SP1
-Date   : Sun Mar  3 05:37:43 2024
+Date   : Mon Mar  4 07:44:07 2024
 ****************************************
 
   Startpoint: id_stage_i/alu_operator_ex_o_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
