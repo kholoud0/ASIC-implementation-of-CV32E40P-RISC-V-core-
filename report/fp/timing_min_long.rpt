@@ -11,7 +11,7 @@ Report : timing
         -capacitance
 Design : riscv_core
 Version: O-2018.06-SP1
-Date   : Sun Mar  3 05:32:16 2024
+Date   : Tue Mar  5 10:23:37 2024
 ****************************************
 
   Startpoint: id_stage_i/controller_i/boot_done_q_reg (rising edge-triggered flip-flop clocked by CLK_I)
@@ -64,7 +64,7 @@ Date   : Sun Mar  3 05:32:16 2024
 
   debug_unit_i/dbg_cause_q_reg_3_/CK (SAEDRVT14_FDPSBQ_4)                                  0.00      0.00      0.00 r
   debug_unit_i/dbg_cause_q_reg_3_/Q (SAEDRVT14_FDPSBQ_4)                                   0.00      0.02      0.02 r
-  debug_unit_i/dbg_cause_q[3] (net)                                       2      4.41
+  debug_unit_i/dbg_cause_q[3] (net)                                       2      4.43
   debug_unit_i/U107/A1 (SAEDRVT14_AO221_4)                                                 0.00      0.00      0.02 r
   debug_unit_i/U107/X (SAEDRVT14_AO221_4)                                                  0.00      0.01      0.03 r
   debug_unit_i/n318 (net)                                                 1      0.35
@@ -99,7 +99,7 @@ Date   : Sun Mar  3 05:32:16 2024
 
   debug_unit_i/dbg_cause_q_reg_2_/CK (SAEDRVT14_FDPSBQ_4)                                  0.00      0.00      0.00 r
   debug_unit_i/dbg_cause_q_reg_2_/Q (SAEDRVT14_FDPSBQ_4)                                   0.00      0.02      0.02 r
-  debug_unit_i/dbg_cause_q[2] (net)                                       2      4.21
+  debug_unit_i/dbg_cause_q[2] (net)                                       2      4.23
   debug_unit_i/U108/A1 (SAEDRVT14_AO221_4)                                                 0.00      0.00      0.02 r
   debug_unit_i/U108/X (SAEDRVT14_AO221_4)                                                  0.00      0.01      0.03 r
   debug_unit_i/n319 (net)                                                 1      0.59
@@ -134,7 +134,7 @@ Date   : Sun Mar  3 05:32:16 2024
 
   debug_unit_i/dbg_cause_q_reg_0_/CK (SAEDRVT14_FDPSBQ_4)                                  0.00      0.00      0.00 r
   debug_unit_i/dbg_cause_q_reg_0_/Q (SAEDRVT14_FDPSBQ_4)                                   0.00      0.02      0.02 r
-  debug_unit_i/dbg_cause_q[0] (net)                                       2      4.65
+  debug_unit_i/dbg_cause_q[0] (net)                                       2      4.67
   debug_unit_i/U110/A1 (SAEDRVT14_AO221_4)                                                 0.00      0.00      0.02 r
   debug_unit_i/U110/X (SAEDRVT14_AO221_4)                                                  0.00      0.01      0.03 r
   debug_unit_i/n321 (net)                                                 1      0.71
@@ -204,7 +204,7 @@ Date   : Sun Mar  3 05:32:16 2024
 
   debug_unit_i/dbg_cause_q_reg_4_/CK (SAEDRVT14_FDPSBQ_4)                                         0.00      0.00      0.00 r
   debug_unit_i/dbg_cause_q_reg_4_/Q (SAEDRVT14_FDPSBQ_4)                                          0.01      0.02      0.02 r
-  debug_unit_i/dbg_cause_q[4] (net)                                              2      5.81
+  debug_unit_i/dbg_cause_q[4] (net)                                              2      5.85
   debug_unit_i/U106/A1 (SAEDRVT14_AO221_4)                                                        0.01      0.00      0.02 r
   debug_unit_i/U106/X (SAEDRVT14_AO221_4)                                                         0.00      0.01      0.03 r
   debug_unit_i/n317 (net)                                                        1      0.35
@@ -242,7 +242,7 @@ Date   : Sun Mar  3 05:32:16 2024
   cs_registers_i/PCMR_q[0] (net)                                                 4      5.23
   cs_registers_i/U599/A1 (SAEDRVT14_AN2_MM_3)                                                     0.00      0.00      0.02 f
   cs_registers_i/U599/X (SAEDRVT14_AN2_MM_3)                                                      0.00      0.01      0.03 f
-  cs_registers_i/n675 (net)                                                      1      0.98
+  cs_registers_i/n675 (net)                                                      1      0.99
   cs_registers_i/PCCR_inc_q_reg_0_/D (SAEDRVT14_FSDPRBQ_V2_4)                                     0.00      0.00      0.03 f
   data arrival time                                                                                                   0.03
 
@@ -312,7 +312,7 @@ Date   : Sun Mar  3 05:32:16 2024
 
   debug_unit_i/dbg_cause_q_reg_1_/CK (SAEDRVT14_FDPSBQ_4)                                         0.00      0.00      0.00 r
   debug_unit_i/dbg_cause_q_reg_1_/Q (SAEDRVT14_FDPSBQ_4)                                          0.01      0.02      0.02 r
-  debug_unit_i/dbg_cause_q[1] (net)                                              2      6.13
+  debug_unit_i/dbg_cause_q[1] (net)                                              2      6.16
   debug_unit_i/U109/A1 (SAEDRVT14_AO221_4)                                                        0.01      0.00      0.02 r
   debug_unit_i/U109/X (SAEDRVT14_AO221_4)                                                         0.00      0.01      0.03 r
   debug_unit_i/n320 (net)                                                        1      0.58
@@ -388,7 +388,7 @@ Date   : Sun Mar  3 05:32:16 2024
   ex_stage_i/mult_i/mulh_CS[1] (net)                                             4      4.33
   ex_stage_i/mult_i/U341/A1 (SAEDRVT14_EN2_3)                                                     0.00      0.00      0.02 f
   ex_stage_i/mult_i/U341/X (SAEDRVT14_EN2_3)                                                      0.00      0.01      0.03 f
-  ex_stage_i/mult_i/n185 (net)                                                   1      0.79
+  ex_stage_i/mult_i/n185 (net)                                                   1      0.80
   ex_stage_i/mult_i/mulh_CS_reg_1_/D (SAEDRVT14_FSDPRBQ_V2_4)                                     0.00      0.00      0.03 f
   data arrival time                                                                                                   0.03
 
@@ -490,7 +490,7 @@ Date   : Sun Mar  3 05:32:16 2024
 
   if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__27_/CK (SAEDRVT14_FSDPRBQ_V2_4)                      0.00      0.00      0.00 r
   if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__27_/Q (SAEDRVT14_FSDPRBQ_V2_4)                       0.00      0.02      0.02 f
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_0__27_ (net)                               3      2.29
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_0__27_ (net)                               3      2.30
   if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/U533/B1 (SAEDRVT14_AO221_4)                                        0.00      0.00      0.02 f
   if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/U533/X (SAEDRVT14_AO221_4)                                         0.00      0.01      0.03 f
   if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/n659 (net)                                        1      0.62
@@ -525,7 +525,7 @@ Date   : Sun Mar  3 05:32:16 2024
 
   if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__16_/CK (SAEDRVT14_FSDPRBQ_V2_4)                      0.00      0.00      0.00 r
   if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__16_/Q (SAEDRVT14_FSDPRBQ_V2_4)                       0.00      0.02      0.02 f
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_0__16_ (net)                               3      2.27
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_0__16_ (net)                               3      2.28
   if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/U570/B1 (SAEDRVT14_AO221_4)                                        0.00      0.00      0.02 f
   if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/U570/X (SAEDRVT14_AO221_4)                                         0.00      0.01      0.03 f
   if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/n670 (net)                                        1      0.71
@@ -535,41 +535,6 @@ Date   : Sun Mar  3 05:32:16 2024
   clock CLK_I (rise edge)                                                                                                      0.00      0.00
   clock network delay (ideal)                                                                                                  0.00      0.00
   if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__16_/CK (SAEDRVT14_FSDPRBQ_V2_4)                      0.00      0.00      0.00 r
-  library hold time                                                                                                           -0.00     -0.00
-  data required time                                                                                                                    -0.00
-  ----------------------------------------------------------------------------------------------------------------------------------------------------
-  data required time                                                                                                                    -0.00
-  data arrival time                                                                                                                     -0.03
-  ----------------------------------------------------------------------------------------------------------------------------------------------------
-  slack (MET)                                                                                                                            0.03
-
-
-
-  Startpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: fast
-  Scenario: func_fast
-  Path Group: CLK_I
-  Path Type: min
-
-  Point                                                                                          Fanout    Cap      Trans      Incr      Path  
-  ----------------------------------------------------------------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                                                                                      0.00      0.00
-  clock network delay (ideal)                                                                                                  0.00      0.00
-
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_/CK (SAEDRVT14_FSDPRBQ_V2_4)                      0.00      0.00      0.00 r
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_/Q (SAEDRVT14_FSDPRBQ_V2_4)                       0.00      0.02      0.02 f
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_0__28_ (net)                               3      2.45
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/U530/B1 (SAEDRVT14_AO221_4)                                        0.00      0.00      0.02 f
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/U530/X (SAEDRVT14_AO221_4)                                         0.00      0.01      0.03 f
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/n658 (net)                                        1      0.57
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_/D (SAEDRVT14_FSDPRBQ_V2_4)                       0.00      0.00      0.03 f
-  data arrival time                                                                                                                      0.03
-
-  clock CLK_I (rise edge)                                                                                                      0.00      0.00
-  clock network delay (ideal)                                                                                                  0.00      0.00
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_/CK (SAEDRVT14_FSDPRBQ_V2_4)                      0.00      0.00      0.00 r
   library hold time                                                                                                           -0.00     -0.00
   data required time                                                                                                                    -0.00
   ----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -675,6 +640,41 @@ Date   : Sun Mar  3 05:32:16 2024
   clock CLK_I (rise edge)                                                                                                       0.00      0.00
   clock network delay (ideal)                                                                                                   0.00      0.00
   if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__21_/CK (SAEDRVT14_FSDPRBQ_V2_4)                       0.00      0.00      0.00 r
+  library hold time                                                                                                            -0.00     -0.00
+  data required time                                                                                                                     -0.00
+  -----------------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                                                     -0.00
+  data arrival time                                                                                                                      -0.03
+  -----------------------------------------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                                                             0.03
+
+
+
+  Startpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: fast
+  Scenario: func_fast
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                           Fanout    Cap      Trans      Incr      Path  
+  -----------------------------------------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                                                       0.00      0.00
+  clock network delay (ideal)                                                                                                   0.00      0.00
+
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_/CK (SAEDRVT14_FSDPRBQ_V2_4)                       0.00      0.00      0.00 r
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_/Q (SAEDRVT14_FSDPRBQ_V2_4)                        0.00      0.02      0.02 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_0__28_ (net)                                3      2.45
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/U530/B1 (SAEDRVT14_AO221_4)                                         0.00      0.00      0.02 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/U530/X (SAEDRVT14_AO221_4)                                          0.00      0.01      0.03 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/n658 (net)                                         1      0.57
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_/D (SAEDRVT14_FSDPRBQ_V2_4)                        0.00      0.00      0.03 f
+  data arrival time                                                                                                                       0.03
+
+  clock CLK_I (rise edge)                                                                                                       0.00      0.00
+  clock network delay (ideal)                                                                                                   0.00      0.00
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_/CK (SAEDRVT14_FSDPRBQ_V2_4)                       0.00      0.00      0.00 r
   library hold time                                                                                                            -0.00     -0.00
   data required time                                                                                                                     -0.00
   -----------------------------------------------------------------------------------------------------------------------------------------------------

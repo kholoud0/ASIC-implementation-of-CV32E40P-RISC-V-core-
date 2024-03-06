@@ -3,7 +3,7 @@ Report : constraint
         -all_violators
 Design : riscv_core
 Version: O-2018.06-SP1
-Date   : Mon Mar  4 07:44:05 2024
+Date   : Tue Mar  5 10:35:28 2024
 ****************************************
 
    late_timing
@@ -31,41 +31,44 @@ No paths.
                              Required        Actual                            
    Net                      Capacitance    Capacitance       Slack  Violation  
   ---------------------------------------------------------------------------
-   id_stage_i/n20              57.08          92.29         -35.21  (VIOLATED) 
-     PIN : id_stage_i/U1581/X    57.08        92.29         -35.21  (VIOLATED) 
+   id_stage_i/n20              57.08          99.74         -42.66  (VIOLATED) 
+     PIN : id_stage_i/U1581/X    57.08        99.74         -42.66  (VIOLATED) 
 
-   id_stage_i/n18              57.08          85.77         -28.69  (VIOLATED) 
-     PIN : id_stage_i/U1579/X    57.08        85.77         -28.69  (VIOLATED) 
+   id_stage_i/n18              57.08          91.45         -34.37  (VIOLATED) 
+     PIN : id_stage_i/U1579/X    57.08        91.45         -34.37  (VIOLATED) 
 
-   id_stage_i/n17              57.08          78.33         -21.25  (VIOLATED) 
-     PIN : id_stage_i/U1575/X    57.08        78.33         -21.25  (VIOLATED) 
+   id_stage_i/n17              57.08          84.08         -27.00  (VIOLATED) 
+     PIN : id_stage_i/U1575/X    57.08        84.08         -27.00  (VIOLATED) 
 
-   id_stage_i/n21              57.08          75.74         -18.66  (VIOLATED) 
-     PIN : id_stage_i/U1577/X    57.08        75.74         -18.66  (VIOLATED) 
+   id_stage_i/n22              57.08          83.54         -26.46  (VIOLATED) 
+     PIN : id_stage_i/U1583/X    57.08        83.54         -26.46  (VIOLATED) 
 
-   id_stage_i/n22              57.08          74.86         -17.78  (VIOLATED) 
-     PIN : id_stage_i/U1583/X    57.08        74.86         -17.78  (VIOLATED) 
+   id_stage_i/n21              57.08          80.36         -23.28  (VIOLATED) 
+     PIN : id_stage_i/U1577/X    57.08        80.36         -23.28  (VIOLATED) 
 
-   id_stage_i/n527             57.08          71.18         -14.10  (VIOLATED) 
-     PIN : id_stage_i/U1794/X    57.08        71.18         -14.10  (VIOLATED) 
+   id_stage_i/n527             57.08          75.79         -18.71  (VIOLATED) 
+     PIN : id_stage_i/U1794/X    57.08        75.79         -18.71  (VIOLATED) 
 
-   id_stage_i/n19              57.08          70.37         -13.29  (VIOLATED) 
-     PIN : id_stage_i/U1573/X    57.08        70.37         -13.29  (VIOLATED) 
+   id_stage_i/n19              57.08          74.03         -16.95  (VIOLATED) 
+     PIN : id_stage_i/U1573/X    57.08        74.03         -16.95  (VIOLATED) 
 
-   if_stage_i/n196             57.08          69.14         -12.06  (VIOLATED) 
-     PIN : if_stage_i/U323/X    57.08         69.14         -12.06  (VIOLATED) 
+   if_stage_i/n196             57.08          72.45         -15.37  (VIOLATED) 
+     PIN : if_stage_i/U323/X    57.08         72.45         -15.37  (VIOLATED) 
 
-   ex_stage_i/mult_i/short_imm[4]     9.97    15.15          -5.18  (VIOLATED) 
-     PIN : ex_stage_i/mult_i/U43/X     9.97    15.15         -5.18  (VIOLATED) 
+   data_be_o[3]                29.25          41.08         -11.83  (VIOLATED) 
+     PIN : load_store_unit_i/U406/X    29.25    41.08       -11.83  (VIOLATED) 
 
-   if_stage_i/prefetch_32_prefetch_buffer_i/fifo_clear     9.97    11.76    -1.79 (VIOLATED)
-     PIN : if_stage_i/prefetch_32_prefetch_buffer_i/U229/X     9.97    11.76    -1.79 (VIOLATED)
+   ex_stage_i/mult_i/short_imm[4]     9.97    15.81          -5.85  (VIOLATED) 
+     PIN : ex_stage_i/mult_i/U43/X     9.97    15.81         -5.85  (VIOLATED) 
 
-   id_stage_i/mult_signed_mode[0]     9.97    11.28          -1.31  (VIOLATED) 
-     PIN : id_stage_i/decoder_i/U445/X     9.97    11.28     -1.31  (VIOLATED) 
+   id_stage_i/mult_signed_mode[0]     9.97    13.07          -3.11  (VIOLATED) 
+     PIN : id_stage_i/decoder_i/U445/X     9.97    13.07     -3.11  (VIOLATED) 
+
+   if_stage_i/prefetch_32_prefetch_buffer_i/fifo_clear     9.97    12.34    -2.38 (VIOLATED)
+     PIN : if_stage_i/prefetch_32_prefetch_buffer_i/U229/X     9.97    12.34    -2.38 (VIOLATED)
 
   ---------------------------------------------------------------------------
-   Number of max_capacitance violation(s): 11
+   Number of max_capacitance violation(s): 12
 
 
    Mode: func Corner: slow
@@ -73,5 +76,5 @@ No paths.
   ---------------------------------------------------------------------------
    Number of min_capacitance violation(s): 0
 
-   Total number of violation(s): 11
+   Total number of violation(s): 12
 1

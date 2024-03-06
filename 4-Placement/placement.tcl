@@ -32,10 +32,10 @@ open_block /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-
 check_design -checks pre_placement_stage
 analyze_lib_cell_placement -lib_cells *
 
-set_app_options -name place.coarse.max_density -value 0.6
+#set_app_options -name place.coarse.max_density -value 0.6
 
 
-set_app_options -name place.coarse.congestion_driven_max_util -value 0.6
+#set_app_options -name place.coarse.congestion_driven_max_util -value 0.6
 
 set_app_options -name time.disable_recovery_removal_checks -value false
 set_app_options -name time.disable_case_analysis -value false
@@ -47,8 +47,8 @@ set_app_options -name opt.common.user_instance_name_prefix -value place
 #set_app_options -name place.coarse.congestion_expansion_direction  -value horizontal.
 
 #remove_corners estimated_corner
-#create_placement -congestion
-#legalize_placement
+create_placement -congestion
+legalize_placement
 check_pg_drc
 analyze_design_violations
 
@@ -56,7 +56,7 @@ analyze_design_violations
 place_opt
 legalize_placement
 check_legality -verbos
-
+report_timing
 
 
 set NDM_POWER_NET                "VDD" ;#

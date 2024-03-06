@@ -1,21 +1,4 @@
-****************************************
-Report : report_utilization
-Design : riscv_core
-Version: O-2018.06-SP1
-Date   : Mon Mar  4 08:04:49 2024
-****************************************
-Utilization Ratio:			0.4164
-Utilization options:
- - Area calculation based on:		site_row of block riscv_core_3_after_pns
- - Categories of objects excluded:	hard_macros macro_keepouts 
-Total Area:				46479.8736
-Total Capacity Area:			46479.8736
-Total Area of cells:			19355.5584
-Area of excluded objects:
- - hard_macros         :		0.0000
- - macro_keepouts      :		0.0000
-
-Utilization of site-rows with:
- - Site 'unit':				0.4164
-
-0.4164
+Warning: Nothing implicitly matched 'config_sr' (SEL-003)
+Error: Nothing matched for -config (SEL-005)
+Error: bad value specified for option -config
+	Use error_info for more info. (CMD-013)

@@ -1,0 +1,986 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 20
+        -report_by design
+        -nosplit
+        -input_pins
+        -nets
+        -transition_time
+        -capacitance
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Tue Mar  5 19:56:32 2024
+****************************************
+
+  Startpoint: debug_unit_i/jump_req_q_reg (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: if_stage_i/offset_fsm_cs_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                    Fanout    Cap      Trans      Incr      Path  
+  --------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                0.00      0.00
+  clock network delay (propagated)                                                       0.02      0.02
+
+  debug_unit_i/jump_req_q_reg/CK (SAEDRVT14_FSDPRBQ_V2_4)                      0.03      0.00      0.02 r
+  debug_unit_i/jump_req_q_reg/Q (SAEDRVT14_FSDPRBQ_V2_4)                       0.02      0.10      0.12 r
+  debug_unit_i/jump_req_o (net)                               7      9.27
+  id_stage_i/controller_i/U14/A1 (SAEDRVT14_AO211_4)                           0.02      0.00      0.12 r
+  id_stage_i/controller_i/U14/X (SAEDRVT14_AO211_4)                            0.00      0.03      0.15 r
+  id_stage_i/controller_i/n14 (net)                           1      1.00
+  id_stage_i/controller_i/U181/A (SAEDRVT14_INV_PS_3)                          0.00      0.00      0.15 r
+  id_stage_i/controller_i/U181/X (SAEDRVT14_INV_PS_3)                          0.01      0.01      0.16 f
+  id_stage_i/controller_i/n100 (net)                          2      2.87
+  id_stage_i/controller_i/U83/A1 (SAEDRVT14_ND2_CDC_4)                         0.01      0.00      0.16 f
+  id_stage_i/controller_i/U83/X (SAEDRVT14_ND2_CDC_4)                          0.01      0.01      0.17 r
+  id_stage_i/controller_i/pc_mux_o[2] (net)                   5      4.37
+  id_stage_i/controller_i/U148/A1 (SAEDRVT14_NR2_MM_3)                         0.01      0.00      0.17 r
+  id_stage_i/controller_i/U148/X (SAEDRVT14_NR2_MM_3)                          0.00      0.01      0.18 f
+  id_stage_i/controller_i/n7 (net)                            1      0.38
+  id_stage_i/controller_i/U6/B2 (SAEDRVT14_OAI311_4)                           0.00      0.00      0.18 f
+  id_stage_i/controller_i/U6/X (SAEDRVT14_OAI311_4)                            0.04      0.06      0.24 r
+  id_stage_i/controller_i/pc_set_o (net)                      4     16.31
+  if_stage_i/U68/A3 (SAEDRVT14_NR3_3)                                          0.04      0.00      0.24 r
+  if_stage_i/U68/X (SAEDRVT14_NR3_3)                                           0.01      0.05      0.30 f
+  if_stage_i/offset_fsm_ns_0_ (net)                           1      1.45
+  if_stage_i/offset_fsm_cs_reg_0_/D (SAEDRVT14_FDPSBQ_4)                       0.01      0.00      0.30 f
+  data arrival time                                                                                0.30
+
+  clock CLK_I (rise edge)                                                                0.00      0.00
+  clock network delay (propagated)                                                     202.25    202.25
+  if_stage_i/offset_fsm_cs_reg_0_/CK (SAEDRVT14_FDPSBQ_4)                    282.65      0.00    202.25 r
+  library hold time                                                                    137.44    339.69
+  data required time                                                                             339.69
+  --------------------------------------------------------------------------------------------------------------
+  data required time                                                                             339.69
+  data arrival time                                                                               -0.30
+  --------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                               -339.39
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCMR_q_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                    Fanout    Cap      Trans      Incr      Path  
+  --------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                0.00      0.00
+  clock network delay (propagated)                                                       0.02      0.02
+
+  debug_unit_i/wdata_q_reg_0_/CK (SAEDRVT14_FSDPRBQ_V2_4)                      0.03      0.00      0.02 r
+  debug_unit_i/wdata_q_reg_0_/Q (SAEDRVT14_FSDPRBQ_V2_4)                       0.01      0.08      0.10 f
+  debug_unit_i/csr_wdata_o[0] (net)                           2      1.85
+  U32/B1 (SAEDRVT14_AOI22_3)                                                   0.01      0.00      0.10 f
+  U32/X (SAEDRVT14_AOI22_3)                                                    0.03      0.06      0.17 r
+  n16 (net)                                                   1     11.08
+  U168/A (SAEDRVT14_INV_PS_3)                                                  0.03      0.00      0.17 r
+  U168/X (SAEDRVT14_INV_PS_3)                                                  0.01      0.03      0.19 f
+  n150 (net)                                                  2      2.89
+  cs_registers_i/U416/A (SAEDRVT14_INV_PS_3)                                   0.01      0.00      0.19 f
+  cs_registers_i/U416/X (SAEDRVT14_INV_PS_3)                                   0.01      0.02      0.21 r
+  cs_registers_i/n529 (net)                                   4      4.23
+  cs_registers_i/U417/A1 (SAEDRVT14_OAI32_4)                                   0.01      0.00      0.21 r
+  cs_registers_i/U417/X (SAEDRVT14_OAI32_4)                                    0.01      0.06      0.27 f
+  cs_registers_i/PCMR_n[0] (net)                              1      1.06
+  cs_registers_i/PCMR_q_reg_0_/D (SAEDRVT14_FDPSBQ_4)                          0.01      0.00      0.27 f
+  data arrival time                                                                                0.27
+
+  clock CLK_I (rise edge)                                                                0.00      0.00
+  clock network delay (propagated)                                                     202.25    202.25
+  cs_registers_i/PCMR_q_reg_0_/CK (SAEDRVT14_FDPSBQ_4)                       282.65      0.00    202.25 r
+  library hold time                                                                    135.14    337.39
+  data required time                                                                             337.39
+  --------------------------------------------------------------------------------------------------------------
+  data required time                                                                             337.39
+  data arrival time                                                                               -0.27
+  --------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                               -337.13
+
+
+
+  Startpoint: debug_unit_i/jump_req_q_reg (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: if_stage_i/instr_valid_id_o_reg (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                       Fanout    Cap      Trans      Incr      Path  
+  -----------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                   0.00      0.00
+  clock network delay (propagated)                                                          0.02      0.02
+
+  debug_unit_i/jump_req_q_reg/CK (SAEDRVT14_FSDPRBQ_V2_4)                         0.03      0.00      0.02 r
+  debug_unit_i/jump_req_q_reg/Q (SAEDRVT14_FSDPRBQ_V2_4)                          0.02      0.10      0.12 r
+  debug_unit_i/jump_req_o (net)                                  7      9.27
+  id_stage_i/controller_i/U14/A1 (SAEDRVT14_AO211_4)                              0.02      0.00      0.12 r
+  id_stage_i/controller_i/U14/X (SAEDRVT14_AO211_4)                               0.00      0.03      0.15 r
+  id_stage_i/controller_i/n14 (net)                              1      1.00
+  id_stage_i/controller_i/U181/A (SAEDRVT14_INV_PS_3)                             0.00      0.00      0.15 r
+  id_stage_i/controller_i/U181/X (SAEDRVT14_INV_PS_3)                             0.01      0.01      0.16 f
+  id_stage_i/controller_i/n100 (net)                             2      2.87
+  id_stage_i/controller_i/U83/A1 (SAEDRVT14_ND2_CDC_4)                            0.01      0.00      0.16 f
+  id_stage_i/controller_i/U83/X (SAEDRVT14_ND2_CDC_4)                             0.01      0.01      0.17 r
+  id_stage_i/controller_i/pc_mux_o[2] (net)                      5      4.37
+  id_stage_i/controller_i/U148/A1 (SAEDRVT14_NR2_MM_3)                            0.01      0.00      0.17 r
+  id_stage_i/controller_i/U148/X (SAEDRVT14_NR2_MM_3)                             0.00      0.01      0.18 f
+  id_stage_i/controller_i/n7 (net)                               1      0.38
+  id_stage_i/controller_i/U6/B2 (SAEDRVT14_OAI311_4)                              0.00      0.00      0.18 f
+  id_stage_i/controller_i/U6/X (SAEDRVT14_OAI311_4)                               0.04      0.06      0.24 r
+  id_stage_i/controller_i/pc_set_o (net)                         4     16.31
+  if_stage_i/U153/A2 (SAEDRVT14_NR3_3)                                            0.04      0.00      0.24 r
+  if_stage_i/U153/X (SAEDRVT14_NR3_3)                                             0.00      0.05      0.29 f
+  if_stage_i/n76 (net)                                           1      0.84
+  if_stage_i/U266/A2 (SAEDRVT14_AN2_MM_6)                                         0.00      0.00      0.29 f
+  if_stage_i/U266/X (SAEDRVT14_AN2_MM_6)                                          0.06      0.05      0.35 f
+  if_stage_i/n4 (net)                                           39     46.06
+  if_stage_i/placeHFSINV_3994_147/A (SAEDRVT14_INV_S_4)                           0.06      0.01      0.35 f
+  if_stage_i/placeHFSINV_3994_147/X (SAEDRVT14_INV_S_4)                           0.04      0.07      0.43 r
+  if_stage_i/placeHFSNET_128 (net)                              36     23.15
+  if_stage_i/U75/B (SAEDRVT14_OAI21_V1_4)                                         0.04      0.00      0.43 r
+  if_stage_i/U75/X (SAEDRVT14_OAI21_V1_4)                                         0.01      0.03      0.46 f
+  if_stage_i/n346 (net)                                          1      0.56
+  if_stage_i/instr_valid_id_o_reg/D (SAEDRVT14_FSDPRBQ_V2_4)                      0.01      0.00      0.46 f
+  data arrival time                                                                                   0.46
+
+  clock CLK_I (rise edge)                                                                   0.00      0.00
+  clock network delay (propagated)                                                        202.25    202.25
+  if_stage_i/instr_valid_id_o_reg/CK (SAEDRVT14_FSDPRBQ_V2_4)                   282.65      0.00    202.25 r
+  library hold time                                                                       134.23    336.49
+  data required time                                                                                336.49
+  -----------------------------------------------------------------------------------------------------------------
+  data required time                                                                                336.49
+  data arrival time                                                                                  -0.46
+  -----------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                  -336.03
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCMR_q_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                       Fanout    Cap      Trans      Incr      Path  
+  -----------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                   0.00      0.00
+  clock network delay (propagated)                                                          0.02      0.02
+
+  debug_unit_i/wdata_q_reg_1_/CK (SAEDRVT14_FSDPRBQ_V2_4)                         0.03      0.00      0.02 r
+  debug_unit_i/wdata_q_reg_1_/Q (SAEDRVT14_FSDPRBQ_V2_4)                          0.02      0.09      0.11 f
+  debug_unit_i/csr_wdata_o[1] (net)                              3      7.21
+  U34/B1 (SAEDRVT14_AOI22_3)                                                      0.02      0.00      0.11 f
+  U34/X (SAEDRVT14_AOI22_3)                                                       0.02      0.06      0.17 r
+  n17 (net)                                                      1      7.48
+  U164/A (SAEDRVT14_INV_PS_3)                                                     0.02      0.00      0.17 r
+  U164/X (SAEDRVT14_INV_PS_3)                                                     0.01      0.02      0.19 f
+  n149 (net)                                                     2      2.05
+  cs_registers_i/U418/A (SAEDRVT14_INV_PS_3)                                      0.01      0.00      0.19 f
+  cs_registers_i/U418/X (SAEDRVT14_INV_PS_3)                                      0.02      0.02      0.21 r
+  cs_registers_i/n528 (net)                                      4      5.20
+  cs_registers_i/U414/A1 (SAEDRVT14_OAI32_4)                                      0.02      0.00      0.21 r
+  cs_registers_i/U414/X (SAEDRVT14_OAI32_4)                                       0.01      0.06      0.27 f
+  cs_registers_i/PCMR_n[1] (net)                                 1      1.24
+  cs_registers_i/PCMR_q_reg_1_/D (SAEDRVT14_FDPSBQ_4)                             0.01      0.00      0.27 f
+  data arrival time                                                                                   0.27
+
+  clock CLK_I (rise edge)                                                                   0.00      0.00
+  clock network delay (propagated)                                                        202.25    202.25
+  cs_registers_i/PCMR_q_reg_1_/CK (SAEDRVT14_FDPSBQ_4)                          282.65      0.00    202.25 r
+  library hold time                                                                       133.56    335.81
+  data required time                                                                                335.81
+  -----------------------------------------------------------------------------------------------------------------
+  data required time                                                                                335.81
+  data arrival time                                                                                  -0.27
+  -----------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                  -335.55
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_2_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCER_q_reg_2_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                       Fanout    Cap      Trans      Incr      Path  
+  -----------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                   0.00      0.00
+  clock network delay (propagated)                                                          0.02      0.02
+
+  debug_unit_i/wdata_q_reg_2_/CK (SAEDRVT14_FSDPRBQ_V2_4)                         0.03      0.00      0.02 r
+  debug_unit_i/wdata_q_reg_2_/Q (SAEDRVT14_FSDPRBQ_V2_4)                          0.01      0.08      0.11 f
+  debug_unit_i/csr_wdata_o[2] (net)                              3      3.42
+  U36/B1 (SAEDRVT14_AOI22_3)                                                      0.01      0.00      0.11 f
+  U36/X (SAEDRVT14_AOI22_3)                                                       0.02      0.06      0.16 r
+  n18 (net)                                                      1      8.47
+  U167/A (SAEDRVT14_INV_PS_3)                                                     0.02      0.00      0.16 r
+  U167/X (SAEDRVT14_INV_PS_3)                                                     0.01      0.02      0.19 f
+  n148 (net)                                                     2      2.15
+  cs_registers_i/U420/A (SAEDRVT14_INV_PS_3)                                      0.01      0.00      0.19 f
+  cs_registers_i/U420/X (SAEDRVT14_INV_PS_3)                                      0.02      0.02      0.20 r
+  cs_registers_i/n527 (net)                                      3      4.92
+  cs_registers_i/U445/A2 (SAEDRVT14_AO2BB2_V1_4)                                  0.02      0.00      0.20 r
+  cs_registers_i/U445/X (SAEDRVT14_AO2BB2_V1_4)                                   0.01      0.06      0.26 f
+  cs_registers_i/n678 (net)                                      1      0.58
+  cs_registers_i/PCER_q_reg_2_/D (SAEDRVT14_FSDPRBQ_V2_4)                         0.01      0.00      0.26 f
+  data arrival time                                                                                   0.26
+
+  clock CLK_I (rise edge)                                                                   0.00      0.00
+  clock network delay (propagated)                                                        202.25    202.25
+  cs_registers_i/PCER_q_reg_2_/CK (SAEDRVT14_FSDPRBQ_V2_4)                      282.65      0.00    202.25 r
+  library hold time                                                                       128.81    331.06
+  data required time                                                                                331.06
+  -----------------------------------------------------------------------------------------------------------------
+  data required time                                                                                331.06
+  data arrival time                                                                                  -0.26
+  -----------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                  -330.80
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_28_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCCR_q_reg_0__28_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                        Fanout    Cap      Trans      Incr      Path  
+  ------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                    0.00      0.00
+  clock network delay (propagated)                                                           0.02      0.02
+
+  debug_unit_i/wdata_q_reg_28_/CK (SAEDRVT14_FSDPRBQ_V2_4)                         0.03      0.00      0.02 r
+  debug_unit_i/wdata_q_reg_28_/Q (SAEDRVT14_FSDPRBQ_V2_4)                          0.01      0.09      0.11 f
+  debug_unit_i/csr_wdata_o[28] (net)                              3      5.08
+  U88/B1 (SAEDRVT14_AOI22_3)                                                       0.01      0.00      0.11 f
+  U88/X (SAEDRVT14_AOI22_3)                                                        0.03      0.06      0.17 r
+  n44 (net)                                                       1      9.39
+  U155/A (SAEDRVT14_INV_PS_3)                                                      0.03      0.00      0.17 r
+  U155/X (SAEDRVT14_INV_PS_3)                                                      0.01      0.03      0.20 f
+  n122 (net)                                                      2      3.26
+  cs_registers_i/U459/A (SAEDRVT14_INV_PS_3)                                       0.01      0.00      0.20 f
+  cs_registers_i/U459/X (SAEDRVT14_INV_PS_3)                                       0.02      0.02      0.22 r
+  cs_registers_i/n473 (net)                                       2      4.98
+  cs_registers_i/U525/B2 (SAEDRVT14_OAI222_4)                                      0.02      0.00      0.22 r
+  cs_registers_i/U525/X (SAEDRVT14_OAI222_4)                                       0.01      0.06      0.27 f
+  cs_registers_i/n613 (net)                                       1      0.98
+  cs_registers_i/PCCR_q_reg_0__28_/D (SAEDRVT14_FSDPRBQ_V2_4)                      0.01      0.00      0.27 f
+  data arrival time                                                                                    0.27
+
+  clock CLK_I (rise edge)                                                                    0.00      0.00
+  clock network delay (propagated)                                                         202.25    202.25
+  cs_registers_i/PCCR_q_reg_0__28_/CK (SAEDRVT14_FSDPRBQ_V2_4)                   282.65      0.00    202.25 r
+  library hold time                                                                        128.81    331.06
+  data required time                                                                                 331.06
+  ------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                 331.06
+  data arrival time                                                                                   -0.27
+  ------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                   -330.79
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_31_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCCR_q_reg_0__31_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                        Fanout    Cap      Trans      Incr      Path  
+  ------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                    0.00      0.00
+  clock network delay (propagated)                                                           0.02      0.02
+
+  debug_unit_i/wdata_q_reg_31_/CK (SAEDRVT14_FSDPRBQ_V2_4)                         0.03      0.00      0.02 r
+  debug_unit_i/wdata_q_reg_31_/Q (SAEDRVT14_FSDPRBQ_V2_4)                          0.01      0.09      0.11 f
+  debug_unit_i/csr_wdata_o[31] (net)                              3      5.03
+  U94/B1 (SAEDRVT14_AOI22_3)                                                       0.01      0.00      0.11 f
+  U94/X (SAEDRVT14_AOI22_3)                                                        0.03      0.06      0.17 r
+  n47 (net)                                                       1      9.06
+  U162/A (SAEDRVT14_INV_PS_3)                                                      0.03      0.00      0.17 r
+  U162/X (SAEDRVT14_INV_PS_3)                                                      0.01      0.02      0.19 f
+  n119 (net)                                                      2      2.55
+  cs_registers_i/U462/A (SAEDRVT14_INV_PS_3)                                       0.01      0.00      0.19 f
+  cs_registers_i/U462/X (SAEDRVT14_INV_PS_3)                                       0.01      0.02      0.21 r
+  cs_registers_i/n468 (net)                                       2      3.45
+  cs_registers_i/U505/B2 (SAEDRVT14_OAI222_4)                                      0.01      0.00      0.21 r
+  cs_registers_i/U505/X (SAEDRVT14_OAI222_4)                                       0.00      0.05      0.26 f
+  cs_registers_i/n607 (net)                                       1      0.80
+  cs_registers_i/PCCR_q_reg_0__31_/D (SAEDRVT14_FSDPRBQ_V2_4)                      0.00      0.00      0.26 f
+  data arrival time                                                                                    0.26
+
+  clock CLK_I (rise edge)                                                                    0.00      0.00
+  clock network delay (propagated)                                                         202.25    202.25
+  cs_registers_i/PCCR_q_reg_0__31_/CK (SAEDRVT14_FSDPRBQ_V2_4)                   282.65      0.00    202.25 r
+  library hold time                                                                        128.74    330.99
+  data required time                                                                                 330.99
+  ------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                 330.99
+  data arrival time                                                                                   -0.26
+  ------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                   -330.73
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_6_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCCR_q_reg_0__6_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                        Fanout    Cap      Trans      Incr      Path  
+  ------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                    0.00      0.00
+  clock network delay (propagated)                                                           0.02      0.02
+
+  debug_unit_i/wdata_q_reg_6_/CK (SAEDRVT14_FSDPRBQ_V2_4)                          0.03      0.00      0.02 r
+  debug_unit_i/wdata_q_reg_6_/Q (SAEDRVT14_FSDPRBQ_V2_4)                           0.01      0.09      0.11 f
+  debug_unit_i/csr_wdata_o[6] (net)                               3      3.84
+  U44/B1 (SAEDRVT14_AOI22_3)                                                       0.01      0.00      0.11 f
+  U44/X (SAEDRVT14_AOI22_3)                                                        0.03      0.06      0.17 r
+  n22 (net)                                                       1      8.98
+  U158/A (SAEDRVT14_INV_PS_3)                                                      0.03      0.00      0.17 r
+  U158/X (SAEDRVT14_INV_PS_3)                                                      0.01      0.02      0.19 f
+  n144 (net)                                                      2      2.09
+  cs_registers_i/U424/A (SAEDRVT14_INV_PS_3)                                       0.01      0.00      0.19 f
+  cs_registers_i/U424/X (SAEDRVT14_INV_PS_3)                                       0.02      0.02      0.21 r
+  cs_registers_i/n523 (net)                                       3      5.77
+  cs_registers_i/U485/B2 (SAEDRVT14_OAI222_4)                                      0.02      0.00      0.21 r
+  cs_registers_i/U485/X (SAEDRVT14_OAI222_4)                                       0.00      0.06      0.27 f
+  cs_registers_i/n661 (net)                                       1      0.80
+  cs_registers_i/PCCR_q_reg_0__6_/D (SAEDRVT14_FSDPRBQ_V2_4)                       0.00      0.00      0.27 f
+  data arrival time                                                                                    0.27
+
+  clock CLK_I (rise edge)                                                                    0.00      0.00
+  clock network delay (propagated)                                                         202.25    202.25
+  cs_registers_i/PCCR_q_reg_0__6_/CK (SAEDRVT14_FSDPRBQ_V2_4)                    282.65      0.00    202.25 r
+  library hold time                                                                        128.74    330.99
+  data required time                                                                                 330.99
+  ------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                 330.99
+  data arrival time                                                                                   -0.27
+  ------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                   -330.72
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_8_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCCR_q_reg_0__8_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                        Fanout    Cap      Trans      Incr      Path  
+  ------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                    0.00      0.00
+  clock network delay (propagated)                                                           0.02      0.02
+
+  debug_unit_i/wdata_q_reg_8_/CK (SAEDRVT14_FSDPRBQ_V2_4)                          0.03      0.00      0.02 r
+  debug_unit_i/wdata_q_reg_8_/Q (SAEDRVT14_FSDPRBQ_V2_4)                           0.01      0.09      0.11 f
+  debug_unit_i/csr_wdata_o[8] (net)                               3      4.58
+  U48/B1 (SAEDRVT14_AOI22_3)                                                       0.01      0.00      0.11 f
+  U48/X (SAEDRVT14_AOI22_3)                                                        0.03      0.06      0.17 r
+  n24 (net)                                                       1      9.28
+  U159/A (SAEDRVT14_INV_PS_3)                                                      0.03      0.00      0.17 r
+  U159/X (SAEDRVT14_INV_PS_3)                                                      0.01      0.02      0.19 f
+  n142 (net)                                                      2      2.96
+  cs_registers_i/U427/A (SAEDRVT14_INV_PS_3)                                       0.01      0.00      0.19 f
+  cs_registers_i/U427/X (SAEDRVT14_INV_PS_3)                                       0.02      0.02      0.21 r
+  cs_registers_i/n521 (net)                                       3      5.68
+  cs_registers_i/U475/B2 (SAEDRVT14_OAI222_4)                                      0.02      0.00      0.21 r
+  cs_registers_i/U475/X (SAEDRVT14_OAI222_4)                                       0.01      0.06      0.27 f
+  cs_registers_i/n653 (net)                                       1      0.98
+  cs_registers_i/PCCR_q_reg_0__8_/D (SAEDRVT14_FSDPRBQ_V2_4)                       0.01      0.00      0.27 f
+  data arrival time                                                                                    0.27
+
+  clock CLK_I (rise edge)                                                                    0.00      0.00
+  clock network delay (propagated)                                                         202.25    202.25
+  cs_registers_i/PCCR_q_reg_0__8_/CK (SAEDRVT14_FSDPRBQ_V2_4)                    282.65      0.00    202.25 r
+  library hold time                                                                        128.74    330.99
+  data required time                                                                                 330.99
+  ------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                 330.99
+  data arrival time                                                                                   -0.27
+  ------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                   -330.72
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_10_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/instr_addr_q_reg_10_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                     Fanout    Cap      Trans      Incr      Path  
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                        0.02      0.02
+
+  debug_unit_i/wdata_q_reg_10_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                                      0.03      0.00      0.02 r
+  debug_unit_i/wdata_q_reg_10_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                                       0.01      0.09      0.11 f
+  debug_unit_i/csr_wdata_o[10] (net)                                                           3      4.31
+  if_stage_i/U307/A1 (SAEDRVT14_AOI22_3)                                                                        0.01      0.00      0.11 f
+  if_stage_i/U307/X (SAEDRVT14_AOI22_3)                                                                         0.05      0.07      0.18 r
+  if_stage_i/n197 (net)                                                                        1     16.52
+  if_stage_i/U48/A1 (SAEDRVT14_ND3_3)                                                                           0.05      0.00      0.18 r
+  if_stage_i/U48/X (SAEDRVT14_ND3_3)                                                                            0.01      0.06      0.24 f
+  if_stage_i/n172 (net)                                                                        1      2.99
+  if_stage_i/prefetch_32_prefetch_buffer_i/U197/B1 (SAEDRVT14_AO2BB2_V1_4)                                      0.01      0.00      0.24 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/U197/X (SAEDRVT14_AO2BB2_V1_4)                                       0.01      0.05      0.29 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/n146 (net)                                          1      0.96
+  if_stage_i/prefetch_32_prefetch_buffer_i/U196/C (SAEDRVT14_AO221_4)                                           0.01      0.00      0.29 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/U196/X (SAEDRVT14_AO221_4)                                           0.01      0.03      0.33 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/instr_addr_o[10] (net)                              2      4.93
+  if_stage_i/prefetch_32_prefetch_buffer_i/U183/A (SAEDRVT14_INV_PS_3)                                          0.01      0.00      0.33 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/U183/X (SAEDRVT14_INV_PS_3)                                          0.00      0.01      0.34 r
+  if_stage_i/prefetch_32_prefetch_buffer_i/n34 (net)                                           1      0.51
+  if_stage_i/prefetch_32_prefetch_buffer_i/U95/B1 (SAEDRVT14_OAI222_4)                                          0.00      0.00      0.34 r
+  if_stage_i/prefetch_32_prefetch_buffer_i/U95/X (SAEDRVT14_OAI222_4)                                           0.01      0.05      0.39 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/n234 (net)                                          1      0.98
+  if_stage_i/prefetch_32_prefetch_buffer_i/instr_addr_q_reg_10_/D (SAEDRVT14_FSDPRBQ_V2_4)                      0.01      0.00      0.39 f
+  data arrival time                                                                                                                 0.39
+
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                      202.25    202.25
+  if_stage_i/prefetch_32_prefetch_buffer_i/instr_addr_q_reg_10_/CK (SAEDRVT14_FSDPRBQ_V2_4)                   282.65      0.00    202.25 r
+  library hold time                                                                                                     128.81    331.06
+  data required time                                                                                                              331.06
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                                              331.06
+  data arrival time                                                                                                                -0.39
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                                -330.68
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_2_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCCR_q_reg_0__2_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                     Fanout    Cap      Trans      Incr      Path  
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                        0.02      0.02
+
+  debug_unit_i/wdata_q_reg_2_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                                       0.03      0.00      0.02 r
+  debug_unit_i/wdata_q_reg_2_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                                        0.01      0.08      0.11 f
+  debug_unit_i/csr_wdata_o[2] (net)                                                            3      3.42
+  U36/B1 (SAEDRVT14_AOI22_3)                                                                                    0.01      0.00      0.11 f
+  U36/X (SAEDRVT14_AOI22_3)                                                                                     0.02      0.06      0.16 r
+  n18 (net)                                                                                    1      8.47
+  U167/A (SAEDRVT14_INV_PS_3)                                                                                   0.02      0.00      0.16 r
+  U167/X (SAEDRVT14_INV_PS_3)                                                                                   0.01      0.02      0.19 f
+  n148 (net)                                                                                   2      2.15
+  cs_registers_i/U420/A (SAEDRVT14_INV_PS_3)                                                                    0.01      0.00      0.19 f
+  cs_registers_i/U420/X (SAEDRVT14_INV_PS_3)                                                                    0.02      0.02      0.20 r
+  cs_registers_i/n527 (net)                                                                    3      4.92
+  cs_registers_i/U515/B2 (SAEDRVT14_OAI222_4)                                                                   0.02      0.00      0.20 r
+  cs_registers_i/U515/X (SAEDRVT14_OAI222_4)                                                                    0.00      0.06      0.26 f
+  cs_registers_i/n670 (net)                                                                    1      0.81
+  cs_registers_i/PCCR_q_reg_0__2_/D (SAEDRVT14_FSDPRBQ_V2_4)                                                    0.00      0.00      0.26 f
+  data arrival time                                                                                                                 0.26
+
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                      202.25    202.25
+  cs_registers_i/PCCR_q_reg_0__2_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                                 282.65      0.00    202.25 r
+  library hold time                                                                                                     128.67    330.92
+  data required time                                                                                                              330.92
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                                              330.92
+  data arrival time                                                                                                                -0.26
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                                -330.66
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCCR_q_reg_0__5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                     Fanout    Cap      Trans      Incr      Path  
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                        0.02      0.02
+
+  debug_unit_i/wdata_q_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                                       0.03      0.00      0.02 r
+  debug_unit_i/wdata_q_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                                        0.01      0.09      0.11 f
+  debug_unit_i/csr_wdata_o[5] (net)                                                            3      5.32
+  U42/B1 (SAEDRVT14_AOI22_3)                                                                                    0.01      0.00      0.11 f
+  U42/X (SAEDRVT14_AOI22_3)                                                                                     0.03      0.06      0.17 r
+  n21 (net)                                                                                    1      9.20
+  U138/A (SAEDRVT14_INV_PS_3)                                                                                   0.03      0.00      0.17 r
+  U138/X (SAEDRVT14_INV_PS_3)                                                                                   0.01      0.02      0.19 f
+  n145 (net)                                                                                   2      2.33
+  cs_registers_i/U423/A (SAEDRVT14_INV_PS_3)                                                                    0.01      0.00      0.19 f
+  cs_registers_i/U423/X (SAEDRVT14_INV_PS_3)                                                                    0.02      0.02      0.22 r
+  cs_registers_i/n524 (net)                                                                    3      6.36
+  cs_registers_i/U490/B2 (SAEDRVT14_OAI222_4)                                                                   0.02      0.00      0.22 r
+  cs_registers_i/U490/X (SAEDRVT14_OAI222_4)                                                                    0.01      0.06      0.28 f
+  cs_registers_i/n663 (net)                                                                    1      0.99
+  cs_registers_i/PCCR_q_reg_0__5_/D (SAEDRVT14_FSDPRBQ_V2_4)                                                    0.01      0.00      0.28 f
+  data arrival time                                                                                                                 0.28
+
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                      202.25    202.25
+  cs_registers_i/PCCR_q_reg_0__5_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                                 282.65      0.00    202.25 r
+  library hold time                                                                                                     128.67    330.92
+  data required time                                                                                                              330.92
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                                              330.92
+  data arrival time                                                                                                                -0.28
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                                -330.64
+
+
+
+  Startpoint: debug_unit_i/addr_q_reg_4_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/hwloop_regs_i/hwlp_start_q_reg_1__31_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                     Fanout    Cap      Trans      Incr      Path  
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                        0.02      0.02
+
+  debug_unit_i/addr_q_reg_4_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                                        0.03      0.00      0.02 r
+  debug_unit_i/addr_q_reg_4_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                                         0.01      0.09      0.10 f
+  debug_unit_i/regfile_raddr_o[2] (net)                                                        4      3.92
+  U15/B1 (SAEDRVT14_AOI22_3)                                                                                    0.01      0.00      0.10 f
+  U15/X (SAEDRVT14_AOI22_3)                                                                                     0.01      0.05      0.15 r
+  n8 (net)                                                                                     1      3.83
+  U118/A (SAEDRVT14_INV_PS_3)                                                                                   0.01      0.00      0.15 r
+  U118/X (SAEDRVT14_INV_PS_3)                                                                                   0.05      0.04      0.20 f
+  n116 (net)                                                                                   6     20.12
+  cs_registers_i/U135/B (SAEDRVT14_OA31_4)                                                                      0.05      0.00      0.20 f
+  cs_registers_i/U135/X (SAEDRVT14_OA31_4)                                                                      0.00      0.04      0.24 f
+  cs_registers_i/hwlp_regid_o[0] (net)                                                         1      0.80
+  id_stage_i/U632/B1 (SAEDRVT14_AO2BB2_V1_4)                                                                    0.00      0.00      0.24 f
+  id_stage_i/U632/X (SAEDRVT14_AO2BB2_V1_4)                                                                     0.02      0.06      0.31 f
+  id_stage_i/hwloop_regid_0_ (net)                                                             4      8.18
+  id_stage_i/hwloop_regs_i/U155/A2 (SAEDRVT14_ND2_5)                                                            0.02      0.00      0.31 f
+  id_stage_i/hwloop_regs_i/U155/X (SAEDRVT14_ND2_5)                                                             0.04      0.04      0.35 r
+  id_stage_i/hwloop_regs_i/n1 (net)                                                           37     24.87
+  id_stage_i/hwloop_regs_i/U10/A1 (SAEDRVT14_AO2BB2_V1_4)                                                       0.04      0.00      0.35 r
+  id_stage_i/hwloop_regs_i/U10/X (SAEDRVT14_AO2BB2_V1_4)                                                        0.01      0.07      0.42 f
+  id_stage_i/hwloop_regs_i/n523 (net)                                                          1      0.50
+  id_stage_i/hwloop_regs_i/hwlp_start_q_reg_1__31_/D (SAEDRVT14_FSDPRBQ_V2_4)                                   0.01      0.00      0.42 f
+  data arrival time                                                                                                                 0.42
+
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                      202.25    202.25
+  id_stage_i/hwloop_regs_i/hwlp_start_q_reg_1__31_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                282.65      0.00    202.25 r
+  library hold time                                                                                                     128.81    331.06
+  data required time                                                                                                              331.06
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                                              331.06
+  data arrival time                                                                                                                -0.42
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                                -330.64
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_27_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCCR_q_reg_0__27_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                     Fanout    Cap      Trans      Incr      Path  
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                        0.02      0.02
+
+  debug_unit_i/wdata_q_reg_27_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                                      0.03      0.00      0.02 r
+  debug_unit_i/wdata_q_reg_27_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                                       0.01      0.09      0.11 f
+  debug_unit_i/csr_wdata_o[27] (net)                                                           3      5.46
+  U86/B1 (SAEDRVT14_AOI22_3)                                                                                    0.01      0.00      0.11 f
+  U86/X (SAEDRVT14_AOI22_3)                                                                                     0.03      0.06      0.17 r
+  n43 (net)                                                                                    1      9.67
+  U154/A (SAEDRVT14_INV_PS_3)                                                                                   0.03      0.00      0.17 r
+  U154/X (SAEDRVT14_INV_PS_3)                                                                                   0.01      0.03      0.20 f
+  n123 (net)                                                                                   2      3.70
+  cs_registers_i/U456/A (SAEDRVT14_INV_PS_3)                                                                    0.01      0.00      0.20 f
+  cs_registers_i/U456/X (SAEDRVT14_INV_PS_3)                                                                    0.02      0.02      0.22 r
+  cs_registers_i/n474 (net)                                                                    2      5.30
+  cs_registers_i/U530/B2 (SAEDRVT14_OAI222_4)                                                                   0.02      0.00      0.22 r
+  cs_registers_i/U530/X (SAEDRVT14_OAI222_4)                                                                    0.01      0.06      0.28 f
+  cs_registers_i/n615 (net)                                                                    1      1.00
+  cs_registers_i/PCCR_q_reg_0__27_/D (SAEDRVT14_FSDPRBQ_V2_4)                                                   0.01      0.00      0.28 f
+  data arrival time                                                                                                                 0.28
+
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                      202.25    202.25
+  cs_registers_i/PCCR_q_reg_0__27_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                                282.65      0.00    202.25 r
+  library hold time                                                                                                     128.59    330.85
+  data required time                                                                                                              330.85
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                                              330.85
+  data arrival time                                                                                                                -0.28
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                                -330.57
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_12_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/hwloop_regs_i/hwlp_start_q_reg_1__12_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                     Fanout    Cap      Trans      Incr      Path  
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                        0.02      0.02
+
+  debug_unit_i/wdata_q_reg_12_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                                      0.03      0.00      0.02 r
+  debug_unit_i/wdata_q_reg_12_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                                       0.02      0.09      0.11 f
+  debug_unit_i/csr_wdata_o[12] (net)                                                           3      6.86
+  U56/B1 (SAEDRVT14_AOI22_3)                                                                                    0.02      0.00      0.11 f
+  U56/X (SAEDRVT14_AOI22_3)                                                                                     0.02      0.06      0.17 r
+  n28 (net)                                                                                    1      8.47
+  U139/A (SAEDRVT14_INV_PS_3)                                                                                   0.02      0.00      0.17 r
+  U139/X (SAEDRVT14_INV_PS_3)                                                                                   0.01      0.03      0.20 f
+  n138 (net)                                                                                   2      4.30
+  cs_registers_i/U433/A (SAEDRVT14_INV_PS_3)                                                                    0.01      0.00      0.20 f
+  cs_registers_i/U433/X (SAEDRVT14_INV_PS_3)                                                                    0.01      0.01      0.21 r
+  cs_registers_i/n517 (net)                                                                    2      1.50
+  cs_registers_i/U170/B2 (SAEDRVT14_OAI32_4)                                                                    0.01      0.00      0.21 r
+  cs_registers_i/U170/X (SAEDRVT14_OAI32_4)                                                                     0.02      0.05      0.27 f
+  cs_registers_i/hwlp_data_o[12] (net)                                                         3      7.69
+  id_stage_i/U621/B1 (SAEDRVT14_AO2BB2_V1_4)                                                                    0.02      0.00      0.27 f
+  id_stage_i/U621/X (SAEDRVT14_AO2BB2_V1_4)                                                                     0.01      0.06      0.33 f
+  id_stage_i/n503 (net)                                                                        1      1.24
+  id_stage_i/U620/C (SAEDRVT14_AO221_4)                                                                         0.01      0.00      0.33 f
+  id_stage_i/U620/X (SAEDRVT14_AO221_4)                                                                         0.01      0.03      0.35 f
+  id_stage_i/hwloop_start[12] (net)                                                            1      1.67
+  id_stage_i/hwloop_regs_i/U197/A (SAEDRVT14_INV_PS_3)                                                          0.01      0.00      0.35 f
+  id_stage_i/hwloop_regs_i/U197/X (SAEDRVT14_INV_PS_3)                                                          0.02      0.02      0.38 r
+  id_stage_i/hwloop_regs_i/n216 (net)                                                          2      7.38
+  id_stage_i/hwloop_regs_i/U31/A2 (SAEDRVT14_AO2BB2_V1_4)                                                       0.02      0.00      0.38 r
+  id_stage_i/hwloop_regs_i/U31/X (SAEDRVT14_AO2BB2_V1_4)                                                        0.01      0.07      0.44 f
+  id_stage_i/hwloop_regs_i/n504 (net)                                                          1      0.58
+  id_stage_i/hwloop_regs_i/hwlp_start_q_reg_1__12_/D (SAEDRVT14_FSDPRBQ_V2_4)                                   0.01      0.00      0.44 f
+  data arrival time                                                                                                                 0.44
+
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                      202.25    202.25
+  id_stage_i/hwloop_regs_i/hwlp_start_q_reg_1__12_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                282.65      0.00    202.25 r
+  library hold time                                                                                                     128.74    330.99
+  data required time                                                                                                              330.99
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                                              330.99
+  data arrival time                                                                                                                -0.44
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                                -330.55
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_26_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/instr_addr_q_reg_26_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                     Fanout    Cap      Trans      Incr      Path  
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                        0.02      0.02
+
+  debug_unit_i/wdata_q_reg_26_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                                      0.03      0.00      0.02 r
+  debug_unit_i/wdata_q_reg_26_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                                       0.01      0.09      0.11 f
+  debug_unit_i/csr_wdata_o[26] (net)                                                           3      4.15
+  if_stage_i/U216/A1 (SAEDRVT14_AOI22_3)                                                                        0.01      0.00      0.11 f
+  if_stage_i/U216/X (SAEDRVT14_AOI22_3)                                                                         0.05      0.07      0.18 r
+  if_stage_i/n131 (net)                                                                        1     17.37
+  if_stage_i/U10/A1 (SAEDRVT14_ND3_3)                                                                           0.05      0.00      0.18 r
+  if_stage_i/U10/X (SAEDRVT14_ND3_3)                                                                            0.00      0.06      0.24 f
+  if_stage_i/n74 (net)                                                                         1      0.59
+  if_stage_i/prefetch_32_prefetch_buffer_i/U147/B1 (SAEDRVT14_AO2BB2_V1_4)                                      0.00      0.00      0.24 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/U147/X (SAEDRVT14_AO2BB2_V1_4)                                       0.01      0.05      0.29 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/n129 (net)                                          1      0.87
+  if_stage_i/prefetch_32_prefetch_buffer_i/U146/C (SAEDRVT14_AO221_4)                                           0.01      0.00      0.29 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/U146/X (SAEDRVT14_AO221_4)                                           0.01      0.03      0.32 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/instr_addr_o[26] (net)                              2      4.36
+  if_stage_i/prefetch_32_prefetch_buffer_i/U58/A (SAEDRVT14_INV_PS_3)                                           0.01      0.00      0.32 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/U58/X (SAEDRVT14_INV_PS_3)                                           0.00      0.01      0.33 r
+  if_stage_i/prefetch_32_prefetch_buffer_i/n50 (net)                                           1      0.60
+  if_stage_i/prefetch_32_prefetch_buffer_i/U44/B1 (SAEDRVT14_OAI222_4)                                          0.00      0.00      0.33 r
+  if_stage_i/prefetch_32_prefetch_buffer_i/U44/X (SAEDRVT14_OAI222_4)                                           0.00      0.05      0.38 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/n250 (net)                                          1      0.80
+  if_stage_i/prefetch_32_prefetch_buffer_i/instr_addr_q_reg_26_/D (SAEDRVT14_FSDPRBQ_V2_4)                      0.00      0.00      0.38 f
+  data arrival time                                                                                                                 0.38
+
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                      202.25    202.25
+  if_stage_i/prefetch_32_prefetch_buffer_i/instr_addr_q_reg_26_/CK (SAEDRVT14_FSDPRBQ_V2_4)                   282.65      0.00    202.25 r
+  library hold time                                                                                                     128.67    330.92
+  data required time                                                                                                              330.92
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                                              330.92
+  data arrival time                                                                                                                -0.38
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                                -330.54
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_19_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/mepc_q_reg_19_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                     Fanout    Cap      Trans      Incr      Path  
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                        0.02      0.02
+
+  debug_unit_i/wdata_q_reg_19_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                                      0.03      0.00      0.02 r
+  debug_unit_i/wdata_q_reg_19_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                                       0.01      0.09      0.11 f
+  debug_unit_i/csr_wdata_o[19] (net)                                                           3      4.73
+  U70/B1 (SAEDRVT14_AOI22_3)                                                                                    0.01      0.00      0.11 f
+  U70/X (SAEDRVT14_AOI22_3)                                                                                     0.02      0.06      0.17 r
+  n35 (net)                                                                                    1      8.80
+  U146/A (SAEDRVT14_INV_PS_3)                                                                                   0.02      0.00      0.17 r
+  U146/X (SAEDRVT14_INV_PS_3)                                                                                   0.01      0.03      0.19 f
+  n131 (net)                                                                                   2      4.15
+  cs_registers_i/U444/A (SAEDRVT14_INV_PS_3)                                                                    0.01      0.00      0.19 f
+  cs_registers_i/U444/X (SAEDRVT14_INV_PS_3)                                                                    0.01      0.02      0.21 r
+  cs_registers_i/n486 (net)                                                                    2      4.15
+  cs_registers_i/U163/B2 (SAEDRVT14_OAI32_4)                                                                    0.01      0.00      0.21 r
+  cs_registers_i/U163/X (SAEDRVT14_OAI32_4)                                                                     0.02      0.05      0.27 f
+  cs_registers_i/hwlp_data_o[19] (net)                                                         3      6.37
+  cs_registers_i/U78/A2 (SAEDRVT14_AO221_4)                                                                     0.02      0.00      0.27 f
+  cs_registers_i/U78/X (SAEDRVT14_AO221_4)                                                                      0.01      0.05      0.32 f
+  cs_registers_i/n630 (net)                                                                    1      0.81
+  cs_registers_i/mepc_q_reg_19_/D (SAEDRVT14_FSDPRBQ_V2_4)                                                      0.01      0.00      0.32 f
+  data arrival time                                                                                                                 0.32
+
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                      202.25    202.25
+  cs_registers_i/mepc_q_reg_19_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                                   282.65      0.00    202.25 r
+  library hold time                                                                                                     128.59    330.85
+  data required time                                                                                                              330.85
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                                              330.85
+  data arrival time                                                                                                                -0.32
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                                -330.53
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_18_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/hwloop_regs_i/hwlp_end_q_reg_0__18_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                     Fanout    Cap      Trans      Incr      Path  
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                        0.02      0.02
+
+  debug_unit_i/wdata_q_reg_18_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                                      0.03      0.00      0.02 r
+  debug_unit_i/wdata_q_reg_18_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                                       0.01      0.09      0.11 f
+  debug_unit_i/csr_wdata_o[18] (net)                                                           3      5.65
+  U68/B1 (SAEDRVT14_AOI22_3)                                                                                    0.01      0.00      0.11 f
+  U68/X (SAEDRVT14_AOI22_3)                                                                                     0.02      0.06      0.17 r
+  n34 (net)                                                                                    1      8.57
+  U145/A (SAEDRVT14_INV_PS_3)                                                                                   0.02      0.00      0.17 r
+  U145/X (SAEDRVT14_INV_PS_3)                                                                                   0.01      0.03      0.20 f
+  n132 (net)                                                                                   2      5.10
+  cs_registers_i/U443/A (SAEDRVT14_INV_PS_3)                                                                    0.01      0.00      0.20 f
+  cs_registers_i/U443/X (SAEDRVT14_INV_PS_3)                                                                    0.01      0.02      0.22 r
+  cs_registers_i/n488 (net)                                                                    2      3.12
+  cs_registers_i/U164/B2 (SAEDRVT14_OAI32_4)                                                                    0.01      0.00      0.22 r
+  cs_registers_i/U164/X (SAEDRVT14_OAI32_4)                                                                     0.02      0.05      0.27 f
+  cs_registers_i/hwlp_data_o[18] (net)                                                         3      6.01
+  id_stage_i/U1238/A (SAEDRVT14_INV_PS_3)                                                                       0.02      0.00      0.27 f
+  id_stage_i/U1238/X (SAEDRVT14_INV_PS_3)                                                                       0.01      0.02      0.29 r
+  id_stage_i/n1092 (net)                                                                       2      3.75
+  id_stage_i/U700/C2 (SAEDRVT14_OAI222_4)                                                                       0.01      0.00      0.29 r
+  id_stage_i/U700/X (SAEDRVT14_OAI222_4)                                                                        0.01      0.06      0.35 f
+  id_stage_i/hwloop_end[18] (net)                                                              1      1.25
+  id_stage_i/hwloop_regs_i/U270/A (SAEDRVT14_INV_PS_3)                                                          0.01      0.00      0.35 f
+  id_stage_i/hwloop_regs_i/U270/X (SAEDRVT14_INV_PS_3)                                                          0.01      0.01      0.36 r
+  id_stage_i/hwloop_regs_i/n241 (net)                                                          2      2.47
+  id_stage_i/hwloop_regs_i/U178/A1 (SAEDRVT14_AO2BB2_V1_4)                                                      0.01      0.00      0.36 r
+  id_stage_i/hwloop_regs_i/U178/X (SAEDRVT14_AO2BB2_V1_4)                                                       0.01      0.05      0.41 f
+  id_stage_i/hwloop_regs_i/n414 (net)                                                          1      0.59
+  id_stage_i/hwloop_regs_i/hwlp_end_q_reg_0__18_/D (SAEDRVT14_FSDPRBQ_V2_4)                                     0.01      0.00      0.41 f
+  data arrival time                                                                                                                 0.41
+
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                      202.25    202.25
+  id_stage_i/hwloop_regs_i/hwlp_end_q_reg_0__18_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                  282.65      0.00    202.25 r
+  library hold time                                                                                                     128.67    330.92
+  data required time                                                                                                              330.92
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                                              330.92
+  data arrival time                                                                                                                -0.41
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                                -330.51
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_12_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/hwloop_regs_i/hwlp_end_q_reg_1__12_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                     Fanout    Cap      Trans      Incr      Path  
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                        0.02      0.02
+
+  debug_unit_i/wdata_q_reg_12_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                                      0.03      0.00      0.02 r
+  debug_unit_i/wdata_q_reg_12_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                                       0.02      0.09      0.11 f
+  debug_unit_i/csr_wdata_o[12] (net)                                                           3      6.86
+  U56/B1 (SAEDRVT14_AOI22_3)                                                                                    0.02      0.00      0.11 f
+  U56/X (SAEDRVT14_AOI22_3)                                                                                     0.02      0.06      0.17 r
+  n28 (net)                                                                                    1      8.47
+  U139/A (SAEDRVT14_INV_PS_3)                                                                                   0.02      0.00      0.17 r
+  U139/X (SAEDRVT14_INV_PS_3)                                                                                   0.01      0.03      0.20 f
+  n138 (net)                                                                                   2      4.30
+  cs_registers_i/U433/A (SAEDRVT14_INV_PS_3)                                                                    0.01      0.00      0.20 f
+  cs_registers_i/U433/X (SAEDRVT14_INV_PS_3)                                                                    0.01      0.01      0.21 r
+  cs_registers_i/n517 (net)                                                                    2      1.50
+  cs_registers_i/U170/B2 (SAEDRVT14_OAI32_4)                                                                    0.01      0.00      0.21 r
+  cs_registers_i/U170/X (SAEDRVT14_OAI32_4)                                                                     0.02      0.05      0.27 f
+  cs_registers_i/hwlp_data_o[12] (net)                                                         3      7.69
+  id_stage_i/U1228/A (SAEDRVT14_INV_PS_3)                                                                       0.02      0.00      0.27 f
+  id_stage_i/U1228/X (SAEDRVT14_INV_PS_3)                                                                       0.01      0.02      0.28 r
+  id_stage_i/n1098 (net)                                                                       2      1.85
+  id_stage_i/U718/C2 (SAEDRVT14_OAI222_4)                                                                       0.01      0.00      0.28 r
+  id_stage_i/U718/X (SAEDRVT14_OAI222_4)                                                                        0.01      0.05      0.34 f
+  id_stage_i/hwloop_end[12] (net)                                                              1      1.87
+  id_stage_i/hwloop_regs_i/U304/A (SAEDRVT14_INV_PS_3)                                                          0.01      0.00      0.34 f
+  id_stage_i/hwloop_regs_i/U304/X (SAEDRVT14_INV_PS_3)                                                          0.01      0.01      0.35 r
+  id_stage_i/hwloop_regs_i/n247 (net)                                                          2      3.18
+  id_stage_i/hwloop_regs_i/U129/A2 (SAEDRVT14_AO2BB2_V1_4)                                                      0.01      0.00      0.35 r
+  id_stage_i/hwloop_regs_i/U129/X (SAEDRVT14_AO2BB2_V1_4)                                                       0.01      0.06      0.41 f
+  id_stage_i/hwloop_regs_i/n440 (net)                                                          1      0.50
+  id_stage_i/hwloop_regs_i/hwlp_end_q_reg_1__12_/D (SAEDRVT14_FSDPRBQ_V2_4)                                     0.01      0.00      0.41 f
+  data arrival time                                                                                                                 0.41
+
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                      202.25    202.25
+  id_stage_i/hwloop_regs_i/hwlp_end_q_reg_1__12_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                  282.65      0.00    202.25 r
+  library hold time                                                                                                     128.67    330.92
+  data required time                                                                                                              330.92
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                                              330.92
+  data arrival time                                                                                                                -0.41
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                                -330.51
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_19_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/hwloop_regs_i/hwlp_end_q_reg_1__19_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                     Fanout    Cap      Trans      Incr      Path  
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                        0.02      0.02
+
+  debug_unit_i/wdata_q_reg_19_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                                      0.03      0.00      0.02 r
+  debug_unit_i/wdata_q_reg_19_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                                       0.01      0.09      0.11 f
+  debug_unit_i/csr_wdata_o[19] (net)                                                           3      4.73
+  U70/B1 (SAEDRVT14_AOI22_3)                                                                                    0.01      0.00      0.11 f
+  U70/X (SAEDRVT14_AOI22_3)                                                                                     0.02      0.06      0.17 r
+  n35 (net)                                                                                    1      8.80
+  U146/A (SAEDRVT14_INV_PS_3)                                                                                   0.02      0.00      0.17 r
+  U146/X (SAEDRVT14_INV_PS_3)                                                                                   0.01      0.03      0.19 f
+  n131 (net)                                                                                   2      4.15
+  cs_registers_i/U444/A (SAEDRVT14_INV_PS_3)                                                                    0.01      0.00      0.19 f
+  cs_registers_i/U444/X (SAEDRVT14_INV_PS_3)                                                                    0.01      0.02      0.21 r
+  cs_registers_i/n486 (net)                                                                    2      4.15
+  cs_registers_i/U163/B2 (SAEDRVT14_OAI32_4)                                                                    0.01      0.00      0.21 r
+  cs_registers_i/U163/X (SAEDRVT14_OAI32_4)                                                                     0.02      0.05      0.27 f
+  cs_registers_i/hwlp_data_o[19] (net)                                                         3      6.37
+  id_stage_i/U1240/A (SAEDRVT14_INV_PS_3)                                                                       0.02      0.00      0.27 f
+  id_stage_i/U1240/X (SAEDRVT14_INV_PS_3)                                                                       0.01      0.02      0.29 r
+  id_stage_i/n1091 (net)                                                                       2      3.95
+  id_stage_i/U697/C2 (SAEDRVT14_OAI222_4)                                                                       0.01      0.00      0.29 r
+  id_stage_i/U697/X (SAEDRVT14_OAI222_4)                                                                        0.01      0.06      0.35 f
+  id_stage_i/hwloop_end[19] (net)                                                              1      0.99
+  id_stage_i/hwloop_regs_i/U272/A (SAEDRVT14_INV_PS_3)                                                          0.01      0.00      0.35 f
+  id_stage_i/hwloop_regs_i/U272/X (SAEDRVT14_INV_PS_3)                                                          0.01      0.01      0.36 r
+  id_stage_i/hwloop_regs_i/n240 (net)                                                          2      2.57
+  id_stage_i/hwloop_regs_i/U122/A2 (SAEDRVT14_AO2BB2_V1_4)                                                      0.01      0.00      0.36 r
+  id_stage_i/hwloop_regs_i/U122/X (SAEDRVT14_AO2BB2_V1_4)                                                       0.01      0.06      0.41 f
+  id_stage_i/hwloop_regs_i/n447 (net)                                                          1      0.61
+  id_stage_i/hwloop_regs_i/hwlp_end_q_reg_1__19_/D (SAEDRVT14_FSDPRBQ_V2_4)                                     0.01      0.00      0.41 f
+  data arrival time                                                                                                                 0.41
+
+  clock CLK_I (rise edge)                                                                                                 0.00      0.00
+  clock network delay (propagated)                                                                                      202.25    202.25
+  id_stage_i/hwloop_regs_i/hwlp_end_q_reg_1__19_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                  282.65      0.00    202.25 r
+  library hold time                                                                                                     128.67    330.92
+  data required time                                                                                                              330.92
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                                              330.92
+  data arrival time                                                                                                                -0.41
+  -----------------------------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                                -330.51
+
+
+1

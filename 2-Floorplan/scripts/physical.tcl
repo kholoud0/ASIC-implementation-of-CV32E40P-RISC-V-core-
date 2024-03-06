@@ -26,16 +26,16 @@ source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floo
 save_block -as ${DESIGN}_1_imported
 
 ############################################################
-set_attribute [get_layers M1] routing_direction vertical
-set_attribute [get_layers M2] routing_direction horizontal
-set_attribute [get_layers M3] routing_direction vertical
-set_attribute [get_layers M4] routing_direction horizontal
-set_attribute [get_layers M5] routing_direction vertical
-set_attribute [get_layers M6] routing_direction horizontal
-set_attribute [get_layers M7] routing_direction vertical
-set_attribute [get_layers M8] routing_direction horizontal
-set_attribute [get_layers M9] routing_direction vertical
-set_attribute [get_layers MRDL] routing_direction horizontal
+set_attribute [get_layers M1] routing_direction horizontal
+set_attribute [get_layers M2] routing_direction vertical
+set_attribute [get_layers M3] routing_direction horizontal
+set_attribute [get_layers M4] routing_direction vertical
+set_attribute [get_layers M5] routing_direction horizontal
+set_attribute [get_layers M6] routing_direction vertical
+set_attribute [get_layers M7] routing_direction horizontal
+set_attribute [get_layers M8] routing_direction vertical
+set_attribute [get_layers M9] routing_direction horizontal
+set_attribute [get_layers MRDL] routing_direction vertical
 
 #set_wire_track_pattern -site_def unit -layer M1  -mode uniform -mask_constraint {mask_two mask_one} \
 #-coord 0.037 -space 0.074 -direction vertical

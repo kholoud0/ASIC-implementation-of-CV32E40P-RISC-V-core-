@@ -2,7 +2,7 @@
 Report : qor
 Design : riscv_core
 Version: O-2018.06-SP1
-Date   : Mon Mar  4 07:44:13 2024
+Date   : Tue Mar  5 10:35:36 2024
 ****************************************
 
 
@@ -10,8 +10,8 @@ Scenario           'func_fast'
 Timing Path Group  'CLK_I'
 ----------------------------------------
 Levels of Logic:                     86
-Critical Path Length:              1.41
-Critical Path Slack:               3.58
+Critical Path Length:              1.43
+Critical Path Slack:               3.56
 Critical Path Clk Period:          5.00
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
@@ -24,8 +24,8 @@ Scenario           'func_slow'
 Timing Path Group  'CLK_I'
 ----------------------------------------
 Levels of Logic:                     86
-Critical Path Length:              4.35
-Critical Path Slack:               0.62
+Critical Path Length:              4.43
+Critical Path Slack:               0.54
 Critical Path Clk Period:          5.00
 Total Negative Slack:              0.00
 No. of Violating Paths:               0

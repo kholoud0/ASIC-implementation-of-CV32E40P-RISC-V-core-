@@ -16,8 +16,7 @@ PDC app_options settings =========
 
 Layer M1: cached 0 shapes out of 360 total shapes.
 Layer M2: cached 0 shapes out of 0 total shapes.
-Layer M3: cached 0 shapes out of 0 total shapes.
-Cached 0 vias out of 2558 total vias.
+Cached 0 vias out of 6160 total vias.
 
 check_legality for block design riscv_core ... 
 Warning: Library cell saed14rvt_ss0p6vm40c:SAEDRVT14_ISOFSDPQ_PECO_8.frame is missing supply pins. Its power structure cannot be determined. (LGL-050)

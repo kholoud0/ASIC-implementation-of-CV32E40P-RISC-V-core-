@@ -1,0 +1,652 @@
+****************************************
+Report : timing
+        -path_type short
+        -delay_type min
+        -max_paths 20
+        -report_by design
+        -nosplit
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Tue Mar  5 19:56:32 2024
+****************************************
+
+  Startpoint: debug_unit_i/jump_req_q_reg (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: if_stage_i/offset_fsm_cs_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                      Incr      Path  
+  ----------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                    0.00      0.00
+  clock network delay (propagated)                           0.02      0.02
+
+  debug_unit_i/jump_req_q_reg/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.02 r
+  debug_unit_i/jump_req_q_reg/Q (SAEDRVT14_FSDPRBQ_V2_4)     0.10      0.12 r
+  ...
+  if_stage_i/offset_fsm_cs_reg_0_/D (SAEDRVT14_FDPSBQ_4)     0.18      0.30 f
+  data arrival time                                                    0.30
+
+  clock CLK_I (rise edge)                                    0.00      0.00
+  clock network delay (propagated)                         202.25    202.25
+  if_stage_i/offset_fsm_cs_reg_0_/CK (SAEDRVT14_FDPSBQ_4)    0.00    202.25 r
+  library hold time                                        137.44    339.69
+  data required time                                                 339.69
+  ----------------------------------------------------------------------------------
+  data required time                                                 339.69
+  data arrival time                                                   -0.30
+  ----------------------------------------------------------------------------------
+  slack (VIOLATED)                                                   -339.39
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCMR_q_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                      Incr      Path  
+  ----------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                    0.00      0.00
+  clock network delay (propagated)                           0.02      0.02
+
+  debug_unit_i/wdata_q_reg_0_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.02 r
+  debug_unit_i/wdata_q_reg_0_/Q (SAEDRVT14_FSDPRBQ_V2_4)     0.08      0.10 f
+  ...
+  cs_registers_i/PCMR_q_reg_0_/D (SAEDRVT14_FDPSBQ_4)        0.16      0.27 f
+  data arrival time                                                    0.27
+
+  clock CLK_I (rise edge)                                    0.00      0.00
+  clock network delay (propagated)                         202.25    202.25
+  cs_registers_i/PCMR_q_reg_0_/CK (SAEDRVT14_FDPSBQ_4)       0.00    202.25 r
+  library hold time                                        135.14    337.39
+  data required time                                                 337.39
+  ----------------------------------------------------------------------------------
+  data required time                                                 337.39
+  data arrival time                                                   -0.27
+  ----------------------------------------------------------------------------------
+  slack (VIOLATED)                                                   -337.13
+
+
+
+  Startpoint: debug_unit_i/jump_req_q_reg (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: if_stage_i/instr_valid_id_o_reg (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                         Incr      Path  
+  -------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                       0.00      0.00
+  clock network delay (propagated)                              0.02      0.02
+
+  debug_unit_i/jump_req_q_reg/CK (SAEDRVT14_FSDPRBQ_V2_4)       0.00      0.02 r
+  debug_unit_i/jump_req_q_reg/Q (SAEDRVT14_FSDPRBQ_V2_4)        0.10      0.12 r
+  ...
+  if_stage_i/instr_valid_id_o_reg/D (SAEDRVT14_FSDPRBQ_V2_4)    0.34      0.46 f
+  data arrival time                                                       0.46
+
+  clock CLK_I (rise edge)                                       0.00      0.00
+  clock network delay (propagated)                            202.25    202.25
+  if_stage_i/instr_valid_id_o_reg/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00    202.25 r
+  library hold time                                           134.23    336.49
+  data required time                                                    336.49
+  -------------------------------------------------------------------------------------
+  data required time                                                    336.49
+  data arrival time                                                      -0.46
+  -------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                      -336.03
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCMR_q_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                         Incr      Path  
+  -------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                       0.00      0.00
+  clock network delay (propagated)                              0.02      0.02
+
+  debug_unit_i/wdata_q_reg_1_/CK (SAEDRVT14_FSDPRBQ_V2_4)       0.00      0.02 r
+  debug_unit_i/wdata_q_reg_1_/Q (SAEDRVT14_FSDPRBQ_V2_4)        0.09      0.11 f
+  ...
+  cs_registers_i/PCMR_q_reg_1_/D (SAEDRVT14_FDPSBQ_4)           0.16      0.27 f
+  data arrival time                                                       0.27
+
+  clock CLK_I (rise edge)                                       0.00      0.00
+  clock network delay (propagated)                            202.25    202.25
+  cs_registers_i/PCMR_q_reg_1_/CK (SAEDRVT14_FDPSBQ_4)          0.00    202.25 r
+  library hold time                                           133.56    335.81
+  data required time                                                    335.81
+  -------------------------------------------------------------------------------------
+  data required time                                                    335.81
+  data arrival time                                                      -0.27
+  -------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                      -335.55
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_2_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCER_q_reg_2_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                         Incr      Path  
+  -------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                       0.00      0.00
+  clock network delay (propagated)                              0.02      0.02
+
+  debug_unit_i/wdata_q_reg_2_/CK (SAEDRVT14_FSDPRBQ_V2_4)       0.00      0.02 r
+  debug_unit_i/wdata_q_reg_2_/Q (SAEDRVT14_FSDPRBQ_V2_4)        0.08      0.11 f
+  ...
+  cs_registers_i/PCER_q_reg_2_/D (SAEDRVT14_FSDPRBQ_V2_4)       0.16      0.26 f
+  data arrival time                                                       0.26
+
+  clock CLK_I (rise edge)                                       0.00      0.00
+  clock network delay (propagated)                            202.25    202.25
+  cs_registers_i/PCER_q_reg_2_/CK (SAEDRVT14_FSDPRBQ_V2_4)      0.00    202.25 r
+  library hold time                                           128.81    331.06
+  data required time                                                    331.06
+  -------------------------------------------------------------------------------------
+  data required time                                                    331.06
+  data arrival time                                                      -0.26
+  -------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                      -330.80
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_28_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCCR_q_reg_0__28_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                          Incr      Path  
+  --------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                        0.00      0.00
+  clock network delay (propagated)                               0.02      0.02
+
+  debug_unit_i/wdata_q_reg_28_/CK (SAEDRVT14_FSDPRBQ_V2_4)       0.00      0.02 r
+  debug_unit_i/wdata_q_reg_28_/Q (SAEDRVT14_FSDPRBQ_V2_4)        0.09      0.11 f
+  ...
+  cs_registers_i/PCCR_q_reg_0__28_/D (SAEDRVT14_FSDPRBQ_V2_4)    0.17      0.27 f
+  data arrival time                                                        0.27
+
+  clock CLK_I (rise edge)                                        0.00      0.00
+  clock network delay (propagated)                             202.25    202.25
+  cs_registers_i/PCCR_q_reg_0__28_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00    202.25 r
+  library hold time                                            128.81    331.06
+  data required time                                                     331.06
+  --------------------------------------------------------------------------------------
+  data required time                                                     331.06
+  data arrival time                                                       -0.27
+  --------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                       -330.79
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_31_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCCR_q_reg_0__31_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                          Incr      Path  
+  --------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                        0.00      0.00
+  clock network delay (propagated)                               0.02      0.02
+
+  debug_unit_i/wdata_q_reg_31_/CK (SAEDRVT14_FSDPRBQ_V2_4)       0.00      0.02 r
+  debug_unit_i/wdata_q_reg_31_/Q (SAEDRVT14_FSDPRBQ_V2_4)        0.09      0.11 f
+  ...
+  cs_registers_i/PCCR_q_reg_0__31_/D (SAEDRVT14_FSDPRBQ_V2_4)    0.16      0.26 f
+  data arrival time                                                        0.26
+
+  clock CLK_I (rise edge)                                        0.00      0.00
+  clock network delay (propagated)                             202.25    202.25
+  cs_registers_i/PCCR_q_reg_0__31_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00    202.25 r
+  library hold time                                            128.74    330.99
+  data required time                                                     330.99
+  --------------------------------------------------------------------------------------
+  data required time                                                     330.99
+  data arrival time                                                       -0.26
+  --------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                       -330.73
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_6_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCCR_q_reg_0__6_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                          Incr      Path  
+  --------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                        0.00      0.00
+  clock network delay (propagated)                               0.02      0.02
+
+  debug_unit_i/wdata_q_reg_6_/CK (SAEDRVT14_FSDPRBQ_V2_4)        0.00      0.02 r
+  debug_unit_i/wdata_q_reg_6_/Q (SAEDRVT14_FSDPRBQ_V2_4)         0.09      0.11 f
+  ...
+  cs_registers_i/PCCR_q_reg_0__6_/D (SAEDRVT14_FSDPRBQ_V2_4)     0.16      0.27 f
+  data arrival time                                                        0.27
+
+  clock CLK_I (rise edge)                                        0.00      0.00
+  clock network delay (propagated)                             202.25    202.25
+  cs_registers_i/PCCR_q_reg_0__6_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00    202.25 r
+  library hold time                                            128.74    330.99
+  data required time                                                     330.99
+  --------------------------------------------------------------------------------------
+  data required time                                                     330.99
+  data arrival time                                                       -0.27
+  --------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                       -330.72
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_8_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCCR_q_reg_0__8_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                          Incr      Path  
+  --------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                        0.00      0.00
+  clock network delay (propagated)                               0.02      0.02
+
+  debug_unit_i/wdata_q_reg_8_/CK (SAEDRVT14_FSDPRBQ_V2_4)        0.00      0.02 r
+  debug_unit_i/wdata_q_reg_8_/Q (SAEDRVT14_FSDPRBQ_V2_4)         0.09      0.11 f
+  ...
+  cs_registers_i/PCCR_q_reg_0__8_/D (SAEDRVT14_FSDPRBQ_V2_4)     0.17      0.27 f
+  data arrival time                                                        0.27
+
+  clock CLK_I (rise edge)                                        0.00      0.00
+  clock network delay (propagated)                             202.25    202.25
+  cs_registers_i/PCCR_q_reg_0__8_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00    202.25 r
+  library hold time                                            128.74    330.99
+  data required time                                                     330.99
+  --------------------------------------------------------------------------------------
+  data required time                                                     330.99
+  data arrival time                                                       -0.27
+  --------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                       -330.72
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_10_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/instr_addr_q_reg_10_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                       Incr      Path  
+  -------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                            0.02      0.02
+
+  debug_unit_i/wdata_q_reg_10_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                    0.00      0.02 r
+  debug_unit_i/wdata_q_reg_10_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                     0.09      0.11 f
+  ...
+  if_stage_i/prefetch_32_prefetch_buffer_i/instr_addr_q_reg_10_/D (SAEDRVT14_FSDPRBQ_V2_4)    0.28      0.39 f
+  data arrival time                                                                                     0.39
+
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                          202.25    202.25
+  if_stage_i/prefetch_32_prefetch_buffer_i/instr_addr_q_reg_10_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00    202.25 r
+  library hold time                                                                         128.81    331.06
+  data required time                                                                                  331.06
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                  331.06
+  data arrival time                                                                                    -0.39
+  -------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -330.68
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_2_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCCR_q_reg_0__2_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                       Incr      Path  
+  -------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                            0.02      0.02
+
+  debug_unit_i/wdata_q_reg_2_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                     0.00      0.02 r
+  debug_unit_i/wdata_q_reg_2_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                      0.08      0.11 f
+  ...
+  cs_registers_i/PCCR_q_reg_0__2_/D (SAEDRVT14_FSDPRBQ_V2_4)                                  0.16      0.26 f
+  data arrival time                                                                                     0.26
+
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                          202.25    202.25
+  cs_registers_i/PCCR_q_reg_0__2_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                 0.00    202.25 r
+  library hold time                                                                         128.67    330.92
+  data required time                                                                                  330.92
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                  330.92
+  data arrival time                                                                                    -0.26
+  -------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -330.66
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCCR_q_reg_0__5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                       Incr      Path  
+  -------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                            0.02      0.02
+
+  debug_unit_i/wdata_q_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                     0.00      0.02 r
+  debug_unit_i/wdata_q_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                      0.09      0.11 f
+  ...
+  cs_registers_i/PCCR_q_reg_0__5_/D (SAEDRVT14_FSDPRBQ_V2_4)                                  0.17      0.28 f
+  data arrival time                                                                                     0.28
+
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                          202.25    202.25
+  cs_registers_i/PCCR_q_reg_0__5_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                 0.00    202.25 r
+  library hold time                                                                         128.67    330.92
+  data required time                                                                                  330.92
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                  330.92
+  data arrival time                                                                                    -0.28
+  -------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -330.64
+
+
+
+  Startpoint: debug_unit_i/addr_q_reg_4_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/hwloop_regs_i/hwlp_start_q_reg_1__31_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                       Incr      Path  
+  -------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                            0.02      0.02
+
+  debug_unit_i/addr_q_reg_4_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                      0.00      0.02 r
+  debug_unit_i/addr_q_reg_4_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                       0.09      0.10 f
+  ...
+  id_stage_i/hwloop_regs_i/hwlp_start_q_reg_1__31_/D (SAEDRVT14_FSDPRBQ_V2_4)                 0.32      0.42 f
+  data arrival time                                                                                     0.42
+
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                          202.25    202.25
+  id_stage_i/hwloop_regs_i/hwlp_start_q_reg_1__31_/CK (SAEDRVT14_FSDPRBQ_V2_4)                0.00    202.25 r
+  library hold time                                                                         128.81    331.06
+  data required time                                                                                  331.06
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                  331.06
+  data arrival time                                                                                    -0.42
+  -------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -330.64
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_27_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/PCCR_q_reg_0__27_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                       Incr      Path  
+  -------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                            0.02      0.02
+
+  debug_unit_i/wdata_q_reg_27_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                    0.00      0.02 r
+  debug_unit_i/wdata_q_reg_27_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                     0.09      0.11 f
+  ...
+  cs_registers_i/PCCR_q_reg_0__27_/D (SAEDRVT14_FSDPRBQ_V2_4)                                 0.17      0.28 f
+  data arrival time                                                                                     0.28
+
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                          202.25    202.25
+  cs_registers_i/PCCR_q_reg_0__27_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                0.00    202.25 r
+  library hold time                                                                         128.59    330.85
+  data required time                                                                                  330.85
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                  330.85
+  data arrival time                                                                                    -0.28
+  -------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -330.57
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_12_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/hwloop_regs_i/hwlp_start_q_reg_1__12_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                       Incr      Path  
+  -------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                            0.02      0.02
+
+  debug_unit_i/wdata_q_reg_12_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                    0.00      0.02 r
+  debug_unit_i/wdata_q_reg_12_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                     0.09      0.11 f
+  ...
+  id_stage_i/hwloop_regs_i/hwlp_start_q_reg_1__12_/D (SAEDRVT14_FSDPRBQ_V2_4)                 0.33      0.44 f
+  data arrival time                                                                                     0.44
+
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                          202.25    202.25
+  id_stage_i/hwloop_regs_i/hwlp_start_q_reg_1__12_/CK (SAEDRVT14_FSDPRBQ_V2_4)                0.00    202.25 r
+  library hold time                                                                         128.74    330.99
+  data required time                                                                                  330.99
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                  330.99
+  data arrival time                                                                                    -0.44
+  -------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -330.55
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_26_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/instr_addr_q_reg_26_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                       Incr      Path  
+  -------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                            0.02      0.02
+
+  debug_unit_i/wdata_q_reg_26_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                    0.00      0.02 r
+  debug_unit_i/wdata_q_reg_26_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                     0.09      0.11 f
+  ...
+  if_stage_i/prefetch_32_prefetch_buffer_i/instr_addr_q_reg_26_/D (SAEDRVT14_FSDPRBQ_V2_4)    0.27      0.38 f
+  data arrival time                                                                                     0.38
+
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                          202.25    202.25
+  if_stage_i/prefetch_32_prefetch_buffer_i/instr_addr_q_reg_26_/CK (SAEDRVT14_FSDPRBQ_V2_4)   0.00    202.25 r
+  library hold time                                                                         128.67    330.92
+  data required time                                                                                  330.92
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                  330.92
+  data arrival time                                                                                    -0.38
+  -------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -330.54
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_19_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: cs_registers_i/mepc_q_reg_19_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                       Incr      Path  
+  -------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                            0.02      0.02
+
+  debug_unit_i/wdata_q_reg_19_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                    0.00      0.02 r
+  debug_unit_i/wdata_q_reg_19_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                     0.09      0.11 f
+  ...
+  cs_registers_i/mepc_q_reg_19_/D (SAEDRVT14_FSDPRBQ_V2_4)                                    0.21      0.32 f
+  data arrival time                                                                                     0.32
+
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                          202.25    202.25
+  cs_registers_i/mepc_q_reg_19_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                   0.00    202.25 r
+  library hold time                                                                         128.59    330.85
+  data required time                                                                                  330.85
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                  330.85
+  data arrival time                                                                                    -0.32
+  -------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -330.53
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_18_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/hwloop_regs_i/hwlp_end_q_reg_0__18_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                       Incr      Path  
+  -------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                            0.02      0.02
+
+  debug_unit_i/wdata_q_reg_18_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                    0.00      0.02 r
+  debug_unit_i/wdata_q_reg_18_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                     0.09      0.11 f
+  ...
+  id_stage_i/hwloop_regs_i/hwlp_end_q_reg_0__18_/D (SAEDRVT14_FSDPRBQ_V2_4)                   0.30      0.41 f
+  data arrival time                                                                                     0.41
+
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                          202.25    202.25
+  id_stage_i/hwloop_regs_i/hwlp_end_q_reg_0__18_/CK (SAEDRVT14_FSDPRBQ_V2_4)                  0.00    202.25 r
+  library hold time                                                                         128.67    330.92
+  data required time                                                                                  330.92
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                  330.92
+  data arrival time                                                                                    -0.41
+  -------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -330.51
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_12_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/hwloop_regs_i/hwlp_end_q_reg_1__12_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                       Incr      Path  
+  -------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                            0.02      0.02
+
+  debug_unit_i/wdata_q_reg_12_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                    0.00      0.02 r
+  debug_unit_i/wdata_q_reg_12_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                     0.09      0.11 f
+  ...
+  id_stage_i/hwloop_regs_i/hwlp_end_q_reg_1__12_/D (SAEDRVT14_FSDPRBQ_V2_4)                   0.30      0.41 f
+  data arrival time                                                                                     0.41
+
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                          202.25    202.25
+  id_stage_i/hwloop_regs_i/hwlp_end_q_reg_1__12_/CK (SAEDRVT14_FSDPRBQ_V2_4)                  0.00    202.25 r
+  library hold time                                                                         128.67    330.92
+  data required time                                                                                  330.92
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                  330.92
+  data arrival time                                                                                    -0.41
+  -------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -330.51
+
+
+
+  Startpoint: debug_unit_i/wdata_q_reg_19_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/hwloop_regs_i/hwlp_end_q_reg_1__19_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                       Incr      Path  
+  -------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                            0.02      0.02
+
+  debug_unit_i/wdata_q_reg_19_/CK (SAEDRVT14_FSDPRBQ_V2_4)                                    0.00      0.02 r
+  debug_unit_i/wdata_q_reg_19_/Q (SAEDRVT14_FSDPRBQ_V2_4)                                     0.09      0.11 f
+  ...
+  id_stage_i/hwloop_regs_i/hwlp_end_q_reg_1__19_/D (SAEDRVT14_FSDPRBQ_V2_4)                   0.31      0.41 f
+  data arrival time                                                                                     0.41
+
+  clock CLK_I (rise edge)                                                                     0.00      0.00
+  clock network delay (propagated)                                                          202.25    202.25
+  id_stage_i/hwloop_regs_i/hwlp_end_q_reg_1__19_/CK (SAEDRVT14_FSDPRBQ_V2_4)                  0.00    202.25 r
+  library hold time                                                                         128.67    330.92
+  data required time                                                                                  330.92
+  -------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                  330.92
+  data arrival time                                                                                    -0.41
+  -------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                    -330.51
+
+
+1
