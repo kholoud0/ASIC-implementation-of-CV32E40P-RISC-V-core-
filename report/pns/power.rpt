@@ -8,14 +8,14 @@ Variation Type:                            fixed_derate
 Clock Reconvergence Pessimism Removal:     disabled
 Advanced Receiver Model:                   disabled
 ************************************************************
-Information: Corner slow: no PVT mismatches. (PVT-032)
 Information: Corner fast: no PVT mismatches. (PVT-032)
+Information: Corner slow: no PVT mismatches. (PVT-032)
 ****************************************
 Report : power
         -significant_digits 2
 Design : riscv_core
 Version: O-2018.06-SP1
-Date   : Tue Mar  5 10:35:21 2024
+Date   : Thu Mar  7 01:26:02 2024
 ****************************************
 Information: Doing activity propagation for mode 'func' and corner 'slow' with effort level 'medium'. (POW-024)
 Information: Timer-derived activity data is cached on scenario func_slow (POW-052)
@@ -30,11 +30,11 @@ Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
 Warning: Parasitic Tech Library layer 'M8' parameter 'WMIN' = 0.030 does not match 0.060 of technology file (NEX-007)
 Warning: Parasitic Tech Library layer 'M8' parameter 'SMIN' = 0.060 does not match 0.040 of technology file (NEX-007)
 Information: Design Average RC for design riscv_core_2_floorplan  (NEX-011)
-Information: r = 2.489979 ohm/um, via_r = 0.489313 ohm/cut, c = 0.143876 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
-Information: r = 1.777025 ohm/um, via_r = 0.580198 ohm/cut, c = 0.127756 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: r = 2.489844 ohm/um, via_r = 0.488970 ohm/cut, c = 0.143856 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 1.777025 ohm/um, via_r = 0.580198 ohm/cut, c = 0.127210 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
 Information: The RC mode used is VR for design 'riscv_core'. (NEX-022)
 Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
-Information: Net estimation statistics: timing graph nets = 29314, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 1164, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+Information: Net estimation statistics: timing graph nets = 29305, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 1061, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
 Mode: func
 Corner: slow
 Scenario: func_slow
@@ -54,6 +54,17 @@ scaling for leakage power
 Supply nets:
 VDD (power) probability 1.00 (default)
 VSS (ground) probability 1.00 (default)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell core_busy_q_reg for parameter Tinp. Lowest table value = 0.003000, highest table value = 0.133000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port Q on cell core_busy_q_reg for parameter Tinp. Lowest table value = 0.003000, highest table value = 0.133000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell ex_stage_i/regfile_we_lsu_reg for parameter Tinp. Lowest table value = 0.003000, highest table value = 0.133000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port Q on cell ex_stage_i/regfile_we_lsu_reg for parameter Tinp. Lowest table value = 0.003000, highest table value = 0.133000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell ex_stage_i/regfile_waddr_lsu_reg_5_ for parameter Tinp. Lowest table value = 0.003000, highest table value = 0.133000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port D on cell ex_stage_i/regfile_waddr_lsu_reg_4_ for parameter Tinp. Lowest table value = 0.003000, highest table value = 0.133000, value = 0.002956 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell ex_stage_i/regfile_waddr_lsu_reg_4_ for parameter Tinp. Lowest table value = 0.003000, highest table value = 0.133000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port D on cell ex_stage_i/regfile_waddr_lsu_reg_3_ for parameter Tinp. Lowest table value = 0.003000, highest table value = 0.133000, value = 0.002956 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell ex_stage_i/regfile_waddr_lsu_reg_3_ for parameter Tinp. Lowest table value = 0.003000, highest table value = 0.133000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port Q on cell ex_stage_i/regfile_waddr_lsu_reg_3_ for parameter Tinp. Lowest table value = 0.003000, highest table value = 0.133000, value = 0.000000 (POW-046)
+Note - message 'POW-046' limit (10) exceeded. Remainder will be suppressed.
 
   Cell Internal Power    = 3.32e+08 pW (  0.5%)
   Net Switching Power    = 6.84e+10 pW ( 99.5%)
@@ -72,9 +83,9 @@ io_pad                    0.00e+00               0.00e+00               0.00e+00
 memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)      
 black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)      
 clock_network             3.25e+08               6.84e+10               1.83e+01               6.87e+10    ( 99.9%)      
-register                  1.11e+06               1.46e+06               3.18e+04               2.60e+06    (  0.0%)      
+register                  1.11e+06               1.54e+06               3.18e+04               2.68e+06    (  0.0%)      
 sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)      
-combinational             6.00e+06               3.67e+07               1.27e+05               4.28e+07    (  0.1%)      
+combinational             5.92e+06               3.62e+07               1.27e+05               4.22e+07    (  0.1%)      
 -----------------------------------------------------------------------------------------------------------------------------
 Total                     3.32e+08 pW            6.84e+10 pW            1.58e+05 pW            6.87e+10 pW
 1

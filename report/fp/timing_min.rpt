@@ -7,7 +7,7 @@ Report : timing
         -nosplit
 Design : riscv_core
 Version: O-2018.06-SP1
-Date   : Tue Mar  5 10:23:37 2024
+Date   : Thu Mar  7 01:22:33 2024
 ****************************************
 
   Startpoint: id_stage_i/controller_i/boot_done_q_reg (rising edge-triggered flip-flop clocked by CLK_I)
@@ -32,38 +32,6 @@ Date   : Tue Mar  5 10:23:37 2024
   clock CLK_I (rise edge)                                                0.00      0.00
   clock network delay (ideal)                                            0.00      0.00
   id_stage_i/controller_i/boot_done_q_reg/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
-  library hold time                                                     -0.00     -0.00
-  data required time                                                              -0.00
-  ----------------------------------------------------------------------------------------------
-  data required time                                                              -0.00
-  data arrival time                                                               -0.03
-  ----------------------------------------------------------------------------------------------
-  slack (MET)                                                                      0.03
-
-
-
-  Startpoint: debug_unit_i/dbg_cause_q_reg_3_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: debug_unit_i/dbg_cause_q_reg_3_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: fast
-  Scenario: func_fast
-  Path Group: CLK_I
-  Path Type: min
-
-  Point                                                                  Incr      Path  
-  ----------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                                0.00      0.00
-  clock network delay (ideal)                                            0.00      0.00
-
-  debug_unit_i/dbg_cause_q_reg_3_/CK (SAEDRVT14_FDPSBQ_4)                0.00      0.00 r
-  debug_unit_i/dbg_cause_q_reg_3_/Q (SAEDRVT14_FDPSBQ_4)                 0.02      0.02 r
-  ...
-  debug_unit_i/dbg_cause_q_reg_3_/D (SAEDRVT14_FDPSBQ_4)                 0.01      0.03 r
-  data arrival time                                                                0.03
-
-  clock CLK_I (rise edge)                                                0.00      0.00
-  clock network delay (ideal)                                            0.00      0.00
-  debug_unit_i/dbg_cause_q_reg_3_/CK (SAEDRVT14_FDPSBQ_4)                0.00      0.00 r
   library hold time                                                     -0.00     -0.00
   data required time                                                              -0.00
   ----------------------------------------------------------------------------------------------
@@ -106,6 +74,38 @@ Date   : Tue Mar  5 10:23:37 2024
 
 
 
+  Startpoint: debug_unit_i/dbg_cause_q_reg_3_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: debug_unit_i/dbg_cause_q_reg_3_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: fast
+  Scenario: func_fast
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                  Incr      Path  
+  ----------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                0.00      0.00
+  clock network delay (ideal)                                            0.00      0.00
+
+  debug_unit_i/dbg_cause_q_reg_3_/CK (SAEDRVT14_FDPSBQ_4)                0.00      0.00 r
+  debug_unit_i/dbg_cause_q_reg_3_/Q (SAEDRVT14_FDPSBQ_4)                 0.02      0.02 r
+  ...
+  debug_unit_i/dbg_cause_q_reg_3_/D (SAEDRVT14_FDPSBQ_4)                 0.01      0.03 r
+  data arrival time                                                                0.03
+
+  clock CLK_I (rise edge)                                                0.00      0.00
+  clock network delay (ideal)                                            0.00      0.00
+  debug_unit_i/dbg_cause_q_reg_3_/CK (SAEDRVT14_FDPSBQ_4)                0.00      0.00 r
+  library hold time                                                     -0.00     -0.00
+  data required time                                                              -0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                              -0.00
+  data arrival time                                                               -0.03
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                      0.03
+
+
+
   Startpoint: debug_unit_i/dbg_cause_q_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
   Endpoint: debug_unit_i/dbg_cause_q_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
@@ -128,6 +128,38 @@ Date   : Tue Mar  5 10:23:37 2024
   clock CLK_I (rise edge)                                                0.00      0.00
   clock network delay (ideal)                                            0.00      0.00
   debug_unit_i/dbg_cause_q_reg_0_/CK (SAEDRVT14_FDPSBQ_4)                0.00      0.00 r
+  library hold time                                                     -0.00     -0.00
+  data required time                                                              -0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                              -0.00
+  data arrival time                                                               -0.03
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                      0.03
+
+
+
+  Startpoint: debug_unit_i/dbg_cause_q_reg_4_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: debug_unit_i/dbg_cause_q_reg_4_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: fast
+  Scenario: func_fast
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                  Incr      Path  
+  ----------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                0.00      0.00
+  clock network delay (ideal)                                            0.00      0.00
+
+  debug_unit_i/dbg_cause_q_reg_4_/CK (SAEDRVT14_FDPSBQ_4)                0.00      0.00 r
+  debug_unit_i/dbg_cause_q_reg_4_/Q (SAEDRVT14_FDPSBQ_4)                 0.02      0.02 r
+  ...
+  debug_unit_i/dbg_cause_q_reg_4_/D (SAEDRVT14_FDPSBQ_4)                 0.01      0.03 r
+  data arrival time                                                                0.03
+
+  clock CLK_I (rise edge)                                                0.00      0.00
+  clock network delay (ideal)                                            0.00      0.00
+  debug_unit_i/dbg_cause_q_reg_4_/CK (SAEDRVT14_FDPSBQ_4)                0.00      0.00 r
   library hold time                                                     -0.00     -0.00
   data required time                                                              -0.00
   ----------------------------------------------------------------------------------------------
@@ -170,38 +202,6 @@ Date   : Tue Mar  5 10:23:37 2024
 
 
 
-  Startpoint: debug_unit_i/dbg_cause_q_reg_4_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: debug_unit_i/dbg_cause_q_reg_4_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: fast
-  Scenario: func_fast
-  Path Group: CLK_I
-  Path Type: min
-
-  Point                                                                         Incr      Path  
-  -----------------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                                       0.00      0.00
-  clock network delay (ideal)                                                   0.00      0.00
-
-  debug_unit_i/dbg_cause_q_reg_4_/CK (SAEDRVT14_FDPSBQ_4)                       0.00      0.00 r
-  debug_unit_i/dbg_cause_q_reg_4_/Q (SAEDRVT14_FDPSBQ_4)                        0.02      0.02 r
-  ...
-  debug_unit_i/dbg_cause_q_reg_4_/D (SAEDRVT14_FDPSBQ_4)                        0.01      0.03 r
-  data arrival time                                                                       0.03
-
-  clock CLK_I (rise edge)                                                       0.00      0.00
-  clock network delay (ideal)                                                   0.00      0.00
-  debug_unit_i/dbg_cause_q_reg_4_/CK (SAEDRVT14_FDPSBQ_4)                       0.00      0.00 r
-  library hold time                                                            -0.00     -0.00
-  data required time                                                                     -0.00
-  -----------------------------------------------------------------------------------------------------
-  data required time                                                                     -0.00
-  data arrival time                                                                      -0.03
-  -----------------------------------------------------------------------------------------------------
-  slack (MET)                                                                             0.03
-
-
-
   Startpoint: cs_registers_i/PCMR_q_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
   Endpoint: cs_registers_i/PCCR_inc_q_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
@@ -224,38 +224,6 @@ Date   : Tue Mar  5 10:23:37 2024
   clock CLK_I (rise edge)                                                       0.00      0.00
   clock network delay (ideal)                                                   0.00      0.00
   cs_registers_i/PCCR_inc_q_reg_0_/CK (SAEDRVT14_FSDPRBQ_V2_4)                  0.00      0.00 r
-  library hold time                                                            -0.00     -0.00
-  data required time                                                                     -0.00
-  -----------------------------------------------------------------------------------------------------
-  data required time                                                                     -0.00
-  data arrival time                                                                      -0.03
-  -----------------------------------------------------------------------------------------------------
-  slack (MET)                                                                             0.03
-
-
-
-  Startpoint: if_stage_i/offset_fsm_cs_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: if_stage_i/offset_fsm_cs_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: fast
-  Scenario: func_fast
-  Path Group: CLK_I
-  Path Type: min
-
-  Point                                                                         Incr      Path  
-  -----------------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                                       0.00      0.00
-  clock network delay (ideal)                                                   0.00      0.00
-
-  if_stage_i/offset_fsm_cs_reg_0_/CK (SAEDRVT14_FDPSBQ_4)                       0.00      0.00 r
-  if_stage_i/offset_fsm_cs_reg_0_/Q (SAEDRVT14_FDPSBQ_4)                        0.02      0.02 r
-  ...
-  if_stage_i/offset_fsm_cs_reg_0_/D (SAEDRVT14_FDPSBQ_4)                        0.01      0.03 r
-  data arrival time                                                                       0.03
-
-  clock CLK_I (rise edge)                                                       0.00      0.00
-  clock network delay (ideal)                                                   0.00      0.00
-  if_stage_i/offset_fsm_cs_reg_0_/CK (SAEDRVT14_FDPSBQ_4)                       0.00      0.00 r
   library hold time                                                            -0.00     -0.00
   data required time                                                                     -0.00
   -----------------------------------------------------------------------------------------------------
@@ -298,6 +266,38 @@ Date   : Tue Mar  5 10:23:37 2024
 
 
 
+  Startpoint: if_stage_i/offset_fsm_cs_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: if_stage_i/offset_fsm_cs_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: fast
+  Scenario: func_fast
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                         Incr      Path  
+  -----------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                       0.00      0.00
+  clock network delay (ideal)                                                   0.00      0.00
+
+  if_stage_i/offset_fsm_cs_reg_0_/CK (SAEDRVT14_FDPSBQ_4)                       0.00      0.00 r
+  if_stage_i/offset_fsm_cs_reg_0_/Q (SAEDRVT14_FDPSBQ_4)                        0.02      0.02 r
+  ...
+  if_stage_i/offset_fsm_cs_reg_0_/D (SAEDRVT14_FDPSBQ_4)                        0.01      0.03 r
+  data arrival time                                                                       0.03
+
+  clock CLK_I (rise edge)                                                       0.00      0.00
+  clock network delay (ideal)                                                   0.00      0.00
+  if_stage_i/offset_fsm_cs_reg_0_/CK (SAEDRVT14_FDPSBQ_4)                       0.00      0.00 r
+  library hold time                                                            -0.00     -0.00
+  data required time                                                                     -0.00
+  -----------------------------------------------------------------------------------------------------
+  data required time                                                                     -0.00
+  data arrival time                                                                      -0.03
+  -----------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             0.03
+
+
+
   Startpoint: debug_unit_i/dbg_ssth_q_reg (rising edge-triggered flip-flop clocked by CLK_I)
   Endpoint: debug_unit_i/dbg_ssth_q_reg (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
@@ -320,6 +320,38 @@ Date   : Tue Mar  5 10:23:37 2024
   clock CLK_I (rise edge)                                                       0.00      0.00
   clock network delay (ideal)                                                   0.00      0.00
   debug_unit_i/dbg_ssth_q_reg/CK (SAEDRVT14_FSDPRBQ_V2_4)                       0.00      0.00 r
+  library hold time                                                            -0.00     -0.00
+  data required time                                                                     -0.00
+  -----------------------------------------------------------------------------------------------------
+  data required time                                                                     -0.00
+  data arrival time                                                                      -0.03
+  -----------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             0.03
+
+
+
+  Startpoint: id_stage_i/controller_i/jump_done_q_reg (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/controller_i/jump_done_q_reg (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: fast
+  Scenario: func_fast
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                         Incr      Path  
+  -----------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                       0.00      0.00
+  clock network delay (ideal)                                                   0.00      0.00
+
+  id_stage_i/controller_i/jump_done_q_reg/CK (SAEDRVT14_FSDPRBQ_V2_4)           0.00      0.00 r
+  id_stage_i/controller_i/jump_done_q_reg/Q (SAEDRVT14_FSDPRBQ_V2_4)            0.02      0.02 f
+  ...
+  id_stage_i/controller_i/jump_done_q_reg/D (SAEDRVT14_FSDPRBQ_V2_4)            0.01      0.03 f
+  data arrival time                                                                       0.03
+
+  clock CLK_I (rise edge)                                                       0.00      0.00
+  clock network delay (ideal)                                                   0.00      0.00
+  id_stage_i/controller_i/jump_done_q_reg/CK (SAEDRVT14_FSDPRBQ_V2_4)           0.00      0.00 r
   library hold time                                                            -0.00     -0.00
   data required time                                                                     -0.00
   -----------------------------------------------------------------------------------------------------
@@ -362,8 +394,72 @@ Date   : Tue Mar  5 10:23:37 2024
 
 
 
-  Startpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__30_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__30_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__8_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__8_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: fast
+  Scenario: func_fast
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                           Incr      Path  
+  -----------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                         0.00      0.00
+  clock network delay (ideal)                                                                     0.00      0.00
+
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__8_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__8_/Q (SAEDRVT14_FSDPRBQ_V2_4)     0.02      0.02 f
+  ...
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__8_/D (SAEDRVT14_FSDPRBQ_V2_4)     0.01      0.03 f
+  data arrival time                                                                                         0.03
+
+  clock CLK_I (rise edge)                                                                         0.00      0.00
+  clock network delay (ideal)                                                                     0.00      0.00
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__8_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
+  library hold time                                                                              -0.00     -0.00
+  data required time                                                                                       -0.00
+  -----------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       -0.00
+  data arrival time                                                                                        -0.03
+  -----------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                               0.03
+
+
+
+  Startpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__4_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__4_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: fast
+  Scenario: func_fast
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                           Incr      Path  
+  -----------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                         0.00      0.00
+  clock network delay (ideal)                                                                     0.00      0.00
+
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__4_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__4_/Q (SAEDRVT14_FSDPRBQ_V2_4)     0.02      0.02 f
+  ...
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__4_/D (SAEDRVT14_FSDPRBQ_V2_4)     0.01      0.03 f
+  data arrival time                                                                                         0.03
+
+  clock CLK_I (rise edge)                                                                         0.00      0.00
+  clock network delay (ideal)                                                                     0.00      0.00
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__4_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
+  library hold time                                                                              -0.00     -0.00
+  data required time                                                                                       -0.00
+  -----------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       -0.00
+  data arrival time                                                                                        -0.03
+  -----------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                               0.03
+
+
+
+  Startpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: fast
   Scenario: func_fast
@@ -375,15 +471,47 @@ Date   : Tue Mar  5 10:23:37 2024
   clock CLK_I (rise edge)                                                                          0.00      0.00
   clock network delay (ideal)                                                                      0.00      0.00
 
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__30_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__30_/Q (SAEDRVT14_FSDPRBQ_V2_4)     0.02      0.02 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_/Q (SAEDRVT14_FSDPRBQ_V2_4)     0.02      0.02 f
   ...
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__30_/D (SAEDRVT14_FSDPRBQ_V2_4)     0.01      0.03 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_/D (SAEDRVT14_FSDPRBQ_V2_4)     0.01      0.03 f
   data arrival time                                                                                          0.03
 
   clock CLK_I (rise edge)                                                                          0.00      0.00
   clock network delay (ideal)                                                                      0.00      0.00
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__30_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
+  library hold time                                                                               -0.00     -0.00
+  data required time                                                                                        -0.00
+  ------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                        -0.00
+  data arrival time                                                                                         -0.03
+  ------------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                                0.03
+
+
+
+  Startpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__17_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__17_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: fast
+  Scenario: func_fast
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                                            Incr      Path  
+  ------------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                          0.00      0.00
+  clock network delay (ideal)                                                                      0.00      0.00
+
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__17_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__17_/Q (SAEDRVT14_FSDPRBQ_V2_4)     0.02      0.02 f
+  ...
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__17_/D (SAEDRVT14_FSDPRBQ_V2_4)     0.01      0.03 f
+  data arrival time                                                                                          0.03
+
+  clock CLK_I (rise edge)                                                                          0.00      0.00
+  clock network delay (ideal)                                                                      0.00      0.00
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__17_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
   library hold time                                                                               -0.00     -0.00
   data required time                                                                                        -0.00
   ------------------------------------------------------------------------------------------------------------------------
@@ -426,8 +554,8 @@ Date   : Tue Mar  5 10:23:37 2024
 
 
 
-  Startpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__27_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__27_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: ex_stage_i/regfile_we_lsu_reg (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: ex_stage_i/regfile_we_lsu_reg (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: fast
   Scenario: func_fast
@@ -439,15 +567,15 @@ Date   : Tue Mar  5 10:23:37 2024
   clock CLK_I (rise edge)                                                                          0.00      0.00
   clock network delay (ideal)                                                                      0.00      0.00
 
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__27_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__27_/Q (SAEDRVT14_FSDPRBQ_V2_4)     0.02      0.02 f
+  ex_stage_i/regfile_we_lsu_reg/CK (SAEDRVT14_FSDPRBQ_V2_4)                                        0.00      0.00 r
+  ex_stage_i/regfile_we_lsu_reg/Q (SAEDRVT14_FSDPRBQ_V2_4)                                         0.02      0.02 f
   ...
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__27_/D (SAEDRVT14_FSDPRBQ_V2_4)     0.01      0.03 f
+  ex_stage_i/regfile_we_lsu_reg/D (SAEDRVT14_FSDPRBQ_V2_4)                                         0.01      0.03 f
   data arrival time                                                                                          0.03
 
   clock CLK_I (rise edge)                                                                          0.00      0.00
   clock network delay (ideal)                                                                      0.00      0.00
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__27_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
+  ex_stage_i/regfile_we_lsu_reg/CK (SAEDRVT14_FSDPRBQ_V2_4)                                        0.00      0.00 r
   library hold time                                                                               -0.00     -0.00
   data required time                                                                                        -0.00
   ------------------------------------------------------------------------------------------------------------------------
@@ -458,8 +586,8 @@ Date   : Tue Mar  5 10:23:37 2024
 
 
 
-  Startpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__16_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__16_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__23_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__23_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: fast
   Scenario: func_fast
@@ -471,15 +599,15 @@ Date   : Tue Mar  5 10:23:37 2024
   clock CLK_I (rise edge)                                                                          0.00      0.00
   clock network delay (ideal)                                                                      0.00      0.00
 
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__16_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__16_/Q (SAEDRVT14_FSDPRBQ_V2_4)     0.02      0.02 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__23_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__23_/Q (SAEDRVT14_FSDPRBQ_V2_4)     0.02      0.02 f
   ...
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__16_/D (SAEDRVT14_FSDPRBQ_V2_4)     0.01      0.03 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__23_/D (SAEDRVT14_FSDPRBQ_V2_4)     0.01      0.03 f
   data arrival time                                                                                          0.03
 
   clock CLK_I (rise edge)                                                                          0.00      0.00
   clock network delay (ideal)                                                                      0.00      0.00
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__16_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__23_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
   library hold time                                                                               -0.00     -0.00
   data required time                                                                                        -0.00
   ------------------------------------------------------------------------------------------------------------------------
@@ -490,8 +618,8 @@ Date   : Tue Mar  5 10:23:37 2024
 
 
 
-  Startpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__26_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__26_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Startpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__5_ (rising edge-triggered flip-flop clocked by CLK_I)
   Mode: func
   Corner: fast
   Scenario: func_fast
@@ -503,15 +631,15 @@ Date   : Tue Mar  5 10:23:37 2024
   clock CLK_I (rise edge)                                                                          0.00      0.00
   clock network delay (ideal)                                                                      0.00      0.00
 
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__26_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__26_/Q (SAEDRVT14_FSDPRBQ_V2_4)     0.02      0.02 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__5_/CK (SAEDRVT14_FSDPRBQ_V2_4)     0.00      0.00 r
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__5_/Q (SAEDRVT14_FSDPRBQ_V2_4)      0.02      0.02 f
   ...
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__26_/D (SAEDRVT14_FSDPRBQ_V2_4)     0.01      0.03 f
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__5_/D (SAEDRVT14_FSDPRBQ_V2_4)      0.01      0.03 f
   data arrival time                                                                                          0.03
 
   clock CLK_I (rise edge)                                                                          0.00      0.00
   clock network delay (ideal)                                                                      0.00      0.00
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__26_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
+  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__5_/CK (SAEDRVT14_FSDPRBQ_V2_4)     0.00      0.00 r
   library hold time                                                                               -0.00     -0.00
   data required time                                                                                        -0.00
   ------------------------------------------------------------------------------------------------------------------------
@@ -519,134 +647,6 @@ Date   : Tue Mar  5 10:23:37 2024
   data arrival time                                                                                         -0.03
   ------------------------------------------------------------------------------------------------------------------------
   slack (MET)                                                                                                0.03
-
-
-
-  Startpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/rdata_Q_reg_0__12_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/rdata_Q_reg_0__12_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: fast
-  Scenario: func_fast
-  Path Group: CLK_I
-  Path Type: min
-
-  Point                                                                                             Incr      Path  
-  -------------------------------------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                                                           0.00      0.00
-  clock network delay (ideal)                                                                       0.00      0.00
-
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/rdata_Q_reg_0__12_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/rdata_Q_reg_0__12_/Q (SAEDRVT14_FSDPRBQ_V2_4)     0.02      0.02 f
-  ...
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/rdata_Q_reg_0__12_/D (SAEDRVT14_FSDPRBQ_V2_4)     0.01      0.03 f
-  data arrival time                                                                                           0.03
-
-  clock CLK_I (rise edge)                                                                           0.00      0.00
-  clock network delay (ideal)                                                                       0.00      0.00
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/rdata_Q_reg_0__12_/CK (SAEDRVT14_FSDPRBQ_V2_4)    0.00      0.00 r
-  library hold time                                                                                -0.00     -0.00
-  data required time                                                                                         -0.00
-  -------------------------------------------------------------------------------------------------------------------------
-  data required time                                                                                         -0.00
-  data arrival time                                                                                          -0.03
-  -------------------------------------------------------------------------------------------------------------------------
-  slack (MET)                                                                                                 0.03
-
-
-
-  Startpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__21_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__21_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: fast
-  Scenario: func_fast
-  Path Group: CLK_I
-  Path Type: min
-
-  Point                                                                                             Incr      Path  
-  -------------------------------------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                                                           0.00      0.00
-  clock network delay (ideal)                                                                       0.00      0.00
-
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__21_/CK (SAEDRVT14_FSDPRBQ_V2_4)     0.00      0.00 r
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__21_/Q (SAEDRVT14_FSDPRBQ_V2_4)      0.02      0.02 f
-  ...
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__21_/D (SAEDRVT14_FSDPRBQ_V2_4)      0.01      0.03 f
-  data arrival time                                                                                           0.03
-
-  clock CLK_I (rise edge)                                                                           0.00      0.00
-  clock network delay (ideal)                                                                       0.00      0.00
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__21_/CK (SAEDRVT14_FSDPRBQ_V2_4)     0.00      0.00 r
-  library hold time                                                                                -0.00     -0.00
-  data required time                                                                                         -0.00
-  -------------------------------------------------------------------------------------------------------------------------
-  data required time                                                                                         -0.00
-  data arrival time                                                                                          -0.03
-  -------------------------------------------------------------------------------------------------------------------------
-  slack (MET)                                                                                                 0.03
-
-
-
-  Startpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: fast
-  Scenario: func_fast
-  Path Group: CLK_I
-  Path Type: min
-
-  Point                                                                                             Incr      Path  
-  -------------------------------------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                                                           0.00      0.00
-  clock network delay (ideal)                                                                       0.00      0.00
-
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_/CK (SAEDRVT14_FSDPRBQ_V2_4)     0.00      0.00 r
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_/Q (SAEDRVT14_FSDPRBQ_V2_4)      0.02      0.02 f
-  ...
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_/D (SAEDRVT14_FSDPRBQ_V2_4)      0.01      0.03 f
-  data arrival time                                                                                           0.03
-
-  clock CLK_I (rise edge)                                                                           0.00      0.00
-  clock network delay (ideal)                                                                       0.00      0.00
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__28_/CK (SAEDRVT14_FSDPRBQ_V2_4)     0.00      0.00 r
-  library hold time                                                                                -0.00     -0.00
-  data required time                                                                                         -0.00
-  -------------------------------------------------------------------------------------------------------------------------
-  data required time                                                                                         -0.00
-  data arrival time                                                                                          -0.03
-  -------------------------------------------------------------------------------------------------------------------------
-  slack (MET)                                                                                                 0.03
-
-
-
-  Startpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__25_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Endpoint: if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__25_ (rising edge-triggered flip-flop clocked by CLK_I)
-  Mode: func
-  Corner: fast
-  Scenario: func_fast
-  Path Group: CLK_I
-  Path Type: min
-
-  Point                                                                                             Incr      Path  
-  -------------------------------------------------------------------------------------------------------------------------
-  clock CLK_I (rise edge)                                                                           0.00      0.00
-  clock network delay (ideal)                                                                       0.00      0.00
-
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__25_/CK (SAEDRVT14_FSDPRBQ_V2_4)     0.00      0.00 r
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__25_/Q (SAEDRVT14_FSDPRBQ_V2_4)      0.02      0.02 f
-  ...
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__25_/D (SAEDRVT14_FSDPRBQ_V2_4)      0.01      0.03 f
-  data arrival time                                                                                           0.03
-
-  clock CLK_I (rise edge)                                                                           0.00      0.00
-  clock network delay (ideal)                                                                       0.00      0.00
-  if_stage_i/prefetch_32_prefetch_buffer_i/fifo_i/addr_Q_reg_0__25_/CK (SAEDRVT14_FSDPRBQ_V2_4)     0.00      0.00 r
-  library hold time                                                                                -0.00     -0.00
-  data required time                                                                                         -0.00
-  -------------------------------------------------------------------------------------------------------------------------
-  data required time                                                                                         -0.00
-  data arrival time                                                                                          -0.03
-  -------------------------------------------------------------------------------------------------------------------------
-  slack (MET)                                                                                                 0.03
 
 
 1

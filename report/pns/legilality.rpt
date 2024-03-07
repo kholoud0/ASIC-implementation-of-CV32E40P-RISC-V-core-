@@ -3,7 +3,6 @@
 
 running check_legality
 
-Information: 1 placement spacing labels and 0 placement spacing rules are stored in design NDM. (PLACE-022)
 Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
 PDC app_options settings =========
 	place.legalize.enable_prerouted_net_check: 1
@@ -16,7 +15,7 @@ PDC app_options settings =========
 
 Layer M1: cached 0 shapes out of 360 total shapes.
 Layer M2: cached 0 shapes out of 0 total shapes.
-Cached 0 vias out of 6160 total vias.
+Cached 0 vias out of 6163 total vias.
 
 check_legality for block design riscv_core ... 
 Warning: Library cell saed14rvt_ss0p6vm40c:SAEDRVT14_ISOFSDPQ_PECO_8.frame is missing supply pins. Its power structure cannot be determined. (LGL-050)
@@ -30,7 +29,7 @@ Sorting rows.
 Checking spacing rule legality.
 0%....10%....20%....30%....40%....50%....60%....70%....80%....90%....100%
 Checking packing rule legality.
-
+0%....10%....20%....30%....40%....50%....60%....70%....80%....90%....100%
 
 ****************************************
   Report : Legality

@@ -1,0 +1,3 @@
+
+icc2_shell> start_gui
+icc2_shell> 

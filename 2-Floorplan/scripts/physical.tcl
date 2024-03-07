@@ -8,7 +8,7 @@ set dir "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/repo
 ###################################   FLOORPLAN   ##################################
 ####################################################################################
 
-set gate_verilog "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_11/netlists/riscv_core.v" 
+set gate_verilog "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_12/netlists/riscv_core.v" 
 
 read_verilog -top $DESIGN $gate_verilog
 
@@ -56,7 +56,7 @@ set_attribute [get_ports *] physical_status fixed
 get_attribute [get_ports *] is_fixed
 
 #######################         inserting eell tap cells   #####################################
-create_tap_cells -lib_cell  [get_lib_cell saed14rvt_ss0p6vm40c/SAEDRVT14_CAPTTAPP6] -pattern stagger -distance 30
+create_tap_cells -lib_cell  [get_lib_cell saed14rvt_ss0p6vm40c/SAEDRVT14_TAPDS] -pattern stagger -distance 30
 
 #save_block -as ${DESIGN}_2_floorplan
 #SAED14_CAPTTAPP6
@@ -69,7 +69,7 @@ create_tap_cells -lib_cell  [get_lib_cell saed14rvt_ss0p6vm40c/SAEDRVT14_CAPTTAP
 
 set_placement_spacing_label -name x  -side both -lib_cells [get_lib_cells -of [get_cells *]]
 
-set_placement_spacing_rule -labels {x x} {0 }
+set_placement_spacing_rule -labels {x x} {0 1}
 
 report_placement_spacing_rules
 

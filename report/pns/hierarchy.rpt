@@ -2,16 +2,16 @@
 Report : hierarchy
 Design : riscv_core
 Version: O-2018.06-SP1
-Date   : Tue Mar  5 10:35:31 2024
+Date   : Thu Mar  7 01:26:15 2024
 ****************************************
 
 riscv_core:riscv_core_2_floorplan.design (riscv_core)
   SAEDRVT14_AO2BB2_V1_4                     saed14rvt_ss0p6vm40c
   SAEDRVT14_AOI22_3                         saed14rvt_ss0p6vm40c
-  SAEDRVT14_CAPTTAPP6                       saed14rvt_ss0p6vm40c
   SAEDRVT14_FSDPRBQ_V2_4                    saed14rvt_ss0p6vm40c
   SAEDRVT14_NR3_3                           saed14rvt_ss0p6vm40c
   SAEDRVT14_OR2_4                           saed14rvt_ss0p6vm40c
+  SAEDRVT14_TAPDS                           saed14rvt_ss0p6vm40c
   cluster_clock_gating
      SAEDRVT14_CKGTPLT_V5_4                 saed14rvt_ss0p6vm40c
   riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE0
@@ -20,8 +20,9 @@ riscv_core:riscv_core_2_floorplan.design (riscv_core)
   riscv_ex_stage_FPU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5
      riscv_alu_SHARED_INT_DIV0_FPU0
         SAEDRVT14_AO222_4                   saed14rvt_ss0p6vm40c
+        SAEDRVT14_AO22_4                    saed14rvt_ss0p6vm40c
         SAEDRVT14_BUF_4                     saed14rvt_ss0p6vm40c
-        SAEDRVT14_BUF_6                     saed14rvt_ss0p6vm40c
+        SAEDRVT14_BUF_ECO_3                 saed14rvt_ss0p6vm40c
         SAEDRVT14_BUF_PS_3                  saed14rvt_ss0p6vm40c
         SAEDRVT14_MUXI2_4                   saed14rvt_ss0p6vm40c
         SAEDRVT14_OA33_4                    saed14rvt_ss0p6vm40c
@@ -30,13 +31,12 @@ riscv_core:riscv_core_2_floorplan.design (riscv_core)
         alu_popcnt
         riscv_alu_SHARED_INT_DIV0_FPU0_DW01_add_1
         riscv_alu_SHARED_INT_DIV0_FPU0_DW01_add_2
-           SAEDRVT14_ND2_MM_4               saed14rvt_ss0p6vm40c
            SAEDRVT14_OR2_MM_4               saed14rvt_ss0p6vm40c
         riscv_alu_SHARED_INT_DIV0_FPU0_DW01_ash_0
            SAEDRVT14_MUX2_4                 saed14rvt_ss0p6vm40c
         riscv_alu_SHARED_INT_DIV0_FPU0_DW01_ash_1
         riscv_alu_SHARED_INT_DIV0_FPU0_DW_rash_0
-           SAEDRVT14_AO22_4                 saed14rvt_ss0p6vm40c
+           SAEDRVT14_AOI22_4                saed14rvt_ss0p6vm40c
         riscv_alu_div
            riscv_alu_div_DW01_add_0
            riscv_alu_div_DW01_cmp6_0
@@ -71,7 +71,7 @@ riscv_core:riscv_core_2_floorplan.design (riscv_core)
            riscv_mult_SHARED_DSP_MULT0_DW01_add_17
         riscv_mult_SHARED_DSP_MULT0_DW_rash_0
   riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5
-     SAEDRVT14_AOI22_4                      saed14rvt_ss0p6vm40c
+     SAEDRVT14_FSDPSBQ_V2_4                 saed14rvt_ss0p6vm40c
      SAEDRVT14_INV_3                        saed14rvt_ss0p6vm40c
      SAEDRVT14_INV_S_4                      saed14rvt_ss0p6vm40c
      riscv_controller_FPU0

@@ -35,11 +35,11 @@ set DESIGN_REF_TECH_PATH          "/mnt/hgfs/SAED14nm_PDK_06052019/SAED14nm_PDK_
 # Example: set TARGET_LIBRARY_FILES "lib1.db lib2.db lib3.db"
 
 set ADDITIONAL_SEARCH_PATH     "/mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/db_nldm \
-				/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_2/netlists/riscv_core.v "
+				/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_13/netlists/riscv_core.v "
 
 
 
-set GATE_NET_PATH       "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_2/netlists/riscv_core.v"
+set GATE_NET_PATH       "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_13/netlists/riscv_core.v"
 
 set DB_PATH 	"/mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/db_nldm"
 set FFLIB 		"$DB_PATH/saed14rvt_ff0p88v125c.db"

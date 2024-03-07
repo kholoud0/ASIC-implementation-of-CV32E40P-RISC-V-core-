@@ -1,0 +1,275 @@
+#@ # 
+#@ # Running icc2_shell Version O-2018.06-SP1 for linux64 -- Jul 17, 2018
+#@ # Date:   Thu Mar  7 01:24:30 2024
+#@ # Run by: ICer@IC_EDA
+#@ 
+
+gui_set_pref_value -category {SelectByNamePalette} -key {ObjectType} -value {Logical Cells}
+set_host_options -max_cores 8
+set DESIGN riscv_core
+source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/proc_block.tcl
+set dir "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/report"
+open_block /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/riscv_core:riscv_core_2_floorplan.design
+gui_set_pref_value -category {showRelativeLocationConstraints} -key {macroOffsetX} -value {0.001}
+gui_set_pref_value -category {showRelativeLocationConstraints} -key {macroOffsetY} -value {0.001}
+link_block
+win_set_filter -visible -class cell -filter {hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -visible -class placement_blockage -filter {wiring} -layer {0-72}
+win_set_filter -expand_cell_types {soft_macro  }
+win_set_select_class -visible {cell port bound routing_blockage shaping_blockage pg_region pin_blockage block_shielding topology_node topology_edge core_area die_area edit_group shape via terminal fill_cell placement_blockage }
+win_set_filter -class cell -filter {cell_array hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -class placement_blockage -filter {wiring} -layer {0-72}
+win_set_select_class {cell port bound routing_blockage shaping_blockage pg_region pin_blockage topology_node topology_edge edit_group shape via placement_blockage }
+link_block
+####################################################################################
+###################################  POWER PLAN  ###################################
+####################################################################################
+############################
+########  PG RINGS  ########
+############################
+remove_pg_via_master_rules -all
+remove_pg_patterns -all
+remove_pg_strategies -all
+remove_pg_strategy_via_rules -all
+create_pg_ring_pattern ring1     -nets VDD             -horizontal_layer {M9} -vertical_layer {M8 }             -horizontal_width 5 -vertical_width 5             -horizontal_spacing 0.8 -vertical_spacing 0.8             -via_rule {{intersection: all}}
+set_pg_strategy ring1_s -core -pattern {{name: ring1} {nets: VDD VSS}} -extension {{stop: design_boundary}}
+compile_pg -strategies ring1_s
+create_pg_ring_pattern ring2     -nets VSS             -horizontal_layer {M7} -vertical_layer {M6}             -horizontal_width 5 -vertical_width 5             -horizontal_spacing 0.8 -vertical_spacing 0.8             -via_rule {{intersection: all}}
+set_pg_strategy ring2_s -core -pattern {{name: ring2} {nets: VDD VSS}} -extension {{stop: design_boundary}}
+compile_pg -strategies ring2_s
+create_pg_mesh_pattern m9_mesh -layers {{{horizontal_layer: M9} {width: 2.5} {spacing: 4} {pitch: 13} {offset: 8}}}
+set_pg_strategy m9_mesh -core -extension {{direction: T B L R} {stop: outermost_ring}} -pattern {{name: m9_mesh} {nets: VDD VSS}}
+compile_pg -strategies m9_mesh
+create_pg_mesh_pattern m8_mesh -layers {{{vertical_layer: M8} {width: 2.5} {spacing: 4} {pitch: 13} {offset: 8}}}
+set_pg_strategy m8_mesh -core -extension {{direction: T B L R} {stop: outermost_ring}} -pattern {{name: m8_mesh} {nets: VDD VSS}}
+compile_pg -strategies m8_mesh
+create_pg_mesh_pattern m7_mesh -layers {{{horizontal_layer: M7} {width: 2.5} {spacing: 4} {pitch: 13} {offset: 8}}}
+set_pg_strategy m7_s -core -extension {{direction: T B L R} {stop: outermost_ring}} -pattern {{name: m7_mesh} {nets: VDD VSS}}
+compile_pg -strategies m7_s
+create_pg_mesh_pattern m6_mesh -layers {{{vertical_layer: M6} {width: 2.5} {spacing: 4} {pitch: 13} {offset: 8}}}
+set_pg_strategy m6_s -core -extension {{direction: T B L R} {stop: outermost_ring}} -pattern {{name: m6_mesh} {nets: VDD VSS}}
+compile_pg -strategies m6_s
+create_pg_mesh_pattern m5_mesh -layers {{{horizontal_layer: M5} {width: 2.5} {spacing: 4} {pitch: 13} {offset: 8}}}
+set_pg_strategy m5_s -core -extension {{direction: T B L R} {stop: core_boundary}} -pattern {{name: m5_mesh} {nets: VDD VSS}}
+compile_pg -strategies m5_s
+create_pg_std_cell_conn_pattern rail_pattern  -rail_width 0.094 -layers {M1}
+######### Create rail strategy #########################
+set_pg_strategy rail_strat -pattern {{pattern: rail_pattern} {nets: VDD VSS}} -core
+######### compile rail #################################
+compile_pg -strategies rail_strat
+#############  fixing floating vias ###################
+remove_via  [get_vias -of_objects [get_nets -all "VSS VDD"]]
+create_pg_vias -nets "VSS VDD"
+################# design checks ######################
+check_pg_connectivity
+check_pg_drc
+check_pg_missing_vias
+######################### saving Design & printing reports #####################
+save_block -as ${DESIGN}_3_after_pns
+print_res {pns}
+report_qor > $dir/pns/qor.rpt
+create_utilization_configuration config_sr             -capacity site_row -exclude {hard_macros macro_keepouts}
+report_utilization -config config_sr -verbose > $dir/pns/utilization_sire_row.rpt
+close_blocks -force -purge
+close_lib
+set_host_options -max_cores 8
+set DESIGN riscv_core
+source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/proc_block.tcl
+set dir "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/report"
+open_block /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/riscv_core:riscv_core_3_after_pns.design
+link_block
+link_block
+####################################################################################
+###################################  PLACEMENT  ###################################
+####################################################################################
+############################################################
+#source /home/islam/ICpedia_Tasks/GPCore-aes_ip/core_updated/syn/cons/dont_use_generic.tcl
+#set_target_library_subset -dont_use [get_lib_cells */*0P5*]
+#set_target_library_subset -dont_use saed14rvt_ss0p6vm40c:SAEDRVT14_INV_4.frame
+#set_target_library_subset -dont_use saed14rvt_ss0p6vm40c:SAEDRVT14_EO2_V1_0P75.frame
+#set_target_library_subset -dont_use saed14rvt_ss0p6vm40c:SAEDRVT14_OA221_U_0P5.frame
+#set_target_library_subset -dont_use saed14rvt_ss0p6vm40c:SAEDRVT14_CAPTTAPP6.frame
+#set_target_library_subset -dont_use saed14rvt_ss0p6vm40c:SAEDRVT14_OA21_1.frame
+#set_target_library_subset -dont_use saed14rvt_ss0p6vm40c:SAEDRVT14_OAI21_0P5.frame
+#set_target_library_subset -dont_use saed14rvt_ss0p6vm40c:SAEDRVT14_MUX2_MM_0P5.frame
+#set_target_library_subset -dont_use saed14rvt_ss0p6vm40c:SAEDRVT14_MUX2_MM_0P5.frame
+#set_target_library_subset -dont_use saed14rvt_ss0p6vm40c:SAEDRVT14_OA221_U_0P5.frame
+#set_app_options #-name opt.common.enable_target_library_subset_opt -value 1
+check_design -checks pre_placement_stage
+suppress_message -force CMD-013
+suppress_message -force CMD-013; report_design_mismatch -check_design >> /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/check_design2024Mar07012844.log
+suppress_message -force CMD-013; check_scan_chain >> /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/check_design2024Mar07012844.log
+suppress_message -force CMD-013; check_mv_design >> /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/check_design2024Mar07012844.log
+suppress_message -force CMD-013; check_rp_constraints >> /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/check_design2024Mar07012844.log
+suppress_message -force CMD-013; check_timing >> /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/check_design2024Mar07012844.log
+suppress_message -force CMD-013; check_hier_design -stage pre_placement >> /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/check_design2024Mar07012844.log
+unsuppress_message CMD-013
+analyze_lib_cell_placement -lib_cells *
+check_pg_drc
+#set_app_options -name place.coarse.congestion_driven_max_util -value 0.6
+set_app_options -name time.disable_recovery_removal_checks -value false
+set_app_options -name time.disable_case_analysis -value false
+set_app_options -name place.coarse.continue_on_missing_scandef -value true
+set_app_options -name opt.common.user_instance_name_prefix -value place
+#set_app_options -name place.coarse.congestion_layer_aware  -value true
+#set_app_options -name place.coarse.increased_cell_expansion  -value true
+#set_app_options -name place.coarse.congestion_expansion_direction  -value horizontal.
+#remove_corners estimated_corner
+create_placement -congestion
+legalize_placement
+check_pg_drc
+analyze_design_violations
+place_opt
+redirect $::sh_dev_null { set_app_options -name opt.internal.current_block_utilization -value [report_utilization] }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+redirect $::sh_dev_null { set_app_options -name opt.internal.current_block_utilization -value [report_utilization] }
+
+redirect $::sh_dev_null { set_app_options -name opt.internal.current_block_utilization -value [report_utilization] }
+
+set_app_options -as_user_default -list {route.global.debug_compact_coef 4}
+set_app_options -as_user_default -list {route.global.debug_compact_coef 1}
+
+
+
+
+set_app_options -as_user_default -list {route.global.debug_compact_coef 4}
+set_app_options -as_user_default -list {route.global.debug_compact_coef 1}
+legalize_placement
+check_legality -verbos
+report_timing
+set NDM_POWER_NET                "VDD" ;#
+set NDM_POWER_PORT               "VDD" ;#
+set NDM_GROUND_NET               "VSS" ;#
+set NDM_GROUND_PORT              "VSS" ;#
+#############
+create_net -power $NDM_POWER_NET
+create_net -ground $NDM_GROUND_NET
+connect_pg_net -net $NDM_POWER_NET [get_pins -hierarchical "*/VDD"]
+connect_pg_net -net $NDM_GROUND_NET [get_pins -hierarchical "*/VSS"]
+#######
+save_block -as ${DESIGN}_4_placed
+print_res {placement}
+report_qor > $dir/placement/qor.rpt
+report_utilization -config config_sr -verbose > $dir/placement/utilization_sire_row.rpt
+close_blocks -force -purge
+close_lib
+set_host_options -max_cores 8
+set DESIGN riscv_core
+source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/proc_block.tcl
+set dir "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/report"
+open_block /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/riscv_core:riscv_core_4_placed.design
+link_block
+link_block
+####################################################################################
+###################################  CTS  ###################################
+####################################################################################
+set_dont_touch_network -clear [get_clocks CLK_I]
+############################################################
+#source /home/islam/ICpedia_Tasks/GPCore-aes_ip/core_updated/syn/cons/dont_use_generic.tcl
+#create_routing_rule ROUTE_RULES_1  # -widths {M3 0.2 M4 0.2 }   #-spacings {M3 0.42 M4 0.63 }
+#set_clock_routing_rules -rules ROUTE_RULES_1 -min_routing_layer M2 -max_routing_layer M4
+set_lib_cell_purpose -exclude cts [get_lib_cells -of [get_cells *]]
+set_lib_cell_purpose -include cts */*AOBUF_IW*
+set_lib_cell_purpose -include cts */*BUF*
+check_design -checks pre_clock_tree_stage
+suppress_message -force CMD-013
+suppress_message -force CMD-013; report_design_mismatch -check_design >> /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/check_design2024Mar07015001.log
+suppress_message -force CMD-013; check_scan_chain >> /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/check_design2024Mar07015001.log
+suppress_message -force CMD-013; check_mv_design >> /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/check_design2024Mar07015001.log
+suppress_message -force CMD-013; check_legality >> /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/check_design2024Mar07015001.log
+suppress_message -force CMD-013; design_extraction_check >> /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/check_design2024Mar07015001.log
+suppress_message -force CMD-013; check_timing >> /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/check_design2024Mar07015001.log
+suppress_message -force CMD-013; check_clock_trees >> /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/check_design2024Mar07015001.log
+suppress_message -force CMD-013; check_hier_design -stage pre_clock_tree >> /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/check_design2024Mar07015001.log
+unsuppress_message CMD-013
+create_routing_rule ROUTE_RULES_1 -multiplier_spacing 3 -multiplier_width 3
+set_clock_routing_rules -rules ROUTE_RULES_1 -min_routing_layer metal2  -max_routing_layer metal5
+set_clock_tree_options -target_latency 0.000 -target_skew 0.000
+set cts_enable_drc_fixing_on_data true
+clock_opt
+synthesize_clock_trees
+redirect $::sh_dev_null { set_app_options -name opt.internal.current_block_utilization -value [report_utilization] }
+
+set_app_options -as_user_default -list {route.global.global_route_topology_style 1}
+route_group -all_clock_nets -reuse_existing_global_route true
+set_app_options -as_user_default -list {route.global.global_route_topology_style 0}
+
+redirect $::sh_dev_null { set_app_options -name opt.internal.current_block_utilization -value [report_utilization] }
+
+redirect $::sh_dev_null { set_app_options -name opt.internal.current_block_utilization -value [report_utilization] }
+
+
+set_app_options -as_user_default -list {route.global.debug_compact_coef 4}
+set_app_options -as_user_default -list {route.global.debug_compact_coef 1}
+
+
+set_app_options -as_user_default -list {route.global.debug_compact_coef 4}
+set_app_options -as_user_default -list {route.global.debug_compact_coef 1}
+
+
+set_app_options -as_user_default -list {route.global.debug_compact_coef 4}
+set_app_options -as_user_default -list {route.global.debug_compact_coef 1}
+route_group -all_clock_nets
+check_pg_drc
+clock_opt
+synthesize_clock_trees
+redirect $::sh_dev_null { set_app_options -name opt.internal.current_block_utilization -value [report_utilization] }
+
+set_app_options -as_user_default -list {route.global.global_route_topology_style 1}
+route_group -all_clock_nets -reuse_existing_global_route true
+set_app_options -as_user_default -list {route.global.global_route_topology_style 0}
+
+redirect $::sh_dev_null { set_app_options -name opt.internal.current_block_utilization -value [report_utilization] }
+
+redirect $::sh_dev_null { set_app_options -name opt.internal.current_block_utilization -value [report_utilization] }
+
+
+set_app_options -as_user_default -list {route.global.debug_compact_coef 4}
+set_app_options -as_user_default -list {route.global.debug_compact_coef 1}
+
+
+set_app_options -as_user_default -list {route.global.debug_compact_coef 4}
+set_app_options -as_user_default -list {route.global.debug_compact_coef 1}
+
+
+set_app_options -as_user_default -list {route.global.debug_compact_coef 4}
+set_app_options -as_user_default -list {route.global.debug_compact_coef 1}
+route_group -all_clock_nets
+check_pg_drc
+clock_opt
+synthesize_clock_trees
+redirect $::sh_dev_null { set_app_options -name opt.internal.current_block_utilization -value [report_utilization] }
+
+set_app_options -as_user_default -list {route.global.global_route_topology_style 1}
+route_group -all_clock_nets -reuse_existing_global_route true
+set_app_options -as_user_default -list {route.global.global_route_topology_style 0}
+
+redirect $::sh_dev_null { set_app_options -name opt.internal.current_block_utilization -value [report_utilization] }
+
+redirect $::sh_dev_null { set_app_options -name opt.internal.current_block_utilization -value [report_utilization] }
+
+
+set_app_options -as_user_default -list {route.global.debug_compact_coef 4}
+set_app_options -as_user_default -list {route.global.debug_compact_coef 1}
+
+
+set_app_options -as_user_default -list {route.global.debug_compact_coef 4}
+set_app_options -as_user_default -list {route.global.debug_compact_coef 1}
+
+
+set_app_options -as_user_default -list {route.global.debug_compact_coef 4}
+set_app_options -as_user_default -list {route.global.debug_compact_coef 1}
+route_group -all_clock_nets

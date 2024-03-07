@@ -2,22 +2,20 @@
 Report : hierarchy
 Design : riscv_core
 Version: O-2018.06-SP1
-Date   : Tue Mar  5 10:52:14 2024
+Date   : Thu Mar  7 01:48:49 2024
 ****************************************
 
 riscv_core:riscv_core_3_after_pns.design (riscv_core)
   SAEDRVT14_AO2BB2_V1_4                     saed14rvt_ss0p6vm40c
   SAEDRVT14_AOI22_3                         saed14rvt_ss0p6vm40c
   SAEDRVT14_BUF_8                           saed14rvt_ss0p6vm40c
-  SAEDRVT14_CAPTTAPP6                       saed14rvt_ss0p6vm40c
   SAEDRVT14_FSDPRBQ_V2_4                    saed14rvt_ss0p6vm40c
-  SAEDRVT14_INV_S_9                         saed14rvt_ss0p6vm40c
   SAEDRVT14_NR3_3                           saed14rvt_ss0p6vm40c
   SAEDRVT14_OR2_4                           saed14rvt_ss0p6vm40c
+  SAEDRVT14_TAPDS                           saed14rvt_ss0p6vm40c
   cluster_clock_gating
      SAEDRVT14_CKGTPLT_V5_4                 saed14rvt_ss0p6vm40c
   riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE0
-     SAEDRVT14_AN3_8                        saed14rvt_ss0p6vm40c
      SAEDRVT14_AOI22_6                      saed14rvt_ss0p6vm40c
      riscv_cs_registers_N_EXT_CNT0_APU0_FPU0_PULP_SECURE0_DW01_inc_0
   riscv_debug_unit
@@ -25,8 +23,9 @@ riscv_core:riscv_core_3_after_pns.design (riscv_core)
      riscv_alu_SHARED_INT_DIV0_FPU0
         SAEDRVT14_AN2B_MM_6                 saed14rvt_ss0p6vm40c
         SAEDRVT14_AO222_4                   saed14rvt_ss0p6vm40c
+        SAEDRVT14_AO22_4                    saed14rvt_ss0p6vm40c
+        SAEDRVT14_INV_S_5                   saed14rvt_ss0p6vm40c
         SAEDRVT14_MUXI2_4                   saed14rvt_ss0p6vm40c
-        SAEDRVT14_NR2_MM_10                 saed14rvt_ss0p6vm40c
         SAEDRVT14_NR3_4                     saed14rvt_ss0p6vm40c
         SAEDRVT14_NR3_8                     saed14rvt_ss0p6vm40c
         SAEDRVT14_OA33_4                    saed14rvt_ss0p6vm40c
@@ -39,9 +38,9 @@ riscv_core:riscv_core_3_after_pns.design (riscv_core)
            SAEDRVT14_MUX2_4                 saed14rvt_ss0p6vm40c
         riscv_alu_SHARED_INT_DIV0_FPU0_DW01_ash_1
         riscv_alu_SHARED_INT_DIV0_FPU0_DW_rash_0
-           SAEDRVT14_AO22_4                 saed14rvt_ss0p6vm40c
-           SAEDRVT14_AOINV_IW_4             saed14rvt_ss0p6vm40c
         riscv_alu_div
+           SAEDRVT14_AN3_8                  saed14rvt_ss0p6vm40c
+           SAEDRVT14_AOINV_IW_4             saed14rvt_ss0p6vm40c
            riscv_alu_div_DW01_add_0
            riscv_alu_div_DW01_cmp6_0
            riscv_alu_div_DW01_sub_0
@@ -76,20 +75,19 @@ riscv_core:riscv_core_3_after_pns.design (riscv_core)
            riscv_mult_SHARED_DSP_MULT0_DW01_add_17
         riscv_mult_SHARED_DSP_MULT0_DW_rash_0
   riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5
-     SAEDRVT14_AOI22_4                      saed14rvt_ss0p6vm40c
+     SAEDRVT14_FSDPSBQ_V2_4                 saed14rvt_ss0p6vm40c
      SAEDRVT14_INV_S_6                      saed14rvt_ss0p6vm40c
      SAEDRVT14_NR2_4                        saed14rvt_ss0p6vm40c
-     SAEDRVT14_OAI21_V1_8                   saed14rvt_ss0p6vm40c
+     SAEDRVT14_NR2_MM_4                     saed14rvt_ss0p6vm40c
+     SAEDRVT14_OAI21_V1_6                   saed14rvt_ss0p6vm40c
      riscv_controller_FPU0
+        SAEDRVT14_AOI22_4                   saed14rvt_ss0p6vm40c
      riscv_decoder_FPU0_PULP_SECURE0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_WOP_CPU6
         SAEDRVT14_AO33_4                    saed14rvt_ss0p6vm40c
-        SAEDRVT14_ND2_MM_4                  saed14rvt_ss0p6vm40c
+        SAEDRVT14_ND2_4                     saed14rvt_ss0p6vm40c
         SAEDRVT14_OA21B_4                   saed14rvt_ss0p6vm40c
      riscv_hwloop_regs_N_REGS2
         SAEDRVT14_AOI21_V1_4                saed14rvt_ss0p6vm40c
-        SAEDRVT14_ND2_4                     saed14rvt_ss0p6vm40c
-        SAEDRVT14_ND2_5                     saed14rvt_ss0p6vm40c
-        SAEDRVT14_NR2_3                     saed14rvt_ss0p6vm40c
         riscv_hwloop_regs_N_REGS2_DW01_dec_0
         riscv_hwloop_regs_N_REGS2_DW01_dec_1
      riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DW01_add_0
@@ -105,8 +103,10 @@ riscv_core:riscv_core_3_after_pns.design (riscv_core)
      riscv_register_file_ADDR_WIDTH6_FPU0
         SAEDRVT14_AN2_MM_4                  saed14rvt_ss0p6vm40c
         SAEDRVT14_AN2_MM_8                  saed14rvt_ss0p6vm40c
+        SAEDRVT14_BUF_CDC_4                 saed14rvt_ss0p6vm40c
         SAEDRVT14_BUF_S_6                   saed14rvt_ss0p6vm40c
         SAEDRVT14_INV_S_8                   saed14rvt_ss0p6vm40c
+        SAEDRVT14_INV_S_9                   saed14rvt_ss0p6vm40c
   riscv_if_stage_N_HWLP2_RDATA_WIDTH32_FPU0
      SAEDRVT14_AN2B_MM_4                    saed14rvt_ss0p6vm40c
      SAEDRVT14_AN2_MM_6                     saed14rvt_ss0p6vm40c
@@ -127,7 +127,6 @@ riscv_core:riscv_core_3_after_pns.design (riscv_core)
      riscv_prefetch_buffer
         SAEDRVT14_AO211_4                   saed14rvt_ss0p6vm40c
         SAEDRVT14_AO221_4                   saed14rvt_ss0p6vm40c
-        SAEDRVT14_INV_PS_6                  saed14rvt_ss0p6vm40c
         SAEDRVT14_OA31_4                    saed14rvt_ss0p6vm40c
         SAEDRVT14_OAI222_4                  saed14rvt_ss0p6vm40c
         SAEDRVT14_OAI22_3                   saed14rvt_ss0p6vm40c
@@ -143,6 +142,7 @@ riscv_core:riscv_core_3_after_pns.design (riscv_core)
            SAEDRVT14_BUF_3                  saed14rvt_ss0p6vm40c
            SAEDRVT14_BUF_S_4                saed14rvt_ss0p6vm40c
            SAEDRVT14_INV_3                  saed14rvt_ss0p6vm40c
+           SAEDRVT14_INV_PS_6               saed14rvt_ss0p6vm40c
            SAEDRVT14_ND2_CDC_4              saed14rvt_ss0p6vm40c
            SAEDRVT14_NR2_5                  saed14rvt_ss0p6vm40c
            SAEDRVT14_NR2_MM_3               saed14rvt_ss0p6vm40c

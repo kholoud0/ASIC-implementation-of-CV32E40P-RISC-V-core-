@@ -44,6 +44,13 @@ set_dont_use [get_lib_cells */*_OR2_MM_3*]
 set_dont_use [get_lib_cells */*ND2_MM_3*]
 set_dont_use [get_lib_cells */*BUF_S_3*]
 set_dont_use [get_lib_cells */*AOI31_4*]
+
+
+
+set_dont_use [get_lib_cells */*_INV_20*]
+
+
+set_dont_use [get_lib_cells */*_INV_PECO_4*]
  #set_dont_use  saed14rvt_ss0p6vm40c:SAEDRVT14_OA21_1.frame
 #set_dont_use  saed14rvt_ss0p6vm40c:SAEDRVT14_INV_4.frame
 

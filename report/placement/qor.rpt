@@ -2,7 +2,7 @@
 Report : qor
 Design : riscv_core
 Version: O-2018.06-SP1
-Date   : Tue Mar  5 10:52:17 2024
+Date   : Thu Mar  7 01:48:52 2024
 ****************************************
 
 
@@ -10,8 +10,8 @@ Scenario           'func_fast'
 Timing Path Group  'CLK_I'
 ----------------------------------------
 Levels of Logic:                     81
-Critical Path Length:              1.49
-Critical Path Slack:               3.50
+Critical Path Length:              1.47
+Critical Path Slack:               3.52
 Critical Path Clk Period:          5.00
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
@@ -24,8 +24,8 @@ Scenario           'func_slow'
 Timing Path Group  'CLK_I'
 ----------------------------------------
 Levels of Logic:                     81
-Critical Path Length:              4.63
-Critical Path Slack:               0.34
+Critical Path Length:              4.56
+Critical Path Slack:               0.41
 Critical Path Clk Period:          5.00
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
@@ -38,13 +38,13 @@ No. of Hold Violations:               0
 Cell Count
 ----------------------------------------
 Hierarchical Cell Count:             73
-Hierarchical Port Count:          10721
-Leaf Cell Count:                  27830
-Buf/Inv Cell Count:                5509
-Buf Cell Count:                     177
-Inv Cell Count:                    5332
+Hierarchical Port Count:          10697
+Leaf Cell Count:                  27820
+Buf/Inv Cell Count:                5504
+Buf Cell Count:                     181
+Inv Cell Count:                    5323
 CT Buf/Inv Cell Count:                0
-Combinational Cell Count:         25627
+Combinational Cell Count:         25617
 Sequential Cell Count:             2203
 Macro Count:                          0
 ----------------------------------------
@@ -52,24 +52,24 @@ Macro Count:                          0
 
 Area
 ----------------------------------------
-Combinational Area:            15149.10
-Noncombinational Area:          3127.85
-Buf/Inv Area:                   1505.43
-Total Buffer Area:                70.68
-Total Inverter Area:            1434.74
+Combinational Area:            15140.98
+Noncombinational Area:          3128.07
+Buf/Inv Area:                   1502.72
+Total Buffer Area:                72.24
+Total Inverter Area:            1430.48
 Macro/Black Box Area:              0.00
 Net Area:                             0
 Net XLength:                       0.00
 Net YLength:                       0.00
 ----------------------------------------
-Cell Area (netlist):                          18276.95
-Cell Area (netlist and physical only):        18998.09
+Cell Area (netlist):                          18269.05
+Cell Area (netlist and physical only):        19711.34
 Net Length:                        0.00
 
 
 Design Rules
 ----------------------------------------
-Total Number of Nets:             28091
+Total Number of Nets:             28081
 Nets with Violations:                 0
 Max Trans Violations:                 0
 Max Cap Violations:                   0
