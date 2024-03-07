@@ -9,7 +9,7 @@ Mode   : func
 Corner : slow
 Scenario: func_slow
 Version: O-2018.06-SP1
-Date   : Tue Mar  5 19:56:28 2024
+Date   : Thu Mar  7 04:46:54 2024
 ****************************************
                       Pin Cap                    Wire Cap
                    Min          Max           Min          Max

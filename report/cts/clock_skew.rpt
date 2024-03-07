@@ -1,0 +1,20 @@
+****************************************
+Report : clock timing
+        -type skew
+        -nworst 1
+        -setup
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Thu Mar  7 04:47:14 2024
+****************************************
+
+  Mode: func
+  Clock: CLK_I
+
+  Clock Pin                                          Latency      Skew             Corner
+------------------------------------------------------------------------------------------
+  id_stage_i/mult_operand_b_ex_o_reg_2_/CK              0.14              rp-+       slow
+  id_stage_i/mult_dot_op_c_ex_o_reg_30_/CK              0.12      0.01    rp-+       slow
+
+------------------------------------------------------------------------------------------
+1
