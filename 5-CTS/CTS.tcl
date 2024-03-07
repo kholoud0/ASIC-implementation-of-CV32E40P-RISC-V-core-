@@ -48,5 +48,10 @@ report_qor > $dir/cts/qor.rpt
 
 create_utilization_configuration config_sr \
             -capacity site_row -exclude {hard_macros macro_keepouts}
-report_utilization -config config_sr -verbose > $dir/cts/utilization.rpt
+report_utilization -config config_sr -verbose > $dir/cts/utilization_site_row.rpt
 report_clock_timing  -type skew >  $dir/cts/clock_skew.rpt
+
+
+ close_blocks -force -purge
+close_lib
+
