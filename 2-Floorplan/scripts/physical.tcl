@@ -8,21 +8,21 @@ set dir "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/repo
 ###################################   FLOORPLAN   ##################################
 ####################################################################################
 
-set gate_verilog "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_12/netlists/riscv_core.v" 
+set gate_verilog "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_18/netlists/riscv_core.v" 
 
 read_verilog -top $DESIGN $gate_verilog
 
 current_design $DESIGN
 
 #read_sdc /home/ICer/cv32e40p_updated/output/${DESIGN}.sdc
- source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/cons/func_mode.tcl
+source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/cons/dont_use_generic.tcl
 #load_upf ../../dc/output/compile.upf
 
 #commit_upf
 #source /home/ICer/cv32e40p_updated/scripts/Synthesis/cons/cons.tcl
 
 source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/mcmm.tcl
-source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/cons/dont_use_generic.tcl
+#source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/cons/dont_use_generic.tcl
 save_block -as ${DESIGN}_1_imported
 
 ############################################################
@@ -43,7 +43,7 @@ set_attribute [get_layers MRDL] routing_direction vertical
 
 #./output/ChipTop_pads.v
 initialize_floorplan \
-  -core_utilization 0.4 \
+  -core_utilization 0.25 \
   -flip_first_row true \
   -core_offset {11.25 11.25 11.25 11.25}
    # -boundary {{0 0} {700 700}} \
