@@ -133,7 +133,12 @@ set_dont_use [get_lib_cells */*_OAI221_2*]
 set_dont_use [get_lib_cells */*_AOI221_2*]
 set_dont_use [get_lib_cells */*_MUX3_V1M_2*]
 set_dont_use [get_lib_cells */*_MUX3_V1M_2*]
-
+#3
+set_dont_use [get_lib_cells */*_MUXI3_4*]
+set_dont_use [get_lib_cells */*_ND3B_4*]
+set_dont_use [get_lib_cells */*_AN2_MM_4*]
+set_dont_use [get_lib_cells */*BUF_S_4*]
+set_dont_use [get_lib_cells */*_MUXI3_4*]
 ##################### might be blockesd for routing###############
 set_dont_use [get_lib_cells */*_FSDPRBQ_V2_4*]
 set_dont_use [get_lib_cells */*_AO32_4*]
@@ -144,6 +149,10 @@ set_dont_use [get_lib_cells */*_OAI311_4*]
 set_dont_use [get_lib_cells */*_FDPSBQ_2*]
 set_dont_use [get_lib_cells */*_NR2_MM_*]
 
+set_dont_use [get_lib_cells */*_FDPSBQ_4*]
+
+
+
 ############## missing supply pin ##############
 
 set_dont_use [get_lib_cells */*_ISOFSDPQ_PECO_8*]
@@ -152,8 +161,25 @@ set_dont_use [get_lib_cells */*_ISOFSDPQ_PECO_8*]
 set_dont_use [get_lib_cells */*_DCAP_PV1ECO_12*]
 
 
+############### removing all ECO Cells ################
+set_dont_use [get_lib_cells */*_ECO_*] 
+
+############## remove all large sizes of inv ###########
+set_dont_use [get_lib_cells */*_INV_S_9*]
+
+set_dont_use [get_lib_cells */*_INV_S_10*]
+
+set_dont_use [get_lib_cells */*_INV_S_12*]
+
+set_dont_use [get_lib_cells */*_INV_S_14*]
+
+set_dont_use [get_lib_cells */*_INV_S_16*]
+
+set_dont_use [get_lib_cells */*_INV_S_20*]
+
+set_dont_use [get_lib_cells */*_INV_S_18*]
 
 
+# off grid violations from Zroute
 
-
-
+set_dont_use [get_lib_cells */*_FDPRBQ_V2*]
