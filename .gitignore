@@ -1,0 +1,9 @@
+2-Floorplan/scripts/riscv_core3/riscv_core_4_finished/attach/design.errdm/riscv_core_5_cts_lvs.err
+*/runs
+2-Floorplan\scripts\riscv_core*
+2-Floorplan/scripts/riscv_core*/*
+*.fuse*
+*.log
+
+*.ndm
+2-Floorplan/scripts/riscv_core/*
