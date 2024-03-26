@@ -1,4 +1,4 @@
-set_host_options -max_cores 8
+set_host_options -max_cores 1
 set DESIGN riscv_core
 source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/proc_block.tcl
 
@@ -8,7 +8,7 @@ set dir "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/repo
 ####################################################################################
 ###################################  ROUTING  ###################################
 ####################################################################################
-open_block /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/riscv_core2:riscv_core_5_cts.design
+open_block /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/riscv_core4:riscv_core_5_cts.design
  link_block
 
 
@@ -17,7 +17,7 @@ remove_ignored_layers -all
 
 
 set MIN_ROUTING_LAYER            "M2"   ;# Min routing layer
-set MAX_ROUTING_LAYER            "M9"   ;# Max routing layer
+set MAX_ROUTING_LAYER            "M7"   ;# Max routing layer
 
 
 set_ignored_layers \
@@ -29,6 +29,7 @@ set_ignored_layers \
 check_routability
 
 check_routability > /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/6-Routing/check_routability.rpt
+check_design -checks pre_route_stage > /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/6-Routing/check_pre_route.rpt
 
 set_lib_cell_purpose -include all  [get_lib_cells -of [get_cells *]]
 
@@ -52,4 +53,4 @@ save_block -as ${DESIGN}_6_routed
 print_res {routing}
 report_qor > $dir/routing/qor.rpt
 check_lvs -max 5000 > $dir/routing/lvs.rpt
-report_utilization -config config_sr -verbose > $dir/routing/utilization.rpt
+report_utilization  -verbose > $dir/routing/utilization.rpt
