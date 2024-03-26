@@ -1,8 +1,0 @@
-#@ # 
-#@ # Running icc2_shell Version O-2018.06-SP1 for linux64 -- Jul 17, 2018
-#@ # Date:   Tue Mar  5 21:16:00 2024
-#@ # Run by: ICer@IC_EDA
-#@ 
-
-start_gui
-gui_set_pref_value -category {SelectByNamePalette} -key {ObjectType} -value {Logical Cells}
