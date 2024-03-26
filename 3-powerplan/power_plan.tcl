@@ -5,7 +5,7 @@ source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floo
 set dir "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/report"
 
 
-open_block /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/riscv_core2:riscv_core_2_floorplan.design
+open_block /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/riscv_core5:riscv_core_2_floorplan.design
 
 link_block
 
@@ -54,26 +54,26 @@ set_pg_strategy ring2_s -core -pattern {{name: ring2} {nets: VDD VSS}} -extensio
 compile_pg -strategies ring2_s
 
 
-create_pg_mesh_pattern m9_mesh -layers {{{horizontal_layer: M9} {width: 2.5} {spacing: 4} {pitch: 13} {offset: 8}}}
+create_pg_mesh_pattern m9_mesh -layers {{{horizontal_layer: M9} {width: 2} {spacing: 20} {pitch: 44} {offset: 8}}}
 set_pg_strategy m9_mesh -core -extension {{direction: T B L R} {stop: outermost_ring}} -pattern {{name: m9_mesh} {nets: VDD VSS}} 
 compile_pg -strategies m9_mesh
 
 
 
-create_pg_mesh_pattern m8_mesh -layers {{{vertical_layer: M8} {width: 2.5} {spacing: 4} {pitch: 13} {offset: 8}}}
+create_pg_mesh_pattern m8_mesh -layers {{{vertical_layer: M8} {width: 2} {spacing: 20} {pitch: 44} {offset: 8}}}
 set_pg_strategy m8_mesh -core -extension {{direction: T B L R} {stop: outermost_ring}} -pattern {{name: m8_mesh} {nets: VDD VSS}} 
 compile_pg -strategies m8_mesh
 
 
-create_pg_mesh_pattern m7_mesh -layers {{{horizontal_layer: M7} {width: 2.5} {spacing: 4} {pitch: 13} {offset: 8}}}
+create_pg_mesh_pattern m7_mesh -layers {{{horizontal_layer: M7} {width: 2} {spacing: 20} {pitch: 44} {offset: 8}}}
 set_pg_strategy m7_s -core -extension {{direction: T B L R} {stop: outermost_ring}} -pattern {{name: m7_mesh} {nets: VDD VSS}} 
 compile_pg -strategies m7_s
 
-create_pg_mesh_pattern m6_mesh -layers {{{vertical_layer: M6} {width: 2.5} {spacing: 4} {pitch: 13} {offset: 8}}}
+create_pg_mesh_pattern m6_mesh -layers {{{vertical_layer: M6} {width: 2} {spacing: 20} {pitch: 44} {offset: 8}}}
 set_pg_strategy m6_s -core -extension {{direction: T B L R} {stop: outermost_ring}} -pattern {{name: m6_mesh} {nets: VDD VSS}} 
 compile_pg -strategies m6_s
 
-create_pg_mesh_pattern m5_mesh -layers {{{horizontal_layer: M5} {width: 2.5} {spacing: 4} {pitch: 13} {offset: 8}}}
+create_pg_mesh_pattern m5_mesh -layers {{{horizontal_layer: M5} {width: 2} {spacing: 20} {pitch: 44} {offset: 8}}}
 set_pg_strategy m5_s -core -extension {{direction: T B L R} {stop: core_boundary}} -pattern {{name: m5_mesh} {nets: VDD VSS}} 
 compile_pg -strategies m5_s
 
