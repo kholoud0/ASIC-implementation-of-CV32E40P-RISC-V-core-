@@ -5,7 +5,7 @@ source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floo
 set dir "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/report"
 
 
-open_block /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/riscv_core2:riscv_core_4_placed.design
+open_block /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/riscv_core6:riscv_core_4_placed.design
 link_block
 ####################################################################################
 ###################################  CTS  ###################################
@@ -42,10 +42,17 @@ set_lib_cell_purpose -include cts */*_INV_S_6*
 set_lib_cell_purpose -include cts */*_INV_S_8*
 check_design -checks pre_clock_tree_stage
 
-create_routing_rule ROUTE_RULES -multiplier_spacing 3 -multiplier_width 3
-set_clock_routing_rules -rules ROUTE_RULES -min_routing_layer M2  -max_routing_layer M4
+set_wire_track_pattern -site_def unit -layer M1  -mode uniform -mask_constraint {mask_two mask_one} -coord 0.037 -space 0.0074 -direction horizontal
+
+set_wire_track_pattern -site_def unit -layer M2  -mode uniform -mask_constraint {mask_two mask_one} -coord 0.0037 -space 0.00074 -direction vertical
+
+set_lib_cell_purpose -exclude cts */*_INV_S_20*
+
+create_routing_rule ROUTE_RULES -multiplier_spacing 0.0001 -multiplier_width 0.1
+set_clock_routing_rules -rules ROUTE_RULES -min_routing_layer M2  -max_routing_layer M6
 set_clock_tree_options -target_latency 0.000 -target_skew 0.000 
 set cts_enable_drc_fixing_on_data true
+
 
 clock_opt
 
