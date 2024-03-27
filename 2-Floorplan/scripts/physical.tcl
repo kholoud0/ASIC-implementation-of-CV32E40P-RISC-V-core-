@@ -37,8 +37,8 @@ set_attribute [get_layers M8]   routing_direction vertical
 set_attribute [get_layers M9]   routing_direction horizontal
 set_attribute [get_layers MRDL] routing_direction vertical
 
-#set_wire_track_pattern -site_def unit -layer M1  -mode uniform -mask_constraint {mask_two mask_one} \
-#-coord 0.037 -space 0.074 -direction vertical
+set_wire_track_pattern -site_def unit -layer M1  -mode uniform -mask_constraint {mask_two mask_one} \
+-coord 0.037 -space 0.0074 -direction vertical
 
 
 #./output/ChipTop_pads.v
@@ -67,13 +67,14 @@ create_tap_cells -lib_cell  [get_lib_cell saed14rvt_ss0p6vm40c/SAEDRVT14_TAPDS] 
 #set non_physical_cells [get_cells -filter {is_physical == false}]
 #create_keepout_margin -type soft -outer {3 0 3 0} [get_cells *]
 
-set_placement_spacing_label -name x  -side both -lib_cells [get_lib_cells -of [get_cells *]]
+set_placement_spacing_label -name x  -side both -lib_cells [get_lib_cells ]
 
-set_placement_spacing_rule -labels {x x} {0 1}
+
+set_placement_spacing_rule -labels {x x} {0 20}
 
 report_placement_spacing_rules
 
-
+saed14rvt_ss0p6vm40c:SAEDRVT14_FDPS_V3_2.frame
 #############
 create_net -power $NDM_POWER_NET
 create_net -ground $NDM_GROUND_NET 
