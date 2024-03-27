@@ -24,3 +24,8 @@
 
 */report
 
+*.ndm
+*.gz
+*.err
+*.log
+*.rpt
