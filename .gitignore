@@ -29,3 +29,6 @@
 *.err
 *.log
 *.rpt
+/2-Floorplan/scripts/riscv_core
+/2-Floorplan/scripts/riscv_core
+/report
