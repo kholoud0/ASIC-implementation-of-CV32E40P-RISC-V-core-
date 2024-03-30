@@ -17,7 +17,7 @@ remove_ignored_layers -all
 
 
 set MIN_ROUTING_LAYER            "M2"   ;# Min routing layer
-set MAX_ROUTING_LAYER            "M7"   ;# Max routing layer
+set MAX_ROUTING_LAYER            "M8"   ;# Max routing layer
 
 
 set_ignored_layers \

@@ -1,4 +1,0 @@
-Warning: Nothing implicitly matched 'config_sr' (SEL-003)
-Error: Nothing matched for -config (SEL-005)
-Error: bad value specified for option -config
-	Use error_info for more info. (CMD-013)

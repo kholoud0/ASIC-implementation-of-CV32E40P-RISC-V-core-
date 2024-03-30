@@ -101,6 +101,23 @@ set cts_enable_drc_fixing_on_data true
 
 clock_opt
 
+
+
+
+
+set NDM_POWER_NET                "VDD" ;#
+set NDM_POWER_PORT               "VDD" ;#
+set NDM_GROUND_NET               "VSS" ;#
+set NDM_GROUND_PORT              "VSS" ;#
+
+
+
+connect_pg_net -net $NDM_POWER_NET [get_pins -hierarchical "*/VDD"]
+connect_pg_net -net $NDM_GROUND_NET [get_pins -hierarchical "*/VSS"]
+#######
+
+
+
 # clock_opt -from final_opto               #optimization
 check_pg_drc
 write_verilog /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/results/${DESIGN}.cts.gate.v
