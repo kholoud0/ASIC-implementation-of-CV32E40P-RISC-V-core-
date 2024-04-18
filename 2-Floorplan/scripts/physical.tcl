@@ -37,19 +37,77 @@ set_attribute [get_layers M8]   routing_direction vertical
 set_attribute [get_layers M9]   routing_direction horizontal
 set_attribute [get_layers MRDL] routing_direction vertical
 
-set_wire_track_pattern -site_def unit -layer M1  -mode uniform -mask_constraint {mask_two mask_one} \
--coord 0.037 -space 0.0074 -direction vertical
+#set_wire_track_pattern -site_def unit -layer M1  -mode uniform -mask_constraint {mask_two mask_one} \
+-coord 0.037 -space 0.074 -direction horizontal
 
+
+#set_wire_track_pattern -site_def unit -layer M2  -mode uniform -mask_constraint {mask_two mask_one} \
+-coord 0.037 -space 0.074 -direction horizontal
+
+
+#set_wire_track_pattern -site_def unit -layer M3  -mode uniform -mask_constraint {mask_two mask_one} \
+-coord 0.037 -space 0.074 -direction vertical
+
+
+#set_wire_track_pattern -site_def unit -layer M4  -mode uniform -mask_constraint {mask_two mask_one} \
+-coord 0.037 -space 0.074 -direction horizontal
+
+
+#set_wire_track_pattern -site_def unit -layer M5  -mode uniform -mask_constraint {mask_two mask_one} \
+-coord 0.037 -space 0.074 -direction vertical
+
+
+#set_wire_track_pattern -site_def unit -layer M6  -mode uniform -mask_constraint {mask_two mask_one} \
+-coord 0.037 -space 0.1 -direction horizontal
+
+
+#set_wire_track_pattern -site_def unit -layer M7  -mode uniform -mask_constraint {mask_two mask_one} \
+-coord 0.037 -space 0.1 -direction vertical
+
+#set_wire_track_pattern -site_def unit -layer M8  -mode uniform -mask_constraint {mask_two mask_one} \
+-coord 0.037 -space 0.15 -direction horizontal
+
+
+#set_wire_track_pattern -site_def unit -layer M9  -mode uniform -mask_constraint {mask_two mask_one} \
+-coord 0.037 -space 0.15 -direction vertical
 
 #./output/ChipTop_pads.v
 initialize_floorplan \
   -core_utilization 0.25 \
   -flip_first_row true \
-  -core_offset {11.25 11.25 11.25 11.25}
+  -core_offset {13.5 13.5  13.5  13.5 }
    # -boundary {{0 0} {700 700}} \
+
+
+remove_tracks [get_tracks -of_objects M1]                                               
+remove_tracks [get_tracks -of_objects M2]                                               
+remove_tracks [get_tracks -of_objects M3]                                               
+remove_tracks -all
+
+create_track -layer M1 -coord 0 -space 0.074
+create_track -layer M2 -coord 0 -space 0.06 
+create_track -layer M3 -coord 0 -space 0.074 
+create_track -layer M4 -coord 0 -space 0.074
+create_track -layer M5 -coord 0 -space 0.12
+create_track -layer M6 -coord 0 -space 0.12 
+create_track -layer M7 -coord 0 -space 0.12  
+create_track -layer M8 -coord 0 -space 0.12  
+create_track -layer M9 -coord 0 -space 0.12 
+create_track -layer MRDL -coord 0 -space 0.6
 ########################        place pins with constraints          ######################
-set_block_pin_constraints -self -allowed_layers {M4 M5 M6} -sides {1 2 3 4}
-place_pins -ports [get_ports *]
+
+
+### place port
+remove_individual_pin_constraints
+set_individual_pin_constraints -ports [all_inputs] -allowed_layers M7 -sides {1 3} -pin_spacing_distance 2
+#set_individual_pin_constraints -ports [all_outputs] -allowed_layers {M5 M7} -sides 3 -offset {400 600}
+set_individual_pin_constraints -ports [all_outputs] -allowed_layers M6 -sides {2 4}  -pin_spacing_distance 2
+
+place_pins -self -ports [get_ports *]
+
+
+#set_block_pin_constraints -self -allowed_layers {M4 M5 M6 M7 M8 M9} -sides {1 2 3 4}
+#place_pins -ports [get_ports *]
 
 #fix the ports 
 set_attribute [get_ports *] physical_status fixed
@@ -70,11 +128,11 @@ create_tap_cells -lib_cell  [get_lib_cell saed14rvt_ss0p6vm40c/SAEDRVT14_TAPDS] 
 set_placement_spacing_label -name x  -side both -lib_cells [get_lib_cells ]
 
 
-set_placement_spacing_rule -labels {x x} {0 20}
+set_placement_spacing_rule -labels {x x} {0 2}
 
 report_placement_spacing_rules
 
-saed14rvt_ss0p6vm40c:SAEDRVT14_FDPS_V3_2.frame
+
 #############
 create_net -power $NDM_POWER_NET
 create_net -ground $NDM_GROUND_NET 
