@@ -1,4 +1,4 @@
-set_host_options -max_cores 8
+set_host_options -max_cores 2
 set DESIGN riscv_core
 source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/proc_block.tcl
 
@@ -12,7 +12,7 @@ link_block
 ####################################################################################
 
 ##############app option to access pins############
-set_app_option -name route.common.connect_within_pins_by_layer_name  -value {{M1 via_standard_cell_pins} {M2 via_standard_cell_pins}}
+#set_app_option -name route.common.connect_within_pins_by_layer_name  -value {{M1 via_standard_cell_pins } {M2 via_standard_cell_pins }}
 
 
 
@@ -33,9 +33,10 @@ set_dont_use [get_lib_cells */*_BUF*]
 ############################################################
 
 
-#create_routing_rule ROUTE_RULES_1 \
- # -widths {M3 0.2 M4 0.2 } \
-  #-spacings {M3 0.42 M4 0.63 }
+#create_routing_rule ROUTE_RULES_1 
+\
+  -widths {M1 0.034 M2 0.034 M3 0.034  } \
+  -spacings {M1 0.41 M2 0.041 M3 0.041 }
 #########################  include inverters only to cts  ########################
 set_lib_cell_purpose -exclude cts [get_lib_cells -of [get_cells *]]
 #set_lib_cell_purpose -include cts */*AOBUF_IW*
@@ -57,8 +58,8 @@ set_lib_cell_purpose -exclude cts */*_INV_S_20*
 set_app_options \-name cts.common.user_instance_name_prefix -value "CTS_"
 
 
-create_routing_rule ROUTE_RULES -multiplier_spacing 0.01 -multiplier_width 0.1
-set_clock_routing_rules -rules ROUTE_RULES -min_routing_layer M2  -max_routing_layer M6
+create_routing_rule ROUTE_RULES -multiplier_spacing 1 -multiplier_width 1
+set_clock_routing_rules -rules ROUTE_RULES -min_routing_layer M2  -max_routing_layer M9
 set_clock_tree_options -target_latency 0.000 -target_skew 0.000 
 set cts_enable_drc_fixing_on_data true
 
@@ -88,12 +89,12 @@ connect_pg_net -net $NDM_GROUND_NET [get_pins -hierarchical "*/VSS"]
 check_pg_drc
 write_verilog /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/results/${DESIGN}.cts.gate.v
 
-set_propagated_clock [get_clocks CLK_I]
+#set_propagated_clock [get_clocks CLK_I]
 
 
 #create_tap_cells -lib_cell saed14rvt_frame_timing_ccs/SAEDRVT14_TAPDS -pattern stagger -distance 15
 
-save_block -as ${DESIGN}_5_cts_fixed
+save_block -as ${DESIGN}_5_cts_2
 
 print_res {cts}
 report_qor > $dir/cts/qor.rpt

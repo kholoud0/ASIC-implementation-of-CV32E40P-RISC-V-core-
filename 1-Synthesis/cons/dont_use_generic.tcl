@@ -171,15 +171,40 @@ set_dont_use [get_lib_cells */*_INV_S_10*]
 
 set_dont_use [get_lib_cells */*_INV_S_12*]
 
-set_dont_use [get_lib_cells */*_INV_S_14*]
+#set_dont_use [get_lib_cells */*_INV_S_14*]
 
 set_dont_use [get_lib_cells */*_INV_S_16*]
 
 set_dont_use [get_lib_cells */*_INV_S_20*]
 
-set_dont_use [get_lib_cells */*_INV_S_18*]
+#set_dont_use [get_lib_cells */*_INV_S_18*]
 
 
 # off grid violations from Zroute
 
 set_dont_use [get_lib_cells */*_FDPRBQ_V2*]
+
+
+
+
+
+
+
+###fix rouitng offgrids 
+
+
+
+set_dont_use [get_lib_cells */*_OA22_*]
+set_dont_use [get_lib_cells */*_OR3_*]
+set_dont_use [get_lib_cells */*_MUX2_*]
+set_dont_use [get_lib_cells */*_OA22_*]
+set_dont_use [get_lib_cells */*_NR3_*]
+set_dont_use [get_lib_cells */*_AOI31_*]
+set_dont_use [get_lib_cells */*_AN3_*]
+set_dont_use [get_lib_cells */*_OAI31_*]
+set_dont_use [get_lib_cells */*_NR3_*]
+set_dont_use [get_lib_cells */*FDPRB_V3*]
+set_dont_use [get_lib_cells */*_MUX2_*]
+
+set_dont_use [get_lib_cells */*AO32*]
+
