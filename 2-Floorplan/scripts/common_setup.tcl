@@ -13,7 +13,7 @@ set DESIGN_NAME                   "riscv_core"  ;#  The name of the top-level de
 #set DESIGN_REF_PATH "/remote/exchange/synopsys/SAED14_EDK"
 set DESIGN_REF_PATH		  "/mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/db_nldm"
 
-set DESIGN_REF_TECH_PATH          "/mnt/hgfs/SAED14nm_PDK_06052019/SAED14nm_PDK_12232018/techfiles"
+set DESIGN_REF_TECH_PATH          "/mnt/hgfs/Gp_CV32e40p/tech/milkyway"
 
 #set DESIGN_REF_DATA_PATH          ""  ;#  Absolute path prefix variable for library/design data.
                                        #  Use this variable to prefix the common absolute path to 
@@ -38,7 +38,7 @@ set ADDITIONAL_SEARCH_PATH     "/mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell
 
 
 
-set GATE_NET_PATH       "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_20/netlists/riscv_core.v"
+set GATE_NET_PATH       "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_21/netlists/riscv_core.v"
 
 set DB_PATH 	"/mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/db_nldm"
 set FFLIB 		"$DB_PATH/saed14rvt_ff0p88v125c.db"
@@ -54,14 +54,14 @@ set NDM_REFERENCE_LIB_DIRS  " \
        
 "
 
-set MW_REFERENCE_CONTROL_FILE     "saed14nm_1p9m_mw.tf"  ;#  Reference Control file to define the MW ref libs
+set MW_REFERENCE_CONTROL_FILE     "/mnt/hgfs/Gp_CV32e40p/tech/milkyway/saed14nm_1p9m_mw.tf"  ;#  Reference Control file to define the MW ref libs
 
 set TECH_FILE                     "${DESIGN_REF_TECH_PATH}/saed14nm_1p9m_mw.tf"  ;#  Milkyway technology file
 #set TECH_FILE                     "/SCRATCH/labs/Low_Power_Methodology_Manual_for_3228nm/saed14rvt_1p9m.tf"
-set MAP_FILE                      "/mnt/hgfs/SAED14nm_PDK_06052019/SAED14nm_PDK_12232018/starrc/saed14nm_tf_itf_tluplus.map"  ;#  Mapping file for TLUplus
-set TLUPLUS_MAX_FILE              "/mnt/hgfs/SAED14nm_PDK_06052019/SAED14nm_PDK_12232018/starrc/max/saed14nm_1p9m_Cmax.tluplus"  ;#  Max TLUplus file
-set TLUPLUS_MIN_FILE              "/mnt/hgfs/SAED14nm_PDK_06052019/SAED14nm_PDK_12232018/starrc/min/saed14nm_1p9m_Cmin.tluplus"  ;#  Min TLUplus file
-set GDS_MAP_FILE          	  "/mnt/hgfs/SAED14nm_PDK_06052019/SAED14nm_PDK_12232018/techfiles/saed14nm_1p9m_gdsout_mw_icc2.map"
+set MAP_FILE                      "/mnt/hgfs/Gp_CV32e40p/tech/star_rc/saed14nm_tf_itf_tluplus.map"  ;#  Mapping file for TLUplus
+set TLUPLUS_MAX_FILE              "/mnt/hgfs/Gp_CV32e40p/tech/star_rc/max/saed14nm_1p9m_Cmax.tluplus"  ;#  Max TLUplus file
+set TLUPLUS_MIN_FILE              "/mnt/hgfs/Gp_CV32e40p/tech/star_rc/min/saed14nm_1p9m_Cmin.tluplus"  ;#  Min TLUplus file
+set GDS_MAP_FILE          	  "/mnt/hgfs/Gp_CV32e40p/tech/milkyway/saed14nm_1p9m_gdsout_mw.map"
 set STD_CELL_GDS		  "/mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/gds/saed14rvt.gds"
 #set SRAMLP_SINGLELP_GDS		  "${DESIGN_REF_PATH}/lib/sram_lp/gds/singlelp.gds"
 
@@ -115,12 +115,12 @@ puts "RM-Info: Completed script [info script]\n"
 ###################################   INITLIB   ###################################
 ###################################################################################
 
-set_host_options -max_cores 8
+set_host_options -max_cores 2
 set DESIGN riscv_core
 set_app_var search_path "$DESIGN_REF_TECH_PATH $DESIGN_REF_PATH $DB_PATH $GATE_NET_PATH"
 
-create_lib -technology  $TECH_FILE -ref_libs " /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/CLIB_created/CLIBs/saed14rvt_c.ndm \
-                                              /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/CLIB_created/CLIBs/saed14rvt_c_physical_only.ndm" ${DESIGN}6
+create_lib -technology  $TECH_FILE -ref_libs " /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/CLIB2/CLIBs/saed14rvt_c.ndm \
+                                              /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/CLIB2/CLIBs/saed14rvt_c_physical_only.ndm" ${DESIGN}20
 
 read_parasitic_tech -tlup $TLUPLUS_MAX_FILE  -layermap  $MAP_FILE 
 read_parasitic_tech -tlup $TLUPLUS_MIN_FILE  -layermap  $MAP_FILE 
