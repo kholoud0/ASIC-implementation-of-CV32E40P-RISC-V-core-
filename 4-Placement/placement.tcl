@@ -1,4 +1,4 @@
-set_host_options -max_cores 8
+set_host_options -max_cores 1
 set DESIGN riscv_core
 source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/proc_block.tcl
 
@@ -32,10 +32,10 @@ set dir "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/repo
 check_design -checks pre_placement_stage
 analyze_lib_cell_placement -lib_cells *
 
-#set_app_options -name place.coarse.max_density -value 0.6
+#set_app_options -name place.coarse.max_density -value 0.
 
 #saed14rvt_ss0p6vm40c:SAEDRVT14_FDPS_V3_2.frame
-#set_app_options -name place.coarse.congestion_driven_max_util -value 0.6
+#set_app_options -name place.coarse.congestion_driven_max_util -value 0.5
 
 set_app_options -name time.disable_recovery_removal_checks -value false
 set_app_options -name time.disable_case_analysis -value false
@@ -66,21 +66,17 @@ set NDM_GROUND_PORT              "VSS" ;#
 
 
 
-#############
-create_net -power $NDM_POWER_NET
-create_net -ground $NDM_GROUND_NET 
-
 connect_pg_net -net $NDM_POWER_NET [get_pins -hierarchical "*/VDD"]
 connect_pg_net -net $NDM_GROUND_NET [get_pins -hierarchical "*/VSS"]
 #######
 
 
 
-save_block -as ${DESIGN}_4_placed
+save_block -as ${DESIGN}_4_placed_2
 
 print_res {placement}
 report_qor > $dir/placement/qor.rpt
-report_utilization -config config_sr -verbose > $dir/placement/utilization_sire_row.rpt
+
 
 
 close_blocks -force -purge
