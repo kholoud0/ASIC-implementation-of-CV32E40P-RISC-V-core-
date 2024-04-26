@@ -45,7 +45,7 @@
            #########################################################
 #################################################################################### 
 # 1. Master Clock Definitions 
-create_clock -name CLK_I -period 5 -waveform {0 2.5} [get_ports clk_i]
+create_clock -name CLK_I -period 4 -waveform {0 2} [get_ports clk_i]
 #set_dont_touch_network [get_clocks CLK_I]
 
 
@@ -109,7 +109,7 @@ set_output_delay -max 0 -clock [get_clocks CLK_I] [all_outputs]
 ####################################################################################
 #set_load  25000000   [all_outputs]
 
-
+set_max_fanout	20 $top
 ####################################################################################
            #########################################################
                  #### Section 6 : Operating Condition ####
