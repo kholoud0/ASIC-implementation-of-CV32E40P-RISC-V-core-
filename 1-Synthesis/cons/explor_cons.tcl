@@ -46,7 +46,7 @@
 #################################################################################### 
 # 1. Master Clock Definitions 
 create_clock -name CLK_I -period 5 -waveform {0 2.5} [get_ports clk_i]
-set_dont_touch_network [get_clocks CLK_I]
+#set_dont_touch_network [get_clocks CLK_I]
 
 
 
@@ -90,8 +90,8 @@ report_clocks
              #### Section 3 : set input/output delay on ports ####
            #########################################################
 ####################################################################################
-#set_input_delay -max 0 -clock [get_clocks CLK_I] [remove_from_collection [all_inputs] [get_ports clk_i]]
-#set_output_delay -max 0 -clock [get_clocks CLK_I] [all_outputs]
+set_input_delay -max 0 -clock [get_clocks CLK_I] [remove_from_collection [all_inputs] [get_ports clk_i]]
+set_output_delay -max 0 -clock [get_clocks CLK_I] [all_outputs]
 
 
 ####################################################################################
@@ -118,7 +118,7 @@ report_clocks
 
 # Define the Worst Library for Max(#setup) analysis
 # Define the Best Library for Min(hold) analysis
-set_operating_conditions  -min_library "saed14rvt_ff0p88v125c" -min "ff0p88v125c" -max_library "saed14rvt_ss0p6vm40c" -max "ss0p6vm40c"
+set_operating_conditions  -min_library "saed14rvt_ff0p88v25c" -min "ff0p88v25c" -max_library "saed14rvt_ss0p6vm40c" -max "ss0p6vm40c"
 ####################################################################################
 
 
