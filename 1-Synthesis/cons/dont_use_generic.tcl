@@ -208,3 +208,5 @@ set_dont_use [get_lib_cells */*_MUX2_*]
 
 set_dont_use [get_lib_cells */*AO32*]
 
+set_dont_use [get_lib_cells */*_AOINV*]
+
