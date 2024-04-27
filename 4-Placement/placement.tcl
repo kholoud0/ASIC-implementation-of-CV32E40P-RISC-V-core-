@@ -15,18 +15,6 @@ set dir "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/repo
 
 ############################################################
 #source /home/islam/ICpedia_Tasks/GPCore-aes_ip/core_updated/syn/cons/dont_use_generic.tcl
-#set_target_library_subset -dont_use [get_lib_cells */*0P5*]
-#set_target_library_subset -dont_use saed14rvt_ss0p6vm40c:SAEDRVT14_INV_4.frame
-#set_target_library_subset -dont_use saed14rvt_ss0p6vm40c:SAEDRVT14_EO2_V1_0P75.frame
-#set_target_library_subset -dont_use saed14rvt_ss0p6vm40c:SAEDRVT14_OA221_U_0P5.frame
-#set_target_library_subset -dont_use saed14rvt_ss0p6vm40c:SAEDRVT14_CAPTTAPP6.frame
-#set_target_library_subset -dont_use saed14rvt_ss0p6vm40c:SAEDRVT14_OA21_1.frame
-#set_target_library_subset -dont_use saed14rvt_ss0p6vm40c:SAEDRVT14_OAI21_0P5.frame
-#set_target_library_subset -dont_use saed14rvt_ss0p6vm40c:SAEDRVT14_MUX2_MM_0P5.frame
-#set_target_library_subset -dont_use saed14rvt_ss0p6vm40c:SAEDRVT14_MUX2_MM_0P5.frame
-#set_target_library_subset -dont_use saed14rvt_ss0p6vm40c:SAEDRVT14_OA221_U_0P5.frame
-#set_app_options \
-#-name opt.common.enable_target_library_subset_opt -value 1
 
 
 check_design -checks pre_placement_stage
@@ -72,7 +60,7 @@ connect_pg_net -net $NDM_GROUND_NET [get_pins -hierarchical "*/VSS"]
 
 
 
-save_block -as ${DESIGN}_4_placed_2
+save_block -as ${DESIGN}_4_placed
 
 print_res {placement}
 report_qor > $dir/placement/qor.rpt

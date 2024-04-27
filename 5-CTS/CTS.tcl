@@ -1,4 +1,4 @@
-set_host_options -max_cores 2
+set_host_options -max_cores 4
 set DESIGN riscv_core
 source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/proc_block.tcl
 
@@ -28,7 +28,7 @@ set_dont_use [get_lib_cells */*_INV_S_16*]
 
 set_dont_use [get_lib_cells */*_INV_S_20*]
 
-set_dont_use [get_lib_cells */*_INV_S_18*]
+
 set_dont_use [get_lib_cells */*_BUF*]
 ############################################################
 
@@ -91,17 +91,11 @@ write_verilog /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-
 
 #set_propagated_clock [get_clocks CLK_I]
 
-
-#create_tap_cells -lib_cell saed14rvt_frame_timing_ccs/SAEDRVT14_TAPDS -pattern stagger -distance 15
-
-save_block -as ${DESIGN}_5_cts_2
+save_block -as ${DESIGN}_5_cts
 
 print_res {cts}
 report_qor > $dir/cts/qor.rpt
 
-create_utilization_configuration config_sr \
-            -capacity site_row -exclude {hard_macros macro_keepouts}
-report_utilization -config config_sr -verbose > $dir/cts/utilization_site_row.rpt
 report_clock_timing  -type skew >  $dir/cts/clock_skew.rpt
 report_clock_qor -type area >  $dir/cts/clock_qor_area.rpt
 

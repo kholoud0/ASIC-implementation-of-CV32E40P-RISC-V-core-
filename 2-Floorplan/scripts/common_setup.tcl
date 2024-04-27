@@ -115,12 +115,12 @@ puts "RM-Info: Completed script [info script]\n"
 ###################################   INITLIB   ###################################
 ###################################################################################
 
-set_host_options -max_cores 2
+set_host_options -max_cores 4
 set DESIGN riscv_core
 set_app_var search_path "$DESIGN_REF_TECH_PATH $DESIGN_REF_PATH $DB_PATH $GATE_NET_PATH"
 
 create_lib -technology  $TECH_FILE -ref_libs " /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/CLIB2/CLIBs/saed14rvt_c.ndm \
-                                              /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/CLIB2/CLIBs/saed14rvt_c_physical_only.ndm" ${DESIGN}20
+                                              /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/CLIB2/CLIBs/saed14rvt_c_physical_only.ndm" ${DESIGN}23
 
 read_parasitic_tech -tlup $TLUPLUS_MAX_FILE  -layermap  $MAP_FILE 
 read_parasitic_tech -tlup $TLUPLUS_MIN_FILE  -layermap  $MAP_FILE 

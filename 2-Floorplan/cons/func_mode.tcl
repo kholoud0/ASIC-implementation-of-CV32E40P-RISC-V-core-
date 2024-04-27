@@ -1,4 +1,4 @@
-create_clock -name CLK_I -period 5 -waveform {0 2.5} [get_ports clk_i]
+create_clock -name CLK_I -period 4  -waveform {0 2} [get_ports clk_i]
 set_dont_touch_network [get_clocks CLK_I]
 
 # 2. Generated Clock Definitions

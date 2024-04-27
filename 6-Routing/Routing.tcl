@@ -1,4 +1,4 @@
-set_host_options -max_cores 2
+set_host_options -max_cores 4
 set DESIGN riscv_core
 source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/proc_block.tcl
 
@@ -8,11 +8,11 @@ set dir "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/repo
 ####################################################################################
 ###################################  ROUTING  ###################################
 ####################################################################################
-open_block /mntset_host_options -max_cores 2
-set DESIGN riscv_core
-source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/proc_block.tcl
 
-set dir "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/report"
+
+
+
+
 
 
 ####################################################################################
@@ -43,7 +43,7 @@ remove_ignored_layers -all
 
 
 set MIN_ROUTING_LAYER            "M1"   ;# Min routing layer
-set MAX_ROUTING_LAYER            "M8"   ;# Max routing layer
+set MAX_ROUTING_LAYER            "M9"   ;# Max routing layer
 
 
 set_ignored_layers \
@@ -74,7 +74,7 @@ route_opt
 
 
 
-save_block -as ${DESIGN}_6_routed_finished_2
+save_block -as ${DESIGN}_6_routed
 
 print_res {routing}
 report_qor > $dir/routing/qor.rpt
