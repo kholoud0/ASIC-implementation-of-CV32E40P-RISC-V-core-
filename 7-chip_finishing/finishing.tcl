@@ -50,7 +50,7 @@ check_pg_connectivity
 #######\
 ############################################################
 
-write_verilog /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/results/riscv_core.icc2.gate.v
+write_verilog /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/results-hier/riscv_core.icc2.gate.v
 print_res {finishing}
 report_qor > $dir/finishing/qor.rpt
 -config config_sr -verbose > $dir/finishing/utilization.rpt

@@ -18,6 +18,11 @@ link_block
 
 set_dont_touch_network -clear [get_clocks CLK_I]
 
+current_scenario test_slow
+
+set_dont_touch_network -clear [get_clocks s_clk]
+
+
 set_dont_use [get_lib_cells */*_INV_S_10*]
 
 set_dont_use [get_lib_cells */*_INV_S_12*]
@@ -87,7 +92,7 @@ connect_pg_net -net $NDM_GROUND_NET [get_pins -hierarchical "*/VSS"]
 
 # clock_opt -from final_opto               #optimization
 check_pg_drc
-write_verilog /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/results/${DESIGN}.cts.gate.v
+write_verilog /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/results-hier/${DESIGN}.cts.gate.v
 
 #set_propagated_clock [get_clocks CLK_I]
 

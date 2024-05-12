@@ -1,8 +1,8 @@
 set_host_options -max_cores 4
-set DESIGN riscv_core
-source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/proc_block.tcl
+set DESIGN pulpino_top
+source /mnt/hgfs/Gp_CV32e40p/SOC/2-Floorplan/scripts/proc_block.tcl
 
-set dir "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/report"
+set dir "/mnt/hgfs/Gp_CV32e40p/SOC/reports"
 
 
 open_block /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/scripts/riscv_core6:riscv_core_2_floorplan.design
@@ -44,7 +44,7 @@ create_pg_ring_pattern ring1 \
 
 
 
-set_pg_strategy ring1_s -core -pattern {{name: ring1} {nets: VDD VSS}} -extension {{stop: design_boundary}}
+set_pg_strategy ring1_s -core -pattern {{name: ring1} {nets: VDD VSS}} -extension {{stop: design_boundary_ang_generate_pin}}
 
 
 
@@ -63,30 +63,30 @@ compile_pg -strategies ring1_s
 #compile_pg -strategies ring2_s
 
 
-create_pg_mesh_pattern m9_mesh -layers {{{vertical_layer: M9} {width: 1} {spacing: 10} {pitch: 22} {offset: 8}}}
+create_pg_mesh_pattern m9_mesh -layers {{{vertical_layer: M9} {width: 2} {spacing: 10} {pitch: 24} {offset: 8}}}
 set_pg_strategy m9_mesh -core -extension {{direction: T B L R} {stop: outermost_ring}} -pattern {{name: m9_mesh} {nets: VDD VSS}} 
 compile_pg -strategies m9_mesh
 
 
 
-create_pg_mesh_pattern m8_mesh -layers {{{horizontal_layer: M8} {width: 1} {spacing: 10} {pitch: 22} {offset: 8}}}
+create_pg_mesh_pattern m8_mesh -layers {{{horizontal_layer: M8} {width: 2} {spacing: 10} {pitch: 24} {offset: 8}}}
 set_pg_strategy m8_mesh -core -extension {{direction: T B L R} {stop: outermost_ring}} -pattern {{name: m8_mesh} {nets: VDD VSS}} 
 compile_pg -strategies m8_mesh
 
 
-create_pg_mesh_pattern m7_mesh -layers {{{vertical_layer: M7} {width: 1} {spacing: 10} {pitch: 22} {offset: 8}}}
+create_pg_mesh_pattern m7_mesh -layers {{{vertical_layer: M7} {width: 2} {spacing: 10} {pitch: 24} {offset: 8}}}
 set_pg_strategy m7_s -core -extension {{direction: T B L R} {stop: outermost_ring}} -pattern {{name: m7_mesh} {nets: VDD VSS}} 
 compile_pg -strategies m7_s
 
 
 #create_pg_mesh_pattern m6_mesh -layers {{{horizontal_layer: M6} {width: 1} {spacing: 10} {pitch: 21} {offset: 8}}}
-set_pg_strategy m6_s -core -extension {{direction: T B L R} {stop: outermost_ring}} -pattern {{name: m6_mesh} {nets: VDD VSS}} 
-compile_pg -strategies m6_s
+#set_pg_strategy m6_s -core -extension {{direction: T B L R} {stop: outermost_ring}} -pattern {{name: m6_mesh} {nets: VDD VSS}} 
+#compile_pg -strategies m6_s
 
 
 #create_pg_mesh_pattern m5_mesh -layers {{{vertical_layer: M5} {width: 1} {spacing: 5} {pitch: 12} {offset: 8}}}
-set_pg_strategy m5_s -core -extension {{direction: T B L R} {stop: outermost_ring}} -pattern {{name: m5_mesh} {nets: VDD VSS}} 
-compile_pg -strategies m5_s
+#set_pg_strategy m5_s -core -extension {{direction: T B L R} {stop: outermost_ring}} -pattern {{name: m5_mesh} {nets: VDD VSS}} 
+#compile_pg -strategies m5_s
 
 
 
@@ -110,7 +110,7 @@ create_pg_vias -to_layers M7 -from_layers M1 -via_masters PG_VIA_4x1 -nets VDD -
 create_pg_vias -to_layers M7 -from_layers M1 -via_masters PG_VIA_4x1 -nets VSS -drc no_check
 
 
-set_attribute -objects [get_vias -design riscv_core -filter upper_layer_name=="M2"] -name via_def -value [get_via_defs -library [current_lib] VIA12_3LG]
+#set_attribute -objects [get_vias -design riscv_core -filter upper_layer_name=="M2"] -name via_def -value [get_via_defs -library [current_lib] VIA12_3LG]
 
 
 ################# design checks ######################

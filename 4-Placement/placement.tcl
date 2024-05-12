@@ -40,6 +40,8 @@ legalize_placement
 check_pg_drc
 analyze_design_violations
 
+read_def /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_2/netlists/riscv_core.scandef
+
 
 place_opt
 legalize_placement
