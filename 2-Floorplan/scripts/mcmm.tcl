@@ -64,7 +64,7 @@ current_corner slow
 puts "current_corner slow"
 source $slow_corner
 create_scenario -mode test -corner slow -name test_slow
-
+source /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/2-Floorplan/cons/test_mode.tcl
 
 current_scenario func_slow
 

@@ -38,7 +38,7 @@ set ADDITIONAL_SEARCH_PATH     "/mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell
 
 
 
-set GATE_NET_PATH       "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_21/netlists/riscv_core.v"
+set GATE_NET_PATH       "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_2/netlists/riscv_core.v"
 
 set DB_PATH 	"/mnt/hgfs/SAED14nm_EDK_CORE_RVT_v_062020/stdcell_rvt/db_nldm"
 set FFLIB 		"$DB_PATH/saed14rvt_ff0p88v125c.db"
@@ -120,7 +120,7 @@ set DESIGN riscv_core
 set_app_var search_path "$DESIGN_REF_TECH_PATH $DESIGN_REF_PATH $DB_PATH $GATE_NET_PATH"
 
 create_lib -technology  $TECH_FILE -ref_libs " /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/CLIB2/CLIBs/saed14rvt_c.ndm \
-                                              /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/CLIB2/CLIBs/saed14rvt_c_physical_only.ndm" ${DESIGN}23
+                                              /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/CLIB2/CLIBs/saed14rvt_c_physical_only.ndm" ${DESIGN}_hier
 
 read_parasitic_tech -tlup $TLUPLUS_MAX_FILE  -layermap  $MAP_FILE 
 read_parasitic_tech -tlup $TLUPLUS_MIN_FILE  -layermap  $MAP_FILE 

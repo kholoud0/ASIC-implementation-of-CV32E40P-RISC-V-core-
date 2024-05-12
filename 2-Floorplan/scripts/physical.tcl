@@ -8,7 +8,7 @@ set dir "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/repo
 ###################################   FLOORPLAN   ##################################
 ####################################################################################
 
-set gate_verilog "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_26/netlists/riscv_core.v" 
+set gate_verilog "/mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_2/netlists/riscv_core.v" 
 
 read_verilog -top $DESIGN $gate_verilog
 
@@ -40,7 +40,7 @@ set_attribute [get_layers MRDL] routing_direction horizontal
 
 #./output/ChipTop_pads.v
 initialize_floorplan \
-  -core_utilization 0.50 \
+  -core_utilization 0.750 \
   -flip_first_row true \
   -core_offset {13.5 13.5  13.5 13.5 }
    # -boundary {{0 0} {700 700}} \
@@ -63,9 +63,9 @@ create_track -layer MRDL -coord 0 -space 0.6
 
 ### place port
 remove_individual_pin_constraints
-set_individual_pin_constraints  -allowed_layers {M8 M7 M6 M5} -sides {1 2 3 4} -pin_spacing_distance 8 
-#set_individual_pin_constraints -ports [all_outputs] -allowed_layers {M5 M7} -sides 3 -offset {400 600}
-#set_individual_pin_constraints -ports [all_outputs] -allowed_layers M6 -sides {2 4}  -pin_spacing_distance 2
+#set_individual_pin_constraints  -allowed_layers {M8 M7 M6 M5} -sides {1 2 3 4} -pin_spacing_distance 4
+set_individual_pin_constraints -ports [all_inputs] -allowed_layers {M5 M6 M7 M8} -sides {1 3}   -pin_spacing_distance 5
+set_individual_pin_constraints -ports [all_outputs] -allowed_layers {M5 M6 M7 M8} -sides {2 4}  -pin_spacing_distance 5
 
 place_pins -self -ports [get_ports *]
 
@@ -107,6 +107,7 @@ connect_pg_net -net $NDM_GROUND_NET [get_pins -hierarchical "*/VSS"]
 
 
 ##############################  floorplanning placement ####################
+read_def /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/1-Synthesis/runs/run_2/netlists/riscv_core.scandef
 
 create_placement -floorplan -timing_driven
 legalize_placement

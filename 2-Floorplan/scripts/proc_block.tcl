@@ -1,6 +1,6 @@
 proc print_res {"stage"} {
 
-set dir /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/report
+set dir /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/report-hier
 sh rm -rf $dir/$stage
 sh mkdir -p $dir/$stage
 
